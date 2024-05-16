@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FitAI</string>
+    <string name="contentDescription">Image</string>
 </resources>

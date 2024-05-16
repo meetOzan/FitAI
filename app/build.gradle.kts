@@ -7,6 +7,10 @@ android {
     namespace = "com.mobven.fitai"
     compileSdk = 34
 
+    buildFeatures{
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.mobven.fitai"
         minSdk = 24
