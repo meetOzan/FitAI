@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">FitAI</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="onboarding_title_1">Hedeflerinizi Belirleyin</string>
     <string name="onboarding_description_1">Sağlık hedeflerinizi bizimle paylaşın, hedeflerinize ulaşmanız için size özel bir yol haritası oluşturalım.</string>
