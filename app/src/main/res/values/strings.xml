@@ -11,4 +11,7 @@
     <string name="onboarding_description_4">Günlük yediklerinizi kaydedin, kalori takibi ile sağlıklı alışkanlıklar edinin.</string>
     <string name="atla">Atla</string>
     <string name="sonraki">Sonraki</string>
+    <string name="contentDescription">Image</string>
+    <string name="register">Kayıt Ol</string>
+    <string name="login">Giriş Yap</string>
 </resources>

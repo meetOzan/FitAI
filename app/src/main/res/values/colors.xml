@@ -11,4 +11,5 @@
     <!-- #1E232C33 -->
     <color name="transparent_grey">#331E232C</color>
 
+    <color name="darkButtonBackground">#1E232C</color>
 </resources>
