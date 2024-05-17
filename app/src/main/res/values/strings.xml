@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">FitAI</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="onboarding_title_1">Hedeflerinizi Belirleyin</string>
+    <string name="onboarding_description_1">Sağlık hedeflerinizi bizimle paylaşın, hedeflerinize ulaşmanız için size özel bir yol haritası oluşturalım.</string>
+    <string name="onboarding_title_2">Yapay zeka destekli beslenme programı</string>
+    <string name="onboarding_description_2">Sağlık durumunuza ve hareketlerinize göre yapay zeka destekli beslenme planlarıyla tanışın.</string>
+    <string name="onboarding_title_3">Kişiselleştirilmiş Antrenmanlar </string>
+    <string name="onboarding_description_3">Aktivite seviyenize uygun, motive edici ve etkili antrenman programlarıyla formda kalın.</string>
+    <string name="onboarding_title_4">Kalori Takibi </string>
+    <string name="onboarding_description_4">Günlük yediklerinizi kaydedin, kalori takibi ile sağlıklı alışkanlıklar edinin.</string>
+    <string name="atla">Atla</string>
+    <string name="sonraki">Sonraki</string>
 </resources>
