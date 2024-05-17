@@ -6,15 +6,30 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.mobven.fitai.R
+import com.mobven.fitai.databinding.FragmentSecondOnBoardingBinding
+import com.mobven.fitai.onboarding.OnboardingPagerAdapter
 
 class SecondOnboardingFragment : Fragment() {
+
+    private lateinit var binding: FragmentSecondOnBoardingBinding
+    private val onboardingPagerAdapter by lazy { OnboardingPagerAdapter(requireActivity()) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second_on_boarding, container, false)
+        binding = FragmentSecondOnBoardingBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.btnOnboarding2Continue.setOnClickListener {
+            onboardingPagerAdapter.increaseCurrentItem()
+        }
+
     }
 
 }

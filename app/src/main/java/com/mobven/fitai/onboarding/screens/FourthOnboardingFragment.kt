@@ -5,15 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.mobven.fitai.R
+import com.mobven.fitai.databinding.FragmentFourthOnBoardingBinding
+
 class FourthOnboardingFragment : Fragment() {
+
+    private lateinit var binding: FragmentFourthOnBoardingBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fourth_on_boarding, container, false)
+    ): View {
+        binding = FragmentFourthOnBoardingBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
 }
