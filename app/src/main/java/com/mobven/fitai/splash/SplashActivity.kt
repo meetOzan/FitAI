@@ -1,34 +1,41 @@
-package com.mobven.fitai
+package com.mobven.fitai.splash
 
+
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.os.Looper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.mobven.fitai.databinding.ActivityMainBinding
-import com.mobven.fitai.onboarding.OnboardingFragment
+import com.mobven.fitai.MainActivity
+import com.mobven.fitai.R
+import com.mobven.fitai.databinding.ActivitySplashBinding
 
-class MainActivity : AppCompatActivity() {
+@SuppressLint("CustomSplashScreen")
+class SplashActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivitySplashBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        val fragmentManager = supportFragmentManager
-
-        val transaction = fragmentManager.beginTransaction()
-        val fragment = OnboardingFragment()
-        transaction.replace(R.id.fragment_container, fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
+        android.os.Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this@SplashActivity, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }, 2500)
     }
 }
+
+

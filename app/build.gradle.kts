@@ -7,6 +7,10 @@ android {
     namespace = "com.mobven.fitai"
     compileSdk = 34
 
+    buildFeatures{
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.mobven.fitai"
         minSdk = 24
@@ -33,6 +37,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -42,7 +49,13 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    testImplementation(libs.bundles.testImplementation)
+    androidTestImplementation(libs.bundles.androidTestImplementation)
+
+    // Navigation
+    implementation(libs.bundles.navigation)
+
+    // Viewpager Indicator - 3rd Party
+    implementation(libs.thirdparty.viewpagerdotsindicator)
+
 }
