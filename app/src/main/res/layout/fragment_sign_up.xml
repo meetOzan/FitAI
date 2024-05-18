@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -43,6 +44,7 @@
             android:id="@+id/edit_text_nickname_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLines="1"
             android:fontFamily="@font/urbanist_regular"
             android:hint="@string/nickname"
             android:inputType="text" />
@@ -67,6 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/urbanist_regular"
+            android:maxLines="1"
             android:hint="@string/email"
             android:inputType="textEmailAddress" />
 
@@ -91,6 +94,7 @@
             android:id="@+id/edit_text_password_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLines="1"
             android:fontFamily="@font/urbanist_regular"
             android:hint="@string/password" />
 
@@ -115,6 +119,7 @@
             android:id="@+id/edit_text_password_again_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLines="1"
             android:fontFamily="@font/urbanist_regular"
             android:hint="@string/password_again"
             android:inputType="textPassword" />
@@ -141,7 +146,8 @@
         android:textSize="@dimen/_14sp"
         app:layout_constraintBottom_toBottomOf="@id/sign_up_terms_checkbox"
         app:layout_constraintStart_toEndOf="@id/sign_up_terms_checkbox"
-        app:layout_constraintTop_toTopOf="@id/sign_up_terms_checkbox" />
+        app:layout_constraintTop_toTopOf="@id/sign_up_terms_checkbox"
+        app:layout_constraintVertical_bias="0.517" />
 
     <TextView
         android:id="@+id/tv_and_sign_up"
