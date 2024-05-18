@@ -14,4 +14,20 @@
     <string name="contentDescription">Image</string>
     <string name="register">Kayıt Ol</string>
     <string name="login">Giriş Yap</string>
+    <string name="back_button">Back Button</string>
+    <string name="toolbar_logo">toolbar_logo</string>
+    <string name="sign_up_title">Merhaba!\nBaşlamak için kaydolun</string>
+    <string name="nickname">Kullanıcı Adı</string>
+    <string name="email">Email</string>
+    <string name="password">Parola</string>
+    <string name="password_again">Tekrar Parola</string>
+    <string name="or_register_with">Ve ya Şununla Kayıt Olun</string>
+    <string name="zaten_hesab_n_z_var_m">Zaten hesabınız var mı?</string>
+    <string name="terms">Şartları</string>
+    <string name="and">ve</string>
+    <string name="conditions">gizlilik politikasını</string>
+    <string name="accept">kabul ediyorum.</string>
+    <string name="apple_register_button">apple_register_button</string>
+    <string name="google_register_button">google_register_button</string>
+    <string name="facebook_register_button">facebook_register_button</string>
 </resources>

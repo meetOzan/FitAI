@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#00000000</color>
     <color name="onboarding_background">#FFD8D8D8</color>
 
     <!-- #1E232C -->
-    <color name="next_button_color">#FF1E232C</color>
+    <color name="main_grey">#FF1E232C</color>
 
     <!-- #1E232C33 -->
-    <color name="transparent_grey">#331E232C</color>
+    <color name="main_transparent_grey">#331E232C</color>
 
-    <color name="darkButtonBackground">#1E232C</color>
+    <!--#E8ECF4-->
+    <color name="light_grey">#FFE8ECF4</color>
+
+    <!--#F7F8F9;-->
+    <color name="light_grey_2">#FFF7F8F9</color>
+
+    <!-- Text Input Layout default stroke color -->
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#FFE8ECF4</color>
+
+    <!--#6A707C-->
+    <color name="dark_grey">#FF6A707C</color>
+
 </resources>
