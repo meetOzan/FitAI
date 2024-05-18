@@ -30,4 +30,16 @@
     <string name="apple_register_button">apple_register_button</string>
     <string name="google_register_button">google_register_button</string>
     <string name="facebook_register_button">facebook_register_button</string>
+    <string name="what_is_your_height">Boyunuz kaç?</string>
+    <string name="cm">cm</string>
+    <string name="kg">kg</string>
+    <string name="what_is_your_weight">Kilonuz kaç?</string>
+    <string name="goal">Goal</string>
+    <string name="what_is_your_weight_goal">Hedef kilonuz kaç?</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="cinsiyetiniz_nedir">Cinsiyetiniz nedir?</string>
+    <string name="other_gender">Belirtmek istemiyorum</string>
+    <string name="male_gender">Erkek</string>
+    <string name="female_gender">Kadın</string>
 </resources>

@@ -11,6 +11,9 @@
     <!-- #1E232C33 -->
     <color name="main_transparent_grey">#331E232C</color>
 
+    <!--#EFF1F4-->
+    <color name="light_grey_3">#FFEFF1F4</color>
+
     <!--#E8ECF4-->
     <color name="light_grey">#FFE8ECF4</color>
 
