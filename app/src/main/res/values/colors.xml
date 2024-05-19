@@ -11,14 +11,17 @@
     <!-- #1E232C33 -->
     <color name="main_transparent_grey">#331E232C</color>
 
-    <!--#EFF1F4-->
-    <color name="light_grey_3">#FFEFF1F4</color>
-
     <!--#E8ECF4-->
     <color name="light_grey">#FFE8ECF4</color>
 
     <!--#F7F8F9;-->
     <color name="light_grey_2">#FFF7F8F9</color>
+
+    <!--#EFF1F4-->
+    <color name="light_grey_3">#FFEFF1F4</color>
+
+    <!--D1D1D1-->
+    <color name="light_grey_4">#FFD1D1D1</color>
 
     <!-- Text Input Layout default stroke color -->
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#FFE8ECF4</color>

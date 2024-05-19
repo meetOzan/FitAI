@@ -65,4 +65,11 @@
     <string name="pilates">Pilates</string>
     <string name="running">Koşu</string>
     <string name="walking">Yürüyüş</string>
+    <string name="what_are_body_part">Odaklanmak istediğiniz bölgeler nereler?</string>
+    <string name="chest">Göğüs</string>
+    <string name="hip">Kalça</string>
+    <string name="belly_back">Bel ve Sırt</string>
+    <string name="shoulder_arms">Omuz ve kollar</string>
+    <string name="leg">Bacaklar</string>
+    <string name="health_problem_hint">Gluten, laktoz...</string>
 </resources>
