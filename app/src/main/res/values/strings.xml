@@ -72,4 +72,17 @@
     <string name="shoulder_arms">Omuz ve kollar</string>
     <string name="leg">Bacaklar</string>
     <string name="health_problem_hint">Gluten, laktoz...</string>
+    <string name="do_you_know_other_problem">Bilinen başka sağlık sorununuz var mı?</string>
+    <string name="which_foods_alergies">Hangi yiyeceklere alerjiniz var?</string>
+    <string name="which_type_diet">Hangi tip diyet yapmak istersiniz?</string>
+    <string name="celiac">Çölyak</string>
+    <string name="diabetes_1">Diyabet Tip 1</string>
+    <string name="diabetes_2">Diyabet Tip 2</string>
+    <string name="tension">Tansiyon</string>
+    <string name="intolerance_allergy">Intolerance / Allergy</string>
+    <string name="traditional">Geleneksel</string>
+    <string name="vegetarian">Vejetaryen</string>
+    <string name="vegan">Vegan</string>
+    <string name="pescetarian">Peskateryan</string>
+    <string name="ketogenic">Ketojenik</string>
 </resources>

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".login.sign_up.HealthProblemFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".login.sign_up.FoodAllergiesFragment">
 
     <TextView
-        android:id="@+id/health_problem_title"
+        android:id="@+id/food_allergies_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_28dp"
         android:fontFamily="@font/urbanist_bold"
         android:maxEms="10"
-        android:text="@string/what_are_body_part"
+        android:text="@string/which_foods_alergies"
         android:textSize="@dimen/_30sp"
-        app:layout_constraintEnd_toEndOf="@+id/text_input_layout_health_problem"
-        app:layout_constraintStart_toStartOf="@+id/text_input_layout_health_problem"
+        app:layout_constraintEnd_toEndOf="@+id/text_input_layout_food_allergies"
+        app:layout_constraintStart_toStartOf="@+id/text_input_layout_food_allergies"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_layout_health_problem"
+        android:id="@+id/text_input_layout_food_allergies"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_24dp"
@@ -31,15 +31,15 @@
         app:boxCornerRadiusBottomStart="@dimen/_8dp"
         app:boxCornerRadiusTopEnd="@dimen/_8dp"
         app:boxCornerRadiusTopStart="@dimen/_8dp"
-        app:boxStrokeColor="@color/light_grey_3"
         app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/light_grey_3"
         app:boxStrokeWidth="@dimen/_1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/health_problem_title">
+        app:layout_constraintTop_toBottomOf="@id/food_allergies_title">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edit_text_health_problem"
+            android:id="@+id/edit_text_food_allergies"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/urbanist_regular"
@@ -47,11 +47,10 @@
             android:inputType="text"
             android:maxLines="3"
             android:paddingBottom="50dp" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_health_problem_continue"
+        android:id="@+id/btn_food_allergies_continue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
