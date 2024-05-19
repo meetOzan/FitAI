@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.mobven.fitai.databinding.ActivityMainBinding
-import com.mobven.fitai.login.sign_up.SportBodyPartFragment
+import com.mobven.fitai.login.sign_up.AverageSleepFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         val fragmentManager = supportFragmentManager
 
         val transaction = fragmentManager.beginTransaction()
-        val fragment = SportBodyPartFragment()
+        val fragment = AverageSleepFragment()
         transaction.replace(R.id.fragment_container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()

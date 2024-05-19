@@ -85,4 +85,20 @@
     <string name="vegan">Vegan</string>
     <string name="pescetarian">Peskateryan</string>
     <string name="ketogenic">Ketojenik</string>
+    <string name="how_describe_daily_movement">Günlük hareket durumunuzu nasıl tanımlarsınız?</string>
+    <string name="how_many_hours_sleep">Günlük ortalama kaç saat uyursunuz?</string>
+    <string name="how_many_glasses_water">Günlük ortalama kaç bardak su içersiniz?</string>
+    <string name="a_water_glass_is_200ml">Bir su bardağı ortalama 200 ml’dir.</string>
+    <string name="almost_never">Neredeyse hiç</string>
+    <string name="rarely">Düşük seviyede</string>
+    <string name="sometimes">Ortalama bir hareketliliğe sahibim</string>
+    <string name="often">Elimden geldiğince hareket etmeye çalışırım</string>
+    <string name="always">Fazladan hareket için vakit yaratırım</string>
+    <string name="zero_six_hour">0 - 6 Saat</string>
+    <string name="six_ten_hour">6 - 10 Saat</string>
+    <string name="more_than_ten">10\'dan fazla</string>
+    <string name="zero_one_liter">0 - 1 Litre</string>
+    <string name="two_three_liter">2 - 3 Litre</string>
+    <string name="more_than_three">4 - 5 Litre</string>
+    <string name="radio_text">Radio Text</string>
 </resources>

@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_sign_up"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/card_sign_up"
-    app:strokeColor="@color/light_grey"
     android:layout_marginVertical="@dimen/_6dp"
-    app:cardCornerRadius="@dimen/_8dp">
+    app:cardCornerRadius="@dimen/_8dp"
+    app:strokeColor="@color/light_grey">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:background="@color/white"
         android:id="@+id/card_sign_up_item"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
 
         <ImageView
             android:id="@+id/radio_button_image"
@@ -28,15 +29,17 @@
 
         <TextView
             android:id="@+id/radio_button_text"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_16sp"
+            android:layout_marginHorizontal="@dimen/_16sp"
             android:fontFamily="@font/urbanist_bold"
-            android:text="Radio Text"
+            android:textAlignment="textStart"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@id/radio_button_image"
+            app:layout_constraintEnd_toStartOf="@+id/checkbox_image_sign_up_item"
             app:layout_constraintStart_toEndOf="@id/radio_button_image"
-            app:layout_constraintTop_toTopOf="@id/radio_button_image" />
+            app:layout_constraintTop_toTopOf="@id/radio_button_image"
+            tools:text="@string/radio_text" />
 
         <ImageView
             android:id="@+id/checkbox_image_sign_up_item"
