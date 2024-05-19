@@ -29,7 +29,7 @@ class GenderSignUpFragment : Fragment() {
 
         val genderList = listOf(
             SignUpSelectorItem(
-                title = getString(R.string.female_gender),
+                title = getString(R.string.other_gender),
                 isSelected = false,
                 type = SignUpSelectorType.RADIO
             ),
@@ -39,7 +39,7 @@ class GenderSignUpFragment : Fragment() {
                 type = SignUpSelectorType.RADIO
             ),
             SignUpSelectorItem(
-                title = getString(R.string.other_gender),
+                title = getString(R.string.female_gender),
                 isSelected = false,
                 type = SignUpSelectorType.RADIO
             )

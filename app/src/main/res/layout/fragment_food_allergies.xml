@@ -9,11 +9,10 @@
 
     <TextView
         android:id="@+id/food_allergies_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24dp"
         android:layout_marginTop="@dimen/_28dp"
-        android:fontFamily="@font/urbanist_bold"
-        android:maxEms="10"
         android:text="@string/which_foods_alergies"
         android:textSize="@dimen/_30sp"
         app:layout_constraintEnd_toEndOf="@+id/text_input_layout_food_allergies"

@@ -49,7 +49,7 @@ class SportOftenFragment : Fragment() {
                 isSelected = false,
                 type = SignUpSelectorType.RADIO
             )
-        )
+        ).reversed()
 
         adapter.submitList(sportOftenList)
         binding.rvGoals.adapter = adapter

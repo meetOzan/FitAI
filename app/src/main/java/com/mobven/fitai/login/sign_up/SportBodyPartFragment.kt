@@ -59,7 +59,7 @@ class SportBodyPartFragment : Fragment() {
                 isSelected = false,
                 type = SignUpSelectorType.CHECKBOX
             ),
-        )
+        ).reversed()
 
         adapter.submitList(bodyPartList)
         binding.rvBodyPartSport.adapter = adapter

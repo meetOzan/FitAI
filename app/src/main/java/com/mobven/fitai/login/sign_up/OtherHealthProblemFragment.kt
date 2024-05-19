@@ -53,7 +53,7 @@ class OtherHealthProblemFragment : Fragment() {
                 isSelected = false,
                 type = SignUpSelectorType.RADIO
             )
-        )
+        ).reversed()
 
         adapter.submitList(healthProblems)
         binding.rvOtherHealthProblem.adapter = adapter

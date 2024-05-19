@@ -53,7 +53,7 @@ class PreferredSportFragment : Fragment() {
                 isSelected = false,
                 type = SignUpSelectorType.CHECKBOX
             ),
-        )
+        ).reversed()
 
         adapter.submitList(preferredSportList)
         binding.rvGoals.adapter = adapter

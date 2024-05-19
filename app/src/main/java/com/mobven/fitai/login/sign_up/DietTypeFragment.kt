@@ -27,19 +27,9 @@ class DietTypeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val dietTypeList = listOf<SignUpSelectorItem>(
+        val dietTypeList = listOf(
             SignUpSelectorItem(
-                title = getString(R.string.traditional),
-                isSelected = false,
-                type = SignUpSelectorType.RADIO
-            ),
-            SignUpSelectorItem(
-                title = getString(R.string.vegetarian),
-                isSelected = false,
-                type = SignUpSelectorType.RADIO
-            ),
-            SignUpSelectorItem(
-                title = getString(R.string.vegan),
+                title = getString(R.string.ketogenic),
                 isSelected = false,
                 type = SignUpSelectorType.RADIO
             ),
@@ -49,7 +39,17 @@ class DietTypeFragment : Fragment() {
                 type = SignUpSelectorType.RADIO
             ),
             SignUpSelectorItem(
-                title = getString(R.string.ketogenic),
+                title = getString(R.string.vegan),
+                isSelected = false,
+                type = SignUpSelectorType.RADIO
+            ),
+            SignUpSelectorItem(
+                title = getString(R.string.vegetarian),
+                isSelected = false,
+                type = SignUpSelectorType.RADIO
+            ),
+            SignUpSelectorItem(
+                title = getString(R.string.traditional),
                 isSelected = false,
                 type = SignUpSelectorType.RADIO
             )
@@ -59,6 +59,5 @@ class DietTypeFragment : Fragment() {
         binding.rvDietType.adapter = adapter
 
     }
-
 
 }

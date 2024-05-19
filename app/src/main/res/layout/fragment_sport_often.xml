@@ -6,11 +6,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".login.sign_up.SportOftenFragment">
 
-
     <TextView
         android:id="@+id/sports_often_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24dp"
         android:layout_marginTop="@dimen/_28dp"
         android:fontFamily="@font/urbanist_bold"
         android:text="@string/how_often_would_like_sports"
@@ -26,7 +26,7 @@
         android:layout_height="@dimen/_0dp"
         android:layout_marginHorizontal="@dimen/_24dp"
         android:layout_marginVertical="@dimen/_32dp"
-        android:stackFromBottom="true"
+        app:reverseLayout="true"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@id/btn_sports_often_continue"
         app:layout_constraintTop_toBottomOf="@id/sports_often_title"

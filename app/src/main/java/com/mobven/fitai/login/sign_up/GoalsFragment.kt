@@ -29,24 +29,24 @@ class GoalsFragment : Fragment() {
 
         val goalsList = listOf(
             SignUpSelectorItem(
-                title = getString(R.string.weight_loss),
+                title = getString(R.string.calorie_control),
                 isSelected = false,
-                type = SignUpSelectorType.CHECKBOX
-            ),
-            SignUpSelectorItem(
-                title = getString(R.string.weight_gain),
-                isSelected = false,
-                type = SignUpSelectorType.CHECKBOX
+                type = SignUpSelectorType.RADIO
             ),
             SignUpSelectorItem(
                 title = getString(R.string.muscle_gain),
                 isSelected = false,
-                type = SignUpSelectorType.CHECKBOX
+                type = SignUpSelectorType.RADIO
             ),
             SignUpSelectorItem(
-                title = getString(R.string.calorie_control),
+                title = getString(R.string.weight_gain),
                 isSelected = false,
-                type = SignUpSelectorType.CHECKBOX
+                type = SignUpSelectorType.RADIO
+            ),
+            SignUpSelectorItem(
+                title = getString(R.string.weight_loss),
+                isSelected = false,
+                type = SignUpSelectorType.RADIO
             )
         )
 

@@ -58,7 +58,7 @@ class PlansFragment : Fragment() {
                 isSelected = false,
                 type = SignUpSelectorType.CHECKBOX
             )
-        )
+        ).reversed()
 
         adapter.submitList(plansList)
         binding.rvGoals.adapter = adapter
