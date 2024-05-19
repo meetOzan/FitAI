@@ -42,4 +42,5 @@
     <string name="other_gender">Belirtmek istemiyorum</string>
     <string name="male_gender">Erkek</string>
     <string name="female_gender">Kadın</string>
+    <string name="enter_birthday">Enter Your Birthday</string>
 </resources>
