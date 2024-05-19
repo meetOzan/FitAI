@@ -1,6 +1,6 @@
 package com.mobven.fitai.login.sign_up.adapter
 
-import android.content.Context
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +11,7 @@ import com.mobven.fitai.R
 import com.mobven.fitai.databinding.CardSignUpBinding
 import com.mobven.fitai.login.sign_up.SignUpSelectorItem
 
-class SignUpListAdapter(private val context: Context) :
+class SignUpListAdapter :
     ListAdapter<SignUpSelectorItem, SignUpListAdapter.ViewHolder>(SignUpItemDiffUtil()) {
 
     inner class ViewHolder(private val binding: CardSignUpBinding) :
@@ -29,13 +29,13 @@ class SignUpListAdapter(private val context: Context) :
                 if (item.isSelected) {
                     binding.cardSignUpItem.setBackgroundColor(
                         ContextCompat.getColor(
-                            context,
+                            binding.root.context,
                             R.color.light_grey_3
                         )
                     )
                     binding.radioButtonImage.setColorFilter(
                         ContextCompat.getColor(
-                            context,
+                            binding.root.context,
                             R.color.white
                         )
                     )
@@ -43,13 +43,13 @@ class SignUpListAdapter(private val context: Context) :
                 } else {
                     binding.cardSignUpItem.setBackgroundColor(
                         ContextCompat.getColor(
-                            context,
+                            binding.root.context,
                             R.color.white
                         )
                     )
                     binding.radioButtonImage.setColorFilter(
                         ContextCompat.getColor(
-                            context,
+                            binding.root.context,
                             R.color.light_grey_3
                         )
                     )
@@ -59,12 +59,14 @@ class SignUpListAdapter(private val context: Context) :
         }
     }
 
-    private fun selectItem(items: List<SignUpSelectorItem>,position: Int) {
+    @SuppressLint("NotifyDataSetChanged")
+    private fun selectItem(items: List<SignUpSelectorItem>, position: Int) {
         items.forEachIndexed { index, item ->
             item.isSelected = index == position
         }
         notifyDataSetChanged()
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val binding = CardSignUpBinding.inflate(layoutInflater, parent, false)
@@ -74,4 +76,5 @@ class SignUpListAdapter(private val context: Context) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
+
 }

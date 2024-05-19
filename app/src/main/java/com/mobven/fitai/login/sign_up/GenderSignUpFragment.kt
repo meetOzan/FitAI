@@ -12,7 +12,7 @@ import com.mobven.fitai.login.sign_up.adapter.SignUpListAdapter
 class GenderSignUpFragment : Fragment() {
 
     private lateinit var binding: FragmentGenderSignUpBinding
-    private val adapter by lazy { SignUpListAdapter(requireContext()) }
+    private val adapter = SignUpListAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
