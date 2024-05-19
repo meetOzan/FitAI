@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.mobven.fitai.R
 import com.mobven.fitai.databinding.CardSignUpBinding
-import com.mobven.fitai.login.sign_up.SignUpSelectorItem
+import com.mobven.fitai.login.sign_up.model.SignUpSelectorItem
+import com.mobven.fitai.util.SignUpSelectorType
 
 class SignUpListAdapter :
     ListAdapter<SignUpSelectorItem, SignUpListAdapter.ViewHolder>(SignUpItemDiffUtil()) {
@@ -23,37 +24,49 @@ class SignUpListAdapter :
                 radioButtonText.text = item.title
 
                 cardSignUp.setOnClickListener {
-                    selectItem(currentList,adapterPosition)
+                    if (item.type == SignUpSelectorType.RADIO) {
+                        selectItem(currentList, adapterPosition)
+                        notifyItemChanged(adapterPosition)
+                    } else {
+                        item.isSelected = !item.isSelected
+                        notifyItemChanged(adapterPosition)
+                    }
+                }
+
+                if (item.type == SignUpSelectorType.RADIO) {
+                    checkboxImageSignUpItem.visibility = View.INVISIBLE
+                } else {
+                    checkboxImageSignUpItem.visibility = View.VISIBLE
                 }
 
                 if (item.isSelected) {
-                    binding.cardSignUpItem.setBackgroundColor(
+                    cardSignUpItem.setBackgroundColor(
                         ContextCompat.getColor(
-                            binding.root.context,
+                            root.context,
                             R.color.light_grey_3
                         )
                     )
-                    binding.radioButtonImage.setColorFilter(
+                    radioButtonImage.setColorFilter(
                         ContextCompat.getColor(
-                            binding.root.context,
+                            root.context,
                             R.color.white
                         )
                     )
-                    binding.checkboxImageSignUpItem.visibility = View.VISIBLE
+                    checkboxImageSignUpItem.visibility = View.VISIBLE
                 } else {
-                    binding.cardSignUpItem.setBackgroundColor(
+                    cardSignUpItem.setBackgroundColor(
                         ContextCompat.getColor(
-                            binding.root.context,
+                            root.context,
                             R.color.white
                         )
                     )
-                    binding.radioButtonImage.setColorFilter(
+                    radioButtonImage.setColorFilter(
                         ContextCompat.getColor(
-                            binding.root.context,
+                            root.context,
                             R.color.light_grey_3
                         )
                     )
-                    binding.checkboxImageSignUpItem.visibility = View.INVISIBLE
+                    checkboxImageSignUpItem.visibility = View.INVISIBLE
                 }
             }
         }

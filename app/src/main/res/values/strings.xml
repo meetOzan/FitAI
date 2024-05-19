@@ -43,4 +43,26 @@
     <string name="male_gender">Erkek</string>
     <string name="female_gender">Kadın</string>
     <string name="enter_birthday">Enter Your Birthday</string>
+    <string name="all">Hepsi</string>
+    <string name="eating_plan">Beslenme Planı Oluşturma</string>
+    <string name="training_plan">Antreman Planı Oluşturma</string>
+    <string name="calorie_control">Kalori Kontrolü</string>
+    <string name="intermittent_fasting">Aralıklı Oruç</string>
+    <string name="water_tracking">Su Takibi</string>
+    <string name="which_plan_do_you_apply">Bu uygulamada hangi planları uygulamak istersiniz?</string>
+    <string name="muscle_gain">Kas Kazanımı</string>
+    <string name="weight_gain">Kilo Alma</string>
+    <string name="weight_loss">Kilo Kaybı</string>
+    <string name="what_is_your_goals">Hedefleriniz nelerdir?</string>
+    <string name="what_are_your_preferred_sports">Tercih ettiğiniz spor aktiviteleri nelerdir?</string>
+    <string name="how_often_would_like_sports">Hangi sıklıkla spor yapmak istersiniz?</string>
+    <string name="as_much_as_offered">Bana önerilen kadar</string>
+    <string name="on_two_times_week">Haftada 1–2</string>
+    <string name="three_four_times_week">Haftada 3–4</string>
+    <string name="five_six_times_week">Haftada 5–6</string>
+    <string name="yoga">Yoga</string>
+    <string name="fitness">Fitness</string>
+    <string name="pilates">Pilates</string>
+    <string name="running">Koşu</string>
+    <string name="walking">Yürüyüş</string>
 </resources>
