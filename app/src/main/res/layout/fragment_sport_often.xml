@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".login.sign_up.SportOftenFragment">
+    tools:context=".login.sign_up.screens.SportOftenFragment">
 
     <TextView
         android:id="@+id/sports_often_title"

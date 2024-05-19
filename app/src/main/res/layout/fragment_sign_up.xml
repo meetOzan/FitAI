@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".login.sign_up.SignUpFragment">
+    tools:context=".login.sign_up.screens.SignUpFragment">
 
     <include
         android:id="@+id/toolbar_sign_up"

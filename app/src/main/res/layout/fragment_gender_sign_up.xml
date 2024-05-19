@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    tools:context=".login.sign_up.GenderSignUpFragment">
+    tools:context=".login.sign_up.screens.GenderSignUpFragment">
 
     <TextView
         android:id="@+id/gender_title"

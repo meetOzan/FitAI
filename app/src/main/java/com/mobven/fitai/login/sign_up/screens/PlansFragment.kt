@@ -1,4 +1,4 @@
-package com.mobven.fitai.login.sign_up
+package com.mobven.fitai.login.sign_up.screens
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,8 +11,7 @@ import com.mobven.fitai.login.sign_up.adapter.SignUpListAdapter
 import com.mobven.fitai.login.sign_up.model.SignUpSelectorItem
 import com.mobven.fitai.util.SignUpSelectorType
 
-
-class SportOftenFragment : Fragment() {
+class PlansFragment : Fragment() {
 
     private lateinit var binding: FragmentGoalsBinding
     private val adapter = SignUpListAdapter()
@@ -28,32 +27,41 @@ class SportOftenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val sportOftenList = listOf(
+        val plansList = listOf(
             SignUpSelectorItem(
-                title = getString(R.string.as_much_as_offered),
+                title = getString(R.string.all),
                 isSelected = false,
-                type = SignUpSelectorType.RADIO
+                type = SignUpSelectorType.CHECKBOX
             ),
             SignUpSelectorItem(
-                title = getString(R.string.on_two_times_week),
+                title = getString(R.string.eating_plan),
                 isSelected = false,
-                type = SignUpSelectorType.RADIO
+                type = SignUpSelectorType.CHECKBOX
             ),
             SignUpSelectorItem(
-                title = getString(R.string.three_four_times_week),
+                title = getString(R.string.training_plan),
                 isSelected = false,
-                type = SignUpSelectorType.RADIO
+                type = SignUpSelectorType.CHECKBOX
             ),
             SignUpSelectorItem(
-                title = getString(R.string.five_six_times_week),
+                title = getString(R.string.calorie_control),
                 isSelected = false,
-                type = SignUpSelectorType.RADIO
+                type = SignUpSelectorType.CHECKBOX
+            ),
+            SignUpSelectorItem(
+                title = getString(R.string.intermittent_fasting),
+                isSelected = false,
+                type = SignUpSelectorType.CHECKBOX
+            ),
+            SignUpSelectorItem(
+                title = getString(R.string.water_tracking),
+                isSelected = false,
+                type = SignUpSelectorType.CHECKBOX
             )
         ).reversed()
 
-        adapter.submitList(sportOftenList)
+        adapter.submitList(plansList)
         binding.rvGoals.adapter = adapter
-
     }
 
 }

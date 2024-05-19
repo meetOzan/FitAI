@@ -5,7 +5,7 @@
     android:background="@color/white"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".login.sign_up.GoalSignUpFragment">
+    tools:context=".login.sign_up.screens.GoalSignUpFragment">
 
     <TextView
         android:id="@+id/weight_goal_title"

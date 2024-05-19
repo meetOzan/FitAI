@@ -1,4 +1,4 @@
-package com.mobven.fitai.login.sign_up
+package com.mobven.fitai.login.sign_up.screens
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,7 +11,7 @@ import com.mobven.fitai.login.sign_up.adapter.SignUpListAdapter
 import com.mobven.fitai.login.sign_up.model.SignUpSelectorItem
 import com.mobven.fitai.util.SignUpSelectorType
 
-class PreferredSportFragment : Fragment() {
+class GoalsFragment : Fragment() {
 
     private lateinit var binding: FragmentGoalsBinding
     private val adapter = SignUpListAdapter()
@@ -19,7 +19,7 @@ class PreferredSportFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View{
+    ): View {
         binding = FragmentGoalsBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -27,36 +27,30 @@ class PreferredSportFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val preferredSportList = listOf(
+        val goalsList = listOf(
             SignUpSelectorItem(
-                title = getString(R.string.all),
+                title = getString(R.string.calorie_control),
                 isSelected = false,
-                type = SignUpSelectorType.CHECKBOX
+                type = SignUpSelectorType.RADIO
             ),
             SignUpSelectorItem(
-                title = getString(R.string.yoga),
+                title = getString(R.string.muscle_gain),
                 isSelected = false,
-                type = SignUpSelectorType.CHECKBOX
+                type = SignUpSelectorType.RADIO
             ),
             SignUpSelectorItem(
-                title = getString(R.string.fitness),
+                title = getString(R.string.weight_gain),
                 isSelected = false,
-                type = SignUpSelectorType.CHECKBOX
+                type = SignUpSelectorType.RADIO
             ),
             SignUpSelectorItem(
-                title = getString(R.string.running),
+                title = getString(R.string.weight_loss),
                 isSelected = false,
-                type = SignUpSelectorType.CHECKBOX
-            ),
-            SignUpSelectorItem(
-                title = getString(R.string.walking),
-                isSelected = false,
-                type = SignUpSelectorType.CHECKBOX
-            ),
-        ).reversed()
+                type = SignUpSelectorType.RADIO
+            )
+        )
 
-        adapter.submitList(preferredSportList)
+        adapter.submitList(goalsList)
         binding.rvGoals.adapter = adapter
-
     }
 }

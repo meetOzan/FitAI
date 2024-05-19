@@ -7,7 +7,7 @@
     android:background="@color/white"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".login.sign_up.PlanCreatingFragment">
+    tools:context=".login.sign_up.screens.PlanCreatingFragment">
 
     <ImageView
         android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package com.mobven.fitai.login.sign_up
+package com.mobven.fitai.login.sign_up.screens
 
 import android.app.DatePickerDialog
 import android.icu.util.Calendar

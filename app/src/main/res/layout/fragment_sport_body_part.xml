@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".login.sign_up.SportBodyPartFragment">
+    tools:context=".login.sign_up.screens.SportBodyPartFragment">
 
     <TextView
         android:id="@+id/body_part_title"

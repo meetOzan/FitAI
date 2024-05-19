@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".login.sign_up.HeightSignUpFragment">
+    tools:context=".login.sign_up.screens.HeightSignUpFragment">
 
     <TextView
         android:id="@+id/sign_up_title"

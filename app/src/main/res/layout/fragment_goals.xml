@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".login.sign_up.GoalsFragment">
+    tools:context=".login.sign_up.screens.GoalsFragment">
 
     <TextView
         android:id="@+id/goals_title"

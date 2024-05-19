@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.mobven.fitai.databinding.ActivityMainBinding
-import com.mobven.fitai.login.sign_up.AverageSleepFragment
+import com.mobven.fitai.login.sign_up.screens.AverageSleepFragment
 
 class MainActivity : AppCompatActivity() {
 

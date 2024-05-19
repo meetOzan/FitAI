@@ -1,4 +1,4 @@
-package com.mobven.fitai.login
+package com.mobven.fitai.login.sign_up.screens
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,19 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import com.mobven.fitai.R
 
-class AuthFragment : Fragment() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
+class WeightSignUpFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        return inflater.inflate(R.layout.fragment_auth, container, false)
+        return inflater.inflate(R.layout.fragment_weight_sign_up, container, false)
     }
 
 }
