@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.hilt.plugin)
+    kotlin("kapt")
 }
 
 android {
@@ -57,5 +59,9 @@ dependencies {
 
     // Viewpager Indicator - 3rd Party
     implementation(libs.thirdparty.viewpagerdotsindicator)
+
+    // Hilt
+    implementation(libs.bundles.hiltImplementation)
+    kapt(libs.hilt.compiler)
 
 }
