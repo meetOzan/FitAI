@@ -104,4 +104,6 @@
     <string name="customized_plans_created">Size Özel Planlar Oluşturuluyor</string>
     <string name="personalized_plans_are_created_with_ai">Kişiselleştirilmiş planlarınız yapay zeka desteğiyle oluşturuluyor.</string>
     <string name="plans_creating">plans_creating</string>
+    <string name="allergies">Allergies</string>
+    <string name="health_problems">Health Problems</string>
 </resources>
