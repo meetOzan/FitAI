@@ -2,14 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageButton
+    <ImageView
         style="@style/Widget.AppCompat.ImageButton"
         android:id="@+id/toolbar_back"
         android:layout_width="@dimen/_40dp"
         android:layout_height="@dimen/_40dp"
+        android:clickable="true"
         android:contentDescription="@string/back_button"
+        android:focusable="true"
         app:strokeColor="@color/black"
         android:background="@drawable/bg_grey_stroke"
         android:layout_alignParentStart="true"

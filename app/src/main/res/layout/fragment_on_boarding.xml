@@ -9,8 +9,7 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/onboardingViewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".onboarding.OnboardingFragment"/>
+        android:layout_height="match_parent"/>
 
     <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
         android:id="@+id/onboarding_dots_indicator"
