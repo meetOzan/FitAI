@@ -15,10 +15,76 @@
         android:layout_marginTop="@dimen/_8dp"
         android:fontFamily="@font/urbanist_bold"
         android:layout_alignParentTop="true"
-        android:text="@string/what_is_your_weight_goal"
+        android:text="@string/what_is_your_birthday"
         android:textSize="@dimen/_30sp" />
 
-    <androidx.appcompat.widget.AppCompatEditText
+    <EditText
+        android:id="@+id/et_birthday_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="day"
+        android:maxLength="2"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_24dp"
+        android:hint="@string/_29"
+        android:inputType="numberDecimal"
+        android:textSize="22sp"
+        android:fontFamily="@font/urbanist_bold"
+        android:layout_below="@id/birthday_title"
+        android:background="@drawable/bg_grey_stroke"
+        android:padding="@dimen/_20dp"/>
+
+    <EditText
+        android:id="@+id/et_birthday_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="month"
+        android:inputType="numberDecimal"
+        android:maxLength="2"
+        android:layout_marginStart="@dimen/_12dp"
+        android:layout_marginTop="@dimen/_24dp"
+        android:hint="@string/_09"
+        android:textSize="22sp"
+        android:maxEms="10"
+        android:layout_toEndOf="@id/et_birthday_day"
+        android:fontFamily="@font/urbanist_bold"
+        android:layout_below="@id/birthday_title"
+        android:background="@drawable/bg_grey_stroke"
+        android:padding="@dimen/_20dp"/>
+
+    <EditText
+        android:id="@+id/et_birthday_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="year"
+        android:maxLength="4"
+        android:layout_marginStart="@dimen/_12dp"
+        android:layout_marginTop="@dimen/_24dp"
+        android:hint="@string/_2024"
+        android:inputType="numberDecimal"
+        android:textSize="22sp"
+        android:layout_toEndOf="@id/et_birthday_month"
+        android:fontFamily="@font/urbanist_bold"
+        android:layout_below="@id/birthday_title"
+        android:background="@drawable/bg_grey_stroke"
+        android:paddingVertical="@dimen/_20dp"
+        android:paddingHorizontal="@dimen/_40dp"/>
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/et_birthday_year"
+        android:layout_alignBottom="@id/et_birthday_year"
+        android:contentDescription="@string/calendar_icon"
+        android:src="@drawable/calendar"
+        android:padding="@dimen/_16sp"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/et_birthday_year"
+        android:layout_marginEnd="@dimen/_30dp"
+        android:layout_marginStart="@dimen/_12dp"/>
+
+
+    <!--<androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_birthday"
         android:layout_width="wrap_content"
         android:fontFamily="@font/urbanist_bold"
@@ -35,7 +101,7 @@
         android:textSize="@dimen/_36sp"
         android:background="@color/white"
         android:layout_below="@id/birthday_title"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content" />-->
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_birthday_continue"

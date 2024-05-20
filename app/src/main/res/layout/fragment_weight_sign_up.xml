@@ -17,35 +17,83 @@
         android:text="@string/what_is_your_weight"
         android:textSize="@dimen/_30sp" />
 
+    <RadioGroup
+        android:id="@+id/radio_group_weight"
+        android:checkedButton="@+id/radio_button_kg"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_margin="@dimen/_24dp"
+        android:background="@drawable/bg_radio_group"
+        android:layout_below="@id/weight_title"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_button_lbs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radio_button"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/lbs"
+            android:fontFamily="@font/urbanist_semibold"
+            android:textColor="@drawable/selector_radio_text_color"  />
+
+        <RadioButton
+            android:id="@+id/radio_button_kg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radio_button"
+            android:button="@null"
+            android:gravity="center"
+            android:fontFamily="@font/urbanist_semibold"
+            android:text="@string/kg"
+            android:textColor="@drawable/selector_radio_text_color" />
+    </RadioGroup>
+
     <LinearLayout
+        android:id="@+id/ll_weight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/weight_title"
-        android:textSize="@dimen/_48sp"
+        android:layout_below="@id/radio_group_weight"
         android:layout_marginTop="48dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:textSize="@dimen/_48sp">
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/et_weight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/urbanist_bold"
-            android:textAlignment="center"
+            android:background="@color/transparent"
             android:hint="@string/weight"
             android:inputType="numberDecimal"
             android:maxLength="3"
             android:maxLines="1"
+            android:layout_marginEnd="@dimen/_4dp"
+            android:textAlignment="center"
             android:textSize="@dimen/_48sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:fontFamily="@font/poppins_regular"
+            android:fontFamily="@font/urbanist_bold"
+            android:textColor="@color/main_grey"
             android:text="@string/kg"
+            android:layout_marginBottom="@dimen/_4dp"
             android:textSize="@dimen/_20sp" />
     </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:layout_below="@id/ll_weight"
+        android:layout_marginTop="@dimen/_12dp"
+        app:dividerColor="@color/light_grey"
+        android:layout_marginHorizontal="@dimen/_24dp"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_weight_continue"

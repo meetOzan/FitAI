@@ -104,6 +104,13 @@
     <string name="customized_plans_created">Size Özel Planlar Oluşturuluyor</string>
     <string name="personalized_plans_are_created_with_ai">Kişiselleştirilmiş planlarınız yapay zeka desteğiyle oluşturuluyor.</string>
     <string name="plans_creating">plans_creating</string>
-    <string name="allergies">Allergies</string>
-    <string name="health_problems">Health Problems</string>
+    <string name="allergies">Alerjiler</string>
+    <string name="health_problems">Sağlık Problemleri</string>
+    <string name="lbs">lbs</string>
+    <string name="what_is_your_birthday">Doğum gününüz nedir?</string>
+    <string name="_2024">2024</string>
+    <string name="_09">09</string>
+    <string name="_29">29</string>
+    <string name="calendar_icon">calendar_icon</string>
+    <string name="ft">ft</string>
 </resources>

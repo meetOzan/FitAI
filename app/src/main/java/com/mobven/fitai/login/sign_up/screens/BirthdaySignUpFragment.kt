@@ -1,7 +1,5 @@
 package com.mobven.fitai.login.sign_up.screens
 
-import android.app.DatePickerDialog
-import android.icu.util.Calendar
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -26,27 +24,6 @@ class BirthdaySignUpFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.etBirthday.setOnClickListener {
-            val calendar = Calendar.getInstance()
-            val year = calendar[Calendar.YEAR]
-            val month = calendar[Calendar.MONTH]
-            val dayOfMonth = calendar[Calendar.DAY_OF_MONTH]
-
-            val datePickerDialog = DatePickerDialog(
-                requireContext(),
-                { _, selectedYear, selectedMonth, dayOfMonth ->
-                    val selectedDate = "$dayOfMonth/${selectedMonth + 1}/$selectedYear"
-                    binding.etBirthday.setText(selectedDate)
-                },
-                year,
-                month,
-                dayOfMonth
-            )
-
-            datePickerDialog.datePicker.maxDate = System.currentTimeMillis()
-            datePickerDialog.show()
-        }
-
         binding.btnBirthdayContinue.setOnClickListener {
             val currentItem = requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager).currentItem
             val nextItem = currentItem + 1
@@ -54,5 +31,4 @@ class BirthdaySignUpFragment : Fragment() {
         }
 
     }
-
 }

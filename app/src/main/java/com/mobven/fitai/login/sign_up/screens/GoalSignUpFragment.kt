@@ -24,11 +24,20 @@ class GoalSignUpFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnWeightGoalContinue.setOnClickListener {
-            val currentItem = requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager).currentItem
-            val nextItem = currentItem + 1
-            requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager).setCurrentItem(nextItem, true)
+        with(binding) {
+
+            btnWeightGoalContinue.setOnClickListener {
+                val currentItem = requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager).currentItem
+                val nextItem = currentItem + 1
+                requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager).setCurrentItem(nextItem, true)
+            }
+
+
         }
+
+
+
+
 
     }
 
