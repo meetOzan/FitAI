@@ -35,10 +35,6 @@ class GoalSignUpFragment : Fragment() {
 
         }
 
-
-
-
-
     }
 
 }
