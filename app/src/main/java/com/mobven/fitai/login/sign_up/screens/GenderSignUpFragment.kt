@@ -10,7 +10,7 @@ import com.mobven.fitai.R
 import com.mobven.fitai.databinding.FragmentGenderSignUpBinding
 import com.mobven.fitai.login.sign_up.adapter.SignUpListAdapter
 import com.mobven.fitai.login.sign_up.model.SignUpSelectorItem
-import com.mobven.fitai.util.SignUpSelectorType
+import com.mobven.fitai.util.enums.SignUpSelectorType
 
 class GenderSignUpFragment : Fragment() {
 
