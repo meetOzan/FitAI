@@ -2,54 +2,29 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
+    style="@style/mainConstraintLayoutStyle"
     tools:context=".login.sign_up.screens.WeightSignUpFragment">
 
     <TextView
         android:id="@+id/weight_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_8dp"
-        android:fontFamily="@font/urbanist_bold"
-        android:text="@string/what_is_your_weight"
-        android:textSize="@dimen/_30sp" />
+        style="@style/titleTextStyle"
+        android:text="@string/what_is_your_weight" />
 
     <RadioGroup
         android:id="@+id/radio_group_weight"
-        android:checkedButton="@+id/radio_button_kg"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_margin="@dimen/_24dp"
-        android:background="@drawable/bg_radio_group"
+        style="@style/radioGroupStyle"
         android:layout_below="@id/weight_title"
-        android:orientation="horizontal">
+        android:checkedButton="@+id/radio_button_kg">
 
         <RadioButton
             android:id="@+id/radio_button_lbs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/bg_radio_button"
-            android:button="@null"
-            android:gravity="center"
-            android:text="@string/lbs"
-            android:fontFamily="@font/urbanist_semibold"
-            android:textColor="@drawable/selector_radio_text_color"  />
+            style="@style/radioButtonStyle"
+            android:text="@string/lbs" />
 
         <RadioButton
             android:id="@+id/radio_button_kg"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/bg_radio_button"
-            android:button="@null"
-            android:gravity="center"
-            android:fontFamily="@font/urbanist_semibold"
-            android:text="@string/kg"
-            android:textColor="@drawable/selector_radio_text_color" />
+            style="@style/radioButtonStyle"
+            android:text="@string/kg" />
     </RadioGroup>
 
     <LinearLayout
@@ -64,51 +39,27 @@
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/et_weight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/urbanist_bold"
-            android:background="@color/transparent"
-            android:hint="@string/weight"
-            android:inputType="numberDecimal"
-            android:maxLength="3"
-            android:maxLines="1"
-            android:layout_marginEnd="@dimen/_4dp"
-            android:textAlignment="center"
-            android:textSize="@dimen/_48sp" />
+            style="@style/textViewPersonalInfoStyle"
+            android:hint="@string/weight" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:fontFamily="@font/urbanist_bold"
-            android:textColor="@color/main_grey"
-            android:text="@string/kg"
-            android:layout_marginBottom="@dimen/_4dp"
-            android:textSize="@dimen/_20sp" />
+            style="@style/textViewPersonalInfoUnitStyle"
+            android:text="@string/kg" />
+
     </LinearLayout>
 
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
         android:layout_height="@dimen/_1dp"
         android:layout_below="@id/ll_weight"
+        android:layout_marginHorizontal="@dimen/_24dp"
         android:layout_marginTop="@dimen/_12dp"
-        app:dividerColor="@color/light_grey"
-        android:layout_marginHorizontal="@dimen/_24dp"/>
+        app:dividerColor="@color/light_grey" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_weight_continue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        android:layout_marginHorizontal="@dimen/horizontal_margin"
-        android:layout_marginBottom="@dimen/_48sp"
-        android:backgroundTint="@color/main_grey"
-        android:fontFamily="@font/urbanist_bold"
-        android:paddingVertical="@dimen/_16dp"
+        style="@style/nextButtonStyle"
         android:text="@string/sonraki"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_16sp"
         app:cornerRadius="@dimen/button_corner_radius" />
 
 </RelativeLayout>

@@ -1,124 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/mainConstraintLayoutStyle"
     tools:context=".login.sign_up.screens.BirthdaySignUpFragment">
 
     <TextView
         android:id="@+id/birthday_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_8dp"
-        android:fontFamily="@font/urbanist_bold"
-        android:layout_alignParentTop="true"
-        android:text="@string/what_is_your_birthday"
-        android:textSize="@dimen/_30sp" />
+        style="@style/titleTextStyle"
+        android:text="@string/what_is_your_birthday" />
 
     <EditText
         android:id="@+id/et_birthday_day"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:autofillHints="day"
-        android:maxLength="2"
+        style="@style/birthdayDayMonthStyle"
         android:layout_marginStart="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_24dp"
-        android:hint="@string/_29"
-        android:inputType="numberDecimal"
-        android:textSize="22sp"
-        android:fontFamily="@font/urbanist_bold"
-        android:layout_below="@id/birthday_title"
-        android:background="@drawable/bg_grey_stroke"
-        android:padding="@dimen/_20dp"/>
+        android:autofillHints="day"
+        android:hint="@string/_29" />
 
     <EditText
         android:id="@+id/et_birthday_month"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:autofillHints="month"
-        android:inputType="numberDecimal"
-        android:maxLength="2"
-        android:layout_marginStart="@dimen/_12dp"
-        android:layout_marginTop="@dimen/_24dp"
-        android:hint="@string/_09"
-        android:textSize="22sp"
-        android:maxEms="10"
+        style="@style/birthdayDayMonthStyle"
         android:layout_toEndOf="@id/et_birthday_day"
-        android:fontFamily="@font/urbanist_bold"
-        android:layout_below="@id/birthday_title"
-        android:background="@drawable/bg_grey_stroke"
-        android:padding="@dimen/_20dp"/>
+        android:autofillHints="month"
+        android:hint="@string/_09" />
 
     <EditText
         android:id="@+id/et_birthday_year"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:autofillHints="year"
-        android:maxLength="4"
+        android:layout_below="@id/birthday_title"
         android:layout_marginStart="@dimen/_12dp"
         android:layout_marginTop="@dimen/_24dp"
+        android:layout_toEndOf="@id/et_birthday_month"
+        android:autofillHints="year"
+        android:background="@drawable/bg_grey_stroke"
+        android:fontFamily="@font/urbanist_bold"
         android:hint="@string/_2024"
         android:inputType="numberDecimal"
-        android:textSize="22sp"
-        android:layout_toEndOf="@id/et_birthday_month"
-        android:fontFamily="@font/urbanist_bold"
-        android:layout_below="@id/birthday_title"
-        android:background="@drawable/bg_grey_stroke"
+        android:maxLength="4"
+        android:paddingHorizontal="@dimen/_40dp"
         android:paddingVertical="@dimen/_20dp"
-        android:paddingHorizontal="@dimen/_40dp"/>
-    
+        android:textSize="22sp" />
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/et_birthday_year"
         android:layout_alignBottom="@id/et_birthday_year"
-        android:contentDescription="@string/calendar_icon"
-        android:src="@drawable/calendar"
-        android:padding="@dimen/_16sp"
         android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@id/et_birthday_year"
+        android:layout_marginStart="@dimen/_12dp"
         android:layout_marginEnd="@dimen/_30dp"
-        android:layout_marginStart="@dimen/_12dp"/>
-
-
-    <!--<androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/et_birthday"
-        android:layout_width="wrap_content"
-        android:fontFamily="@font/urbanist_bold"
-        android:maxLength="10"
-        android:maxLines="1"
-        android:focusable="false"
-        android:gravity="center"
-        android:hint="@string/enter_birthday"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:foregroundGravity="center_vertical"
-        android:layout_marginHorizontal="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_64dp"
-        android:textSize="@dimen/_36sp"
-        android:background="@color/white"
-        android:layout_below="@id/birthday_title"
-        android:layout_height="wrap_content" />-->
+        android:layout_toEndOf="@id/et_birthday_year"
+        android:contentDescription="@string/calendar_icon"
+        android:padding="@dimen/_16sp"
+        android:src="@drawable/calendar" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_birthday_continue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginHorizontal="@dimen/horizontal_margin"
-        android:backgroundTint="@color/main_grey"
-        android:fontFamily="@font/urbanist_bold"
-        android:layout_marginBottom="@dimen/_48sp"
-        android:paddingVertical="@dimen/_16dp"
-        android:text="@string/sonraki"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_16sp"
-        app:cornerRadius="@dimen/button_corner_radius"
-        android:layout_alignParentBottom="true"
+        style="@style/nextButtonStyle"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/sonraki"
+        app:cornerRadius="@dimen/button_corner_radius" />
 
 </RelativeLayout>

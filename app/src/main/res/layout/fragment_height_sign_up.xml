@@ -2,55 +2,30 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
+    style="@style/mainConstraintLayoutStyle"
     android:orientation="vertical"
     tools:context=".login.sign_up.screens.HeightSignUpFragment">
 
     <TextView
         android:id="@+id/height_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_8dp"
-        android:fontFamily="@font/urbanist_bold"
-        android:text="@string/what_is_your_height"
-        android:textSize="@dimen/_30sp" />
+        style="@style/titleTextStyle"
+        android:text="@string/what_is_your_height" />
 
     <RadioGroup
         android:id="@+id/radio_group_height"
         android:checkedButton="@+id/radio_button_cm"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_margin="@dimen/_24dp"
-        android:background="@drawable/bg_radio_group"
-        android:layout_below="@id/height_title"
-        android:orientation="horizontal">
+        style="@style/radioGroupStyle"
+        android:layout_below="@id/height_title">
 
         <RadioButton
             android:id="@+id/radio_button_feet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/bg_radio_button"
-            android:button="@null"
-            android:gravity="center"
-            android:text="@string/ft"
-            android:fontFamily="@font/urbanist_semibold"
-            android:textColor="@drawable/selector_radio_text_color"  />
+            style="@style/radioButtonStyle"
+            android:text="@string/ft"  />
 
         <RadioButton
             android:id="@+id/radio_button_cm"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/bg_radio_button"
-            android:button="@null"
-            android:gravity="center"
-            android:fontFamily="@font/urbanist_semibold"
-            android:text="@string/cm"
-            android:textColor="@drawable/selector_radio_text_color"  />
+            style="@style/radioButtonStyle"
+            android:text="@string/cm"/>
     </RadioGroup>
 
     <LinearLayout
@@ -65,24 +40,12 @@
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/et_height"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/urbanist_bold"
-            android:hint="@string/height"
-            android:background="@color/transparent"
-            android:inputType="numberDecimal"
-            android:maxLength="3"
-            android:maxLines="1"
-            android:textAlignment="center"
-            android:textSize="@dimen/_48sp" />
+            style="@style/textViewPersonalInfoStyle"
+            android:hint="@string/height" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:fontFamily="@font/poppins_regular"
-            android:text="@string/cm"
-            android:textSize="@dimen/_20sp" />
+            style="@style/textViewPersonalInfoUnitStyle"
+            android:text="@string/cm" />
     </LinearLayout>
 
 
@@ -96,18 +59,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_height_continue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        android:layout_marginHorizontal="@dimen/horizontal_margin"
-        android:layout_marginBottom="@dimen/_48dp"
-        android:backgroundTint="@color/main_grey"
-        android:fontFamily="@font/urbanist_bold"
-        android:paddingVertical="@dimen/_16dp"
+        style="@style/nextButtonStyle"
         android:text="@string/sonraki"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_16sp"
-        app:cornerRadius="@dimen/button_corner_radius" />
+        app:cornerRadius="@dimen/button_corner_radius"  />
 
 </RelativeLayout>

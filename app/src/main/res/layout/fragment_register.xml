@@ -3,20 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
+    style="@style/mainConstraintLayoutStyle"
     tools:context=".login.sign_up.screens.RegisterFragment">
 
     <TextView
         android:id="@+id/sign_up_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_8dp"
-        android:fontFamily="@font/urbanist_bold"
+        style="@style/titleTextStyle"
         android:text="@string/sign_up_title"
-        android:textSize="@dimen/_30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,10 +31,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_nickname_sign_up"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:fontFamily="@font/urbanist_regular"
+            style="@style/editTextPersonalInfoStyle"
             android:hint="@string/nickname"
             android:inputType="text" />
 
@@ -63,10 +53,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_email_sign_up"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/urbanist_regular"
-            android:maxLines="1"
+            style="@style/editTextPersonalInfoStyle"
             android:hint="@string/email"
             android:inputType="textEmailAddress" />
 
@@ -90,11 +77,8 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_password_sign_up"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
+            style="@style/editTextPersonalInfoStyle"
             android:inputType="textPassword"
-            android:fontFamily="@font/urbanist_regular"
             android:hint="@string/password" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -117,10 +101,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_password_again_sign_up"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:fontFamily="@font/urbanist_regular"
+            style="@style/editTextPersonalInfoStyle"
             android:hint="@string/password_again"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -188,16 +169,9 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_sign_up_continue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        style="@style/nextButtonStyle"
         android:layout_marginTop="@dimen/_24dp"
-        android:backgroundTint="@color/main_grey"
-        android:fontFamily="@font/urbanist_bold"
-        android:paddingVertical="@dimen/_16dp"
         android:text="@string/register"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_16sp"
         app:cornerRadius="@dimen/button_corner_radius"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -290,14 +264,13 @@
         android:id="@+id/tv_do_you_have_already_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_8dp"
         android:fontFamily="@font/urbanist_regular"
         android:text="@string/zaten_hesab_n_z_var_m"
         android:textSize="@dimen/_16sp"
+        android:layout_marginEnd="@dimen/_4dp"
         app:layout_constraintBottom_toBottomOf="@id/tv_login_sign_up"
         app:layout_constraintEnd_toStartOf="@+id/tv_login_sign_up"
-        app:layout_constraintTop_toTopOf="@id/tv_login_sign_up"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@id/tv_login_sign_up" />
 
     <TextView
         android:id="@+id/tv_login_sign_up"

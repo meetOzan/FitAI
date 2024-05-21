@@ -2,20 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
+    style="@style/mainConstraintLayoutStyle"
     tools:context=".login.sign_up.screens.DailyMovementFragment">
 
     <TextView
         android:id="@+id/daily_movement_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_8dp"
-        android:fontFamily="@font/urbanist_bold"
+        style="@style/titleTextStyle"
         android:text="@string/how_describe_daily_movement"
-        android:textSize="@dimen/_30sp"
         app:layout_constraintEnd_toEndOf="@+id/rv_daily_movement"
         app:layout_constraintStart_toStartOf="@+id/rv_daily_movement"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,10 +16,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_daily_movement"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_0dp"
-        android:layout_marginHorizontal="@dimen/_24dp"
-        android:layout_marginVertical="@dimen/_32dp"
-        android:stackFromBottom="true"
+        style="@style/recyclerViewPreferencesStyle"
         app:reverseLayout="true"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@id/daily_movement_title"
@@ -35,17 +25,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_daily_movement_continue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginHorizontal="@dimen/horizontal_margin"
-        android:layout_marginBottom="@dimen/_48sp"
-        android:backgroundTint="@color/main_grey"
-        android:fontFamily="@font/urbanist_bold"
-        android:paddingVertical="@dimen/_16dp"
+        style="@style/nextButtonStyle"
         android:text="@string/sonraki"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_16sp"
         app:cornerRadius="@dimen/button_corner_radius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

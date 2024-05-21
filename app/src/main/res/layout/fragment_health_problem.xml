@@ -2,32 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
+    style="@style/mainConstraintLayoutStyle"
     tools:context=".login.sign_up.screens.HealthProblemFragment">
 
     <TextView
         android:id="@+id/health_problem_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_8dp"
-        android:fontFamily="@font/urbanist_bold"
-        android:maxEms="10"
+        style="@style/titleTextStyle"
         android:text="@string/what_are_body_part"
-        android:textSize="@dimen/_30sp"
         app:layout_constraintEnd_toEndOf="@+id/text_input_layout_health_problem"
         app:layout_constraintStart_toStartOf="@+id/text_input_layout_health_problem"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout_health_problem"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_24dp"
-        android:textColorHint="@color/light_grey_4"
+        style="@style/editTextLayoutStyleInfo"
         app:boxCornerRadiusBottomEnd="@dimen/_8dp"
         app:boxCornerRadiusBottomStart="@dimen/_8dp"
         app:hintTextColor="@color/black"
@@ -42,29 +30,14 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_health_problem"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fontFamily="@font/urbanist_regular"
-            android:hint="@string/health_problems"
-            android:inputType="text"
-            android:maxLines="3"
-            android:paddingBottom="50dp" />
-
+            style="@style/textInputEditTextStyleInfo"
+            android:hint="@string/health_problems" />w
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_health_problem_continue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginHorizontal="@dimen/horizontal_margin"
-        android:layout_marginBottom="@dimen/_48sp"
-        android:backgroundTint="@color/main_grey"
-        android:fontFamily="@font/urbanist_bold"
-        android:paddingVertical="@dimen/_16dp"
+        style="@style/nextButtonStyle"
         android:text="@string/sonraki"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_16sp"
         app:cornerRadius="@dimen/button_corner_radius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
