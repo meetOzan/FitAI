@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.mobven.fitai.databinding.ActivityMainBinding
-import com.mobven.fitai.onboarding.OnboardingFragment
-
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -22,13 +20,5 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        val fragmentManager = supportFragmentManager
-
-        val transaction = fragmentManager.beginTransaction()
-        val fragment = OnboardingFragment()
-        transaction.replace(R.id.fragment_container, fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
     }
 }

@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.viewpager2.widget.ViewPager2
+import com.mobven.fitai.R
 import com.mobven.fitai.databinding.FragmentFirstOnBoardingBinding
 import com.mobven.fitai.onboarding.OnboardingPagerAdapter
 
@@ -26,7 +28,9 @@ class FirstOnboardingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnOnboarding1Continue.setOnClickListener {
-            onboardingPagerAdapter.increaseCurrentItem()
+            val currentItem = requireActivity().findViewById<ViewPager2>(R.id.onboardingViewPager).currentItem
+            val nextItem = currentItem + 1
+            requireActivity().findViewById<ViewPager2>(R.id.onboardingViewPager).setCurrentItem(nextItem, true)
         }
 
     }

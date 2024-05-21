@@ -14,38 +14,41 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
+        android:contentDescription="@string/onboarding_description_image"
         android:scaleType="centerCrop"
         android:src="@drawable/onboarding_1" />
-
-    <TextView
-        android:id="@+id/tv_onboarding_1_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/tv_onboarding_1_title"
-        android:layout_alignParentStart="true"
-        android:layout_marginHorizontal="@dimen/horizontal_margin"
-        android:layout_alignParentEnd="true"
-        android:fontFamily="@font/urbanist_bold"
-        android:text="@string/onboarding_title_1"
-        android:layout_marginBottom="@dimen/_16dp"
-        android:textSize="@dimen/_32sp" />
 
     <TextView
         android:id="@+id/tv_onboarding_1_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_onboarding_1_description"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:fontFamily="@font/urbanist_regular"
         android:layout_marginHorizontal="@dimen/horizontal_margin"
-        android:text="@string/onboarding_description_1"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:fontFamily="@font/urbanist_bold"
+        android:text="@string/onboarding_title_1"
+        android:textSize="@dimen/_32sp" />
+
+    <TextView
+        android:id="@+id/tv_onboarding_1_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_above="@id/btn_onboarding_1_continue"
-        android:textSize="@dimen/_16sp"
-        android:layout_marginBottom="@dimen/_30dp"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/urbanist_regular"
+        android:text="@string/onboarding_description_1"
+        android:textSize="@dimen/_16sp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_onboarding_1_continue"
+        style="@style/nextButtonOnBoardingStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/btn_onboarding_1_skip"
@@ -53,27 +56,18 @@
         android:layout_alignParentEnd="true"
         android:layout_marginHorizontal="@dimen/horizontal_margin"
         android:layout_marginBottom="@dimen/_8dp"
-        android:backgroundTint="@color/next_button_color"
-        android:fontFamily="@font/urbanist_bold"
-        android:text="@string/sonraki"
-        android:textColor="@color/white"
         android:paddingVertical="@dimen/_18dp"
-        android:textSize="@dimen/_16sp"
         app:cornerRadius="@dimen/button_corner_radius" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_onboarding_1_skip"
+        style="@style/skipButtonOnBoardingStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/_24dp"
-        android:backgroundTint="@color/transparent"
-        android:ems="5"
-        android:fontFamily="@font/urbanist_bold"
-        android:text="@string/atla"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_16sp"
+        android:maxEms="5"
         app:cornerRadius="@dimen/button_corner_radius" />
 
 </RelativeLayout>

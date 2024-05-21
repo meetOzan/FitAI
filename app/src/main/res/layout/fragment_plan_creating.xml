@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".login.sign_up.screens.PlanCreatingFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:contentDescription="@string/plans_creating"
+        android:src="@drawable/ic_circle_selected"
+        app:tint="@color/light_grey_5" />
+
+    <TextView
+        android:id="@+id/tv_plan_creating_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_45dp"
+        android:fontFamily="@font/urbanist_bold"
+        android:maxEms="10"
+        android:text="@string/customized_plans_created"
+        android:textAlignment="center"
+        android:textSize="@dimen/_26sp" />
+
+    <TextView
+        android:id="@+id/plan_creating_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6dp"
+        android:layout_marginBottom="@dimen/_48sp"
+        android:fontFamily="@font/urbanist_light"
+        android:maxEms="15"
+        android:text="@string/personalized_plans_are_created_with_ai"
+        android:textAlignment="center"
+        android:textSize="@dimen/_16sp" />
+
+</LinearLayout>

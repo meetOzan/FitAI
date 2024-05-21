@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".login.sign_up.screens.GoalSignUpFragment">
+
+    <TextView
+        android:id="@+id/weight_goal_title"
+        style="@style/titleTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:text="@string/what_is_your_weight_goal" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_weight_goal"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30dp"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_below="@id/weight_goal_title"
+        android:layout_marginTop="@dimen/_24dp"
+        android:background="@drawable/bg_radio_group"
+        android:checkedButton="@+id/radio_button_kg_goal"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_button_lbs_goal"
+            style="@style/radioButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/lbs" />
+
+        <RadioButton
+            android:id="@+id/radio_button_kg_goal"
+            style="@style/radioButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/kg" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/ll_weight_goal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_group_weight_goal"
+        android:layout_marginTop="@dimen/_48sp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_weight_goal"
+            style="@style/textViewPersonalInfoStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_4dp"
+            android:hint="@string/goal" />
+
+        <TextView
+            style="@style/textViewPersonalInfoUnitStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="@string/kg" />
+
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:layout_below="@id/ll_weight_goal"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_12dp"
+        app:dividerColor="@color/light_grey_3" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_weight_goal_continue"
+        style="@style/nextButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginBottom="@dimen/_48dp"
+        android:gravity="bottom"
+        android:paddingVertical="@dimen/_16dp"
+        android:text="@string/sonraki"
+        app:cornerRadius="@dimen/button_corner_radius" />
+
+</RelativeLayout>
