@@ -20,6 +20,7 @@
         android:id="@+id/radio_group_weight_goal"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/_30dp"
+        android:layout_marginStart="@dimen/_24dp"
         android:layout_below="@id/weight_goal_title"
         android:layout_marginTop="@dimen/_24dp"
         android:background="@drawable/bg_radio_group"
@@ -32,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_gravity="center"
+            android:gravity="center"
             android:text="@string/lbs" />
 
         <RadioButton
