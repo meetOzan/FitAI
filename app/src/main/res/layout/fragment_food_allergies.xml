@@ -2,12 +2,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/mainConstraintLayoutStyle"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/white"
     tools:context=".login.sign_up.screens.FoodAllergiesFragment">
 
     <TextView
         android:id="@+id/food_allergies_title"
         style="@style/titleTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_8dp"
         android:text="@string/which_foods_alergies"
         app:layout_constraintEnd_toEndOf="@+id/text_input_layout_food_allergies"
         app:layout_constraintStart_toStartOf="@+id/text_input_layout_food_allergies"
@@ -15,7 +21,11 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout_food_allergies"
-        style="@style/editTextLayoutStyleInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginVertical="@dimen/_16sp"
+        android:textColorHint="@color/light_grey_4"
         app:boxBackgroundColor="@color/white"
         app:boxCornerRadiusBottomEnd="@dimen/_8dp"
         app:boxCornerRadiusBottomStart="@dimen/_8dp"
@@ -30,6 +40,8 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_food_allergies"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             style="@style/textInputEditTextStyleInfo"
             android:hint="@string/allergies" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -37,6 +49,12 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_food_allergies_continue"
         style="@style/nextButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginBottom="@dimen/_48dp"
+        android:paddingVertical="@dimen/_16dp"
         android:text="@string/sonraki"
         app:cornerRadius="@dimen/button_corner_radius"
         app:layout_constraintBottom_toBottomOf="parent"

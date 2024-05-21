@@ -1,37 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".onboarding.screens.ThirdOnboardingFragment">
 
     <ImageView
         android:id="@+id/iv_onboarding_3"
-        style="@style/imageViewOnBoardingStyle"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/onboarding_description_image"
+        android:scaleType="centerCrop"
         android:src="@drawable/onboarding_3" />
 
     <TextView
         android:id="@+id/tv_onboarding_3_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/tv_onboarding_3_title"
-        style="@style/onBoardingTitleStyle"
-        android:text="@string/onboarding_title_3" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:fontFamily="@font/urbanist_bold"
+        android:text="@string/onboarding_title_3"
+        android:textSize="@dimen/_32sp" />
 
     <TextView
         android:id="@+id/tv_onboarding_3_title"
-        style="@style/onBoardingDescriptionStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_onboarding_3_continue"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginBottom="@dimen/_30sp"
+        android:fontFamily="@font/urbanist_regular"
         android:text="@string/onboarding_description_3"
-        android:layout_above="@id/btn_onboarding_3_continue"/>
+        android:textSize="@dimen/_16sp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_onboarding_3_continue"
         style="@style/nextButtonOnBoardingStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_above="@id/btn_onboarding_3_skip"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:paddingVertical="@dimen/_18dp"
         app:cornerRadius="@dimen/button_corner_radius" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_onboarding_3_skip"
         style="@style/skipButtonOnBoardingStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_24dp"
+        android:maxEms="5"
         app:cornerRadius="@dimen/button_corner_radius" />
 
 </RelativeLayout>

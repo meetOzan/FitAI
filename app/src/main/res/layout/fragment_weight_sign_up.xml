@@ -2,28 +2,46 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/mainConstraintLayoutStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".login.sign_up.screens.WeightSignUpFragment">
 
     <TextView
         android:id="@+id/weight_title"
         style="@style/titleTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_8dp"
         android:text="@string/what_is_your_weight" />
 
     <RadioGroup
         android:id="@+id/radio_group_weight"
-        style="@style/radioGroupStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30dp"
         android:layout_below="@id/weight_title"
-        android:checkedButton="@+id/radio_button_kg">
+        android:layout_marginTop="@dimen/_24dp"
+        android:background="@drawable/bg_radio_group"
+        android:checkedButton="@+id/radio_button_kg"
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/radio_button_lbs"
             style="@style/radioButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
             android:text="@string/lbs" />
 
         <RadioButton
             android:id="@+id/radio_button_kg"
             style="@style/radioButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
             android:text="@string/kg" />
     </RadioGroup>
 
@@ -40,10 +58,16 @@
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/et_weight"
             style="@style/textViewPersonalInfoStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_4dp"
             android:hint="@string/weight" />
 
         <TextView
             style="@style/textViewPersonalInfoUnitStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:text="@string/kg" />
 
     </LinearLayout>
@@ -59,6 +83,13 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_weight_continue"
         style="@style/nextButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginBottom="@dimen/_48dp"
+        android:gravity="bottom"
+        android:paddingVertical="@dimen/_16dp"
         android:text="@string/sonraki"
         app:cornerRadius="@dimen/button_corner_radius" />
 

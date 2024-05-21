@@ -9,6 +9,10 @@
     <TextView
         android:id="@+id/preferred_sport_title"
         style="@style/titleTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_8dp"
         android:text="@string/what_are_your_preferred_sports"
         app:layout_constraintEnd_toEndOf="@+id/rv_preferred_sport"
         app:layout_constraintStart_toStartOf="@+id/rv_preferred_sport"
@@ -16,7 +20,10 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_preferred_sport"
-        style="@style/recyclerViewPreferencesStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginVertical="@dimen/_32dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@id/btn_preferred_sport_continue"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,6 +35,12 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_preferred_sport_continue"
         style="@style/nextButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginBottom="@dimen/_48dp"
+        android:paddingVertical="@dimen/_16dp"
         android:text="@string/sonraki"
         app:cornerRadius="@dimen/button_corner_radius"
         app:layout_constraintBottom_toBottomOf="parent"

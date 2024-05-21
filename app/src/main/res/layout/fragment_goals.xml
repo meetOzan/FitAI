@@ -2,19 +2,28 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/mainConstraintLayoutStyle"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/white"
     tools:context=".login.sign_up.screens.GoalsFragment">
 
     <TextView
         android:id="@+id/goals_title"
         style="@style/titleTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_8dp"
         android:text="@string/what_is_your_goals"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_goals"
-        style="@style/recyclerViewPreferencesStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginVertical="@dimen/_32dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@id/btn_goals_continue"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,6 +35,12 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_goals_continue"
         style="@style/nextButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginBottom="@dimen/_48dp"
+        android:paddingVertical="@dimen/_16dp"
         android:text="@string/sonraki"
         app:cornerRadius="@dimen/button_corner_radius"
         app:layout_constraintBottom_toBottomOf="parent"

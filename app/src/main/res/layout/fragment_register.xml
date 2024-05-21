@@ -3,12 +3,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/mainConstraintLayoutStyle"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/white"
     tools:context=".login.sign_up.screens.RegisterFragment">
 
     <TextView
         android:id="@+id/sign_up_title"
         style="@style/titleTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_8dp"
         android:text="@string/sign_up_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,7 +37,10 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_nickname_sign_up"
-            style="@style/editTextPersonalInfoStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:fontFamily="@font/urbanist_regular"
             android:hint="@string/nickname"
             android:inputType="text" />
 
@@ -53,7 +62,10 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_email_sign_up"
-            style="@style/editTextPersonalInfoStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:fontFamily="@font/urbanist_regular"
             android:hint="@string/email"
             android:inputType="textEmailAddress" />
 
@@ -77,7 +89,10 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_password_sign_up"
-            style="@style/editTextPersonalInfoStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:fontFamily="@font/urbanist_regular"
             android:inputType="textPassword"
             android:hint="@string/password" />
 
@@ -101,7 +116,10 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_password_again_sign_up"
-            style="@style/editTextPersonalInfoStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:fontFamily="@font/urbanist_regular"
             android:hint="@string/password_again"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -170,6 +188,12 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_sign_up_continue"
         style="@style/nextButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginBottom="@dimen/_48dp"
+        android:paddingVertical="@dimen/_16dp"
         android:layout_marginTop="@dimen/_24dp"
         android:text="@string/register"
         app:cornerRadius="@dimen/button_corner_radius"

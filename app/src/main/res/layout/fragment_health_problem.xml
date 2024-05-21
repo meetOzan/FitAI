@@ -2,12 +2,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/mainConstraintLayoutStyle"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/white"
     tools:context=".login.sign_up.screens.HealthProblemFragment">
 
     <TextView
         android:id="@+id/health_problem_title"
         style="@style/titleTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_8dp"
         android:text="@string/what_are_body_part"
         app:layout_constraintEnd_toEndOf="@+id/text_input_layout_health_problem"
         app:layout_constraintStart_toStartOf="@+id/text_input_layout_health_problem"
@@ -15,7 +21,11 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout_health_problem"
-        style="@style/editTextLayoutStyleInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginVertical="@dimen/_16sp"
+        android:textColorHint="@color/light_grey_4"
         app:boxCornerRadiusBottomEnd="@dimen/_8dp"
         app:boxCornerRadiusBottomStart="@dimen/_8dp"
         app:hintTextColor="@color/black"
@@ -30,13 +40,21 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_health_problem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             style="@style/textInputEditTextStyleInfo"
-            android:hint="@string/health_problems" />w
+            android:hint="@string/health_problems" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_health_problem_continue"
         style="@style/nextButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginBottom="@dimen/_48dp"
+        android:paddingVertical="@dimen/_16dp"
         android:text="@string/sonraki"
         app:cornerRadius="@dimen/button_corner_radius"
         app:layout_constraintBottom_toBottomOf="parent"

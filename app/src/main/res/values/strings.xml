@@ -113,4 +113,5 @@
     <string name="_29">29</string>
     <string name="calendar_icon">calendar_icon</string>
     <string name="ft">ft</string>
+    <string name="onboarding_description_image">Onboarding description image</string>
 </resources>
