@@ -114,4 +114,11 @@
     <string name="calendar_icon">calendar_icon</string>
     <string name="ft">ft</string>
     <string name="onboarding_description_image">Onboarding description image</string>
+    <string name="welcome_message">Merhaba</string>
+    <string name="create_plan">Plan Oluştur</string>
+    <string name="create_plan_description">İstediğin alanda sana özel planlar oluştur.</string>
+    <string name="nutrition_plan">Beslenme Planı</string>
+    <string name="add_plan_button">add_plan_button</string>
+    <string name="training_plan_add">Antrenman Planı</string>
+    <string name="water_tracking_add">Su Takibi</string>
 </resources>
