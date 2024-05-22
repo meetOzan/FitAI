@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey_6"
+    tools:context=".home.HomeFragment">
+
+    <TextView
+        android:id="@+id/tv_home_welcome_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/urbanist_bold"
+        android:text="@string/welcome_message"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_home_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
+        android:layout_marginStart="6dp"
+        android:fontFamily="@font/urbanist_bold"
+        android:text="Mert,"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/tv_home_welcome_message"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_home_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_4dp"
+        android:fontFamily="@font/urbanist_regular"
+        android:text="29 Eylül 2024"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/tv_home_welcome_message"
+        app:layout_constraintTop_toBottomOf="@id/tv_home_welcome_message" />
+
+    <ImageButton
+        android:id="@+id/ib_home_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_24dp"
+        android:background="@color/transparent"
+        android:src="@drawable/ic_notification"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_home_welcome_message"
+        app:layout_constraintEnd_toStartOf="@id/iv_home_profile"
+        app:layout_constraintTop_toTopOf="@id/tv_home_welcome_message" />
+
+    <ImageView
+        android:id="@+id/iv_home_profile"
+        android:layout_width="@dimen/_32dp"
+        android:layout_height="@dimen/_32dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:src="@drawable/ic_circle_selected"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_home_welcome_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_home_welcome_message" />
+
+    <ScrollView
+        android:id="@+id/sv_home"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        android:layout_marginTop="@dimen/_40dp"
+        android:background="@drawable/bg_home_scroll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_home_date">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_0dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_home_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_24dp"
+                android:orientation="horizontal"
+                tools:itemCount="7"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEnd="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/card_home_calendar_item"/>
+
+            <TextView
+                android:id="@+id/tv_create_plan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_24dp"
+                android:fontFamily="@font/urbanist_bold"
+                android:text="@string/create_plan"
+                android:textSize="@dimen/_18sp"
+                android:textColor="@color/dark_grey_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_home_calendar" />
+
+            <TextView
+                android:id="@+id/tv_create_plan_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/urbanist_light"
+                android:text="@string/create_plan_description"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintStart_toStartOf="@id/tv_create_plan"
+                app:layout_constraintTop_toBottomOf="@id/tv_create_plan" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_food_plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_12dp"
+                android:elevation="@dimen/_4dp"
+                app:cardBackgroundColor="@color/light_grey_4"
+                app:cardCornerRadius="@dimen/_12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_create_plan_description">
+
+                <TextView
+                    android:id="@+id/tv_food_plan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_60dp"
+                    android:layout_marginBottom="@dimen/_12dp"
+                    android:fontFamily="@font/urbanist_bold"
+                    android:text="@string/nutrition_plan"
+                    android:textColor="@color/dark_grey_2"
+                    android:textSize="@dimen/_18sp" />
+
+                <ImageView
+                    android:id="@+id/iv_food_plan_add"
+                    android:layout_width="@dimen/_24dp"
+                    android:layout_height="@dimen/_24dp"
+                    android:layout_marginEnd="@dimen/_16dp"
+                    android:layout_marginBottom="@dimen/_12dp"
+                    android:fontFamily="@font/urbanist_bold"
+                    android:src="@drawable/plan_plus"
+                    android:text="@string/create_plan"
+                    android:textSize="@dimen/_18sp"
+                    android:layout_gravity="bottom|end"
+                    app:tint="@color/dark_grey_2" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_training_plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_12dp"
+                app:cardBackgroundColor="@color/light_grey_4"
+                app:cardCornerRadius="@dimen/_12dp"
+                android:elevation="@dimen/_4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_food_plan">
+
+                <TextView
+                    android:id="@+id/tv_training_plan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_60dp"
+                    android:layout_marginBottom="@dimen/_12dp"
+                    android:fontFamily="@font/urbanist_bold"
+                    android:text="@string/training_plan_add"
+                    android:textColor="@color/dark_grey_2"
+                    android:textSize="@dimen/_18sp"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_training_plan_add"
+                    android:layout_width="@dimen/_24dp"
+                    android:layout_height="@dimen/_24dp"
+                    android:layout_marginEnd="@dimen/_16dp"
+                    android:layout_marginBottom="@dimen/_12dp"
+                    android:fontFamily="@font/urbanist_bold"
+                    android:src="@drawable/plan_plus"
+                    android:text="@string/create_plan"
+                    android:textSize="@dimen/_18sp"
+                    android:layout_gravity="bottom|end"
+                    app:tint="@color/dark_grey_2" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_water_plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_12dp"
+                android:layout_marginHorizontal="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_12dp"
+                app:cardBackgroundColor="@color/light_grey_4"
+                app:cardCornerRadius="@dimen/_12dp"
+                android:elevation="@dimen/_4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_training_plan">
+
+                <TextView
+                    android:id="@+id/tv_water_plan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_60dp"
+                    android:layout_marginBottom="@dimen/_12dp"
+                    android:fontFamily="@font/urbanist_bold"
+                    android:text="@string/water_tracking_add"
+                    android:textColor="@color/dark_grey_2"
+                    android:textSize="@dimen/_18sp"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_water_plan_add"
+                    android:layout_width="@dimen/_24dp"
+                    android:layout_height="@dimen/_24dp"
+                    android:layout_marginEnd="@dimen/_16dp"
+                    android:layout_marginBottom="@dimen/_12dp"
+                    android:fontFamily="@font/urbanist_bold"
+                    android:src="@drawable/plan_plus"
+                    android:text="@string/create_plan"
+                    android:textSize="@dimen/_18sp"
+                    android:layout_gravity="bottom|end"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rv_home_calendar"
+                    app:tint="@color/dark_grey_2" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

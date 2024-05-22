@@ -32,4 +32,7 @@
     <dimen name="_4dp">4dp</dimen>
     <dimen name="_20dp">20dp</dimen>
     <dimen name="_22sp">22sp</dimen>
+    <dimen name="_18sp">18sp</dimen>
+    <dimen name="_60dp">60dp</dimen>
+    <dimen name="_12sp">12sp</dimen>
 </resources>
