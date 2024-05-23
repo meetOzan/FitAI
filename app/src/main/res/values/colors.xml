@@ -41,4 +41,7 @@
     <!--#5E5E5E-->
     <color name="dark_grey_3">#FF5E5E5E</color>
 
+    <!--#72777A-->
+    <color name="dark_grey_4">#FF72777A</color>
+
 </resources>
