@@ -5,10 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.sign_in.LoginFragment"
-    >
-
-
+    android:background="@color/white"
+    tools:context=".login.sign_in.LoginFragment">
 
         <ImageView
             android:id="@+id/back"
@@ -17,9 +15,8 @@
             android:contentDescription="@string/contentDescription"
             app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
             app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/ic_back"
-            android:layout_marginTop="25dp"
-            />
+            android:src="@drawable/back_arrow"
+            android:layout_marginTop="25dp" />
 
         <ImageView
             android:id="@+id/logo"
@@ -70,8 +67,7 @@
                 android:textColor="@color/black"
                 android:textStyle="normal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                />
+                android:layout_height="match_parent" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -113,7 +109,7 @@
             android:checked="false"
             android:textSize="18sp"
             app:useMaterialThemeColors="false"
-            android:button="@drawable/chcek_box_selector"
+            android:button="@drawable/checkbox_on"
             app:layout_constraintTop_toBottomOf="@id/loginPassword"
             app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
             app:layout_constraintEnd_toEndOf="@id/guidelineVerticalRight"

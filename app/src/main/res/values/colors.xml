@@ -11,6 +11,9 @@
     <!-- #1E232C33 -->
     <color name="main_transparent_grey">#331E232C</color>
 
+    <!--#6A707C-->
+    <color name="lightGray">#6A707C</color>
+
     <!--#E8ECF4-->
     <color name="light_grey">#FFE8ECF4</color>
 
@@ -31,5 +34,8 @@
 
     <!--#6A707C-->
     <color name="dark_grey">#FF6A707C</color>
+
+    <!--#8391A1-->
+    <color name="cyan_blue">#8391A1</color>
 
 </resources>
