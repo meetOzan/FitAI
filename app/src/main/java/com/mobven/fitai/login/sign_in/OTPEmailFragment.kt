@@ -1,4 +1,4 @@
-package com.mobven.fitai.login
+package com.mobven.fitai.login.sign_in
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

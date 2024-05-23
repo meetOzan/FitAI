@@ -1,4 +1,4 @@
-package com.mobven.fitai.login
+package com.mobven.fitai.login.sign_in
 
 
 import android.os.Bundle
@@ -35,7 +35,7 @@ class OTPFragment : Fragment() {
         _binding = FragmentOtpBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        val filter = InputFilter { source, start, end, dest, dstart, dend ->
+        val filter = InputFilter { source, start, end, _, _, _ ->
             for (i in start until end) {
                 if (!Character.isDigit(source[i])) {
                     return@InputFilter ""
