@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.mobven.fitai.databinding.ActivityMainBinding
+import com.mobven.fitai.login.ForgotPasswordFragment
+import com.mobven.fitai.login.OTPFragment
 import com.mobven.fitai.onboarding.OnboardingFragment
 
 class MainActivity : AppCompatActivity() {
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         val fragmentManager = supportFragmentManager
 
         val transaction = fragmentManager.beginTransaction()
-        val fragment = OnboardingFragment()
+        val fragment = OTPFragment()
         transaction.replace(R.id.fragment_container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
