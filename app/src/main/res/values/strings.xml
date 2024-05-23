@@ -121,6 +121,7 @@
     <string name="add_plan_button">add_plan_button</string>
     <string name="training_plan_add">Antrenman Planı</string>
     <string name="water_tracking_add">Su Takibi</string>
+    <string name="created_for_you_powered_ai">Yapay zeka desteğiyle sana özel oluşturuldu.</string>
     <string name="is_your_number_not_correct">Numaranız doğru değil mi?</string>
     <string name="login_with_email">Epostayla Giriş Yap</string>
     <string name="verification">Doğrulama</string>

@@ -89,10 +89,54 @@
                 android:orientation="horizontal"
                 tools:itemCount="7"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintEnd_toEnd="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:listitem="@layout/card_home_calendar_item"/>
+
+            <LinearLayout
+                android:id="@+id/ll_create_plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:layout_marginTop="32dp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_create_plan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_home_calendar">
+
+                <TextView
+                    android:id="@+id/tv_food_plan_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_24dp"
+                    android:fontFamily="@font/urbanist_bold"
+                    android:text="@string/nutrition_plan"
+                    android:textColor="@color/dark_grey_2"
+                    android:textSize="@dimen/_18sp" />
+
+                <TextView
+                    android:id="@+id/tv_food_plan_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_24dp"
+                    android:fontFamily="@font/urbanist_light"
+                    android:text="@string/created_for_you_powered_ai"
+                    android:textSize="@dimen/_14sp" />
+
+                <include
+                    android:id="@+id/include_food_plan_item"
+                    layout="@layout/card_plan_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:layout_marginHorizontal="@dimen/_24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_create_plan_description" />
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/tv_create_plan"
@@ -104,7 +148,7 @@
                 android:textSize="@dimen/_18sp"
                 android:textColor="@color/dark_grey_2"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rv_home_calendar" />
+                app:layout_constraintTop_toBottomOf="@id/ll_create_plan" />
 
             <TextView
                 android:id="@+id/tv_create_plan_description"
@@ -202,6 +246,7 @@
                 android:layout_marginBottom="@dimen/_12dp"
                 android:layout_marginHorizontal="@dimen/_24dp"
                 android:layout_marginTop="@dimen/_12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:cardBackgroundColor="@color/light_grey_4"
                 app:cardCornerRadius="@dimen/_12dp"
                 android:elevation="@dimen/_4dp"
