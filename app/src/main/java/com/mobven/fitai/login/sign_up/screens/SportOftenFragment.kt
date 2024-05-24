@@ -42,9 +42,9 @@ class SportOftenFragment : BaseFragment<FragmentGoalsBinding>(FragmentGoalsBindi
 
         binding.btnGoalsContinue.setOnClickListener {
             val currentItem =
-                requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager).currentItem
+                requireActivity().findViewById<ViewPager2>(R.id.vp_training).currentItem
             val nextItem = currentItem + 1
-            requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager)
+            requireActivity().findViewById<ViewPager2>(R.id.vp_training)
                 .setCurrentItem(nextItem, true)
         }
     }

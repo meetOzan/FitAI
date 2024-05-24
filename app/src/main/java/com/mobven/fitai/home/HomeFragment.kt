@@ -1,10 +1,12 @@
 package com.mobven.fitai.home
 
+import android.view.View
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.navigation.fragment.findNavController
 import com.mobven.fitai.R
 import com.mobven.fitai.base.BaseFragment
+import com.mobven.fitai.databinding.CardPlanItemBinding
 import com.mobven.fitai.databinding.FragmentHomeBinding
 import com.mobven.fitai.home.calendar.CalendarItem
 import com.mobven.fitai.home.calendar.HomeCalendarAdapter
@@ -19,12 +21,28 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     override fun observeUi() {
         with(binding) {
 
-            includeFoodPlanItem.tvPlanName.text = context?.getString(R.string.eating_plan)
+            setupCards(includeFoodPlanItem,"Kahvaltı",
+                "10 dakikada hazır",
+                "800 kalori",
+                image = R.drawable.food_plan_item)
+            includeFoodPlanItem.thirdTv.visibility = View.GONE
+            includeFoodPlanItem.thirdIcon.visibility = View.GONE
+
+            setupCards(includeTrainingItem,
+                "Evde Fitness",
+                "50 dakika",
+                "2 Set, 3 Tekrar",
+                "400 kalori",
+                R.drawable.training_plan_item)
 
             ivFoodPlanAdd.setOnClickListener {
                 findNavController().navigate(R.id.action_homeFragment_to_nutritionFragment)
             }
-
+            
+            ivTrainingPlanAdd.setOnClickListener {
+                findNavController().navigate(R.id.action_homeFragment_to_trainingFragment)
+            }
+            
             val dateList = mutableListOf<CalendarItem>()
             val dayFormatter = DateTimeFormatter.ofPattern(getString(R.string.eeee)) // Örnek format: "Sunday"
             val dateFormatter = DateTimeFormatter.ofPattern(getString(R.string.dd))
@@ -47,6 +65,22 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             binding.rvHomeCalendar.adapter = adapter
 
         }
+        
     }
-
 }
+
+private fun setupCards(
+  item : CardPlanItemBinding,
+  header : String,
+  firstTv : String,
+  secondTv : String,
+  thirdTv : String = "",
+  image : Int
+){
+    item.tvPlanName.text = header
+    item.firstTv.text = firstTv
+    item.secondTv.text = secondTv
+    item.thirdTv.text = thirdTv
+    item.ivCircle.setImageResource(image)
+}
+

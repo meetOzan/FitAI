@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_32dp"
                 android:orientation="vertical"
-                app:layout_constraintBottom_toTopOf="@+id/tv_create_plan"
+                app:layout_constraintBottom_toTopOf="@+id/ll_create_training_plan"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -139,6 +139,51 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/ll_create_training_plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_32dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/tv_create_plan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_create_plan">
+
+                <TextView
+                    android:id="@+id/tv_training_plan_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_24dp"
+                    android:fontFamily="@font/urbanist_bold"
+                    android:text="@string/daily_training"
+                    android:textColor="@color/dark_grey_2"
+                    android:textSize="@dimen/_18sp" />
+
+                <TextView
+                    android:id="@+id/tv_training_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_24dp"
+                    android:fontFamily="@font/urbanist_light"
+                    android:text="@string/created_for_you_powered_ai"
+                    android:textSize="@dimen/_14sp" />
+
+                <include
+                    android:id="@+id/include_training_item"
+                    layout="@layout/card_plan_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_24dp"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:layout_marginBottom="@dimen/_6dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_create_plan_description" />
+
+            </LinearLayout>
+
             <TextView
                 android:id="@+id/tv_create_plan"
                 android:layout_width="wrap_content"
@@ -149,7 +194,7 @@
                 android:textSize="@dimen/_18sp"
                 android:textColor="@color/dark_grey_2"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ll_create_plan" />
+                app:layout_constraintTop_toBottomOf="@id/ll_create_training_plan" />
 
             <TextView
                 android:id="@+id/tv_create_plan_description"
