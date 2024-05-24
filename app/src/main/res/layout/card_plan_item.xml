@@ -70,6 +70,7 @@
                     android:src="@drawable/time_circle" />
 
                 <TextView
+                    android:id="@+id/firstTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -91,6 +92,7 @@
                     android:src="@drawable/linear_pin" />
 
                 <TextView
+                    android:id="@+id/secondTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -107,11 +109,13 @@
                 android:gravity="center_vertical">
 
                 <ImageView
+                    android:id="@+id/thirdIcon"
                     android:layout_width="@dimen/_12dp"
                     android:layout_height="@dimen/_12dp"
                     android:src="@drawable/linear_pin" />
 
                 <TextView
+                    android:id="@+id/thirdTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
