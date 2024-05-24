@@ -9,7 +9,7 @@
     tools:context=".home.nutrition.NutritionFragment">
 
     <include
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbar_nutrition"
         layout="@layout/toolbar_sign_up" />
 
     <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
