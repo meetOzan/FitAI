@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginHorizontal="@dimen/_24dp"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="@dimen/_12dp">
@@ -18,10 +17,10 @@
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:src="@drawable/food_plan_item"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline_image" />
+            app:layout_constraintStart_toStartOf="@+id/guideline_image"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_image"
@@ -42,29 +41,85 @@
             android:layout_width="@dimen/_0dp"
             android:layout_height="@dimen/_0dp"
             android:background="@drawable/bg_plan_text"
-            android:orientation="vertical"
             android:gravity="center_vertical"
-            android:padding="@dimen/_24dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/guideline_left_view"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_24dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline_left_view"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/tvPlanName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8dp"
                 android:fontFamily="@font/urbanist_bold"
                 android:textColor="@color/black"
-                android:layout_marginBottom="@dimen/_8dp"
                 android:textSize="@dimen/_16sp" />
 
-            <ListView
-                android:id="@+id/lv_plan_items"
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/card_plan_list_item"/>
+                android:gravity="center_vertical">
 
+                <ImageView
+                    android:layout_width="@dimen/_12dp"
+                    android:layout_height="@dimen/_12dp"
+                    android:src="@drawable/time_circle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/urbanist_regular"
+                    android:text="10 dakikada hazır"
+                    android:textColor="@color/dark_grey_4"
+                    android:textSize="@dimen/_12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_12dp"
+                    android:layout_height="@dimen/_12dp"
+                    android:src="@drawable/linear_pin" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/urbanist_regular"
+                    android:text="800 Kalori "
+                    android:textColor="@color/dark_grey_4"
+                    android:textSize="@dimen/_12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_12dp"
+                    android:layout_height="@dimen/_12dp"
+                    android:src="@drawable/linear_pin" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/urbanist_regular"
+                    android:text="800 Kalori "
+                    android:textColor="@color/dark_grey_4"
+                    android:textSize="@dimen/_12sp" />
+            </LinearLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
