@@ -3,12 +3,11 @@ package com.mobven.fitai.home.nutrition
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.mobven.fitai.login.sign_up.screens.DietTypeFragment
-import com.mobven.fitai.login.sign_up.screens.FoodAllergiesFragment
-import com.mobven.fitai.login.sign_up.screens.GoalsFragment
-import com.mobven.fitai.login.sign_up.screens.OtherHealthProblemFragment
-import com.mobven.fitai.login.sign_up.screens.PlanCreatingFragment
-import com.mobven.fitai.login.sign_up.screens.PlansFragment
+import com.mobven.fitai.home.screens.DietTypeFragment
+import com.mobven.fitai.home.screens.FoodAllergiesFragment
+import com.mobven.fitai.home.screens.GoalsFragment
+import com.mobven.fitai.home.screens.OtherHealthProblemFragment
+import com.mobven.fitai.home.screens.PlanCreatingFragment
 
 class NutritionPagerAdapter(
     fragmentActivity: FragmentActivity

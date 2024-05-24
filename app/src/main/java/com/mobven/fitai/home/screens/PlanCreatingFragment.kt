@@ -1,4 +1,4 @@
-package com.mobven.fitai.login.sign_up.screens
+package com.mobven.fitai.home.screens
 
 import android.os.Handler
 import android.os.Looper

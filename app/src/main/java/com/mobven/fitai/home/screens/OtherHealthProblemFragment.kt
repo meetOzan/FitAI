@@ -1,4 +1,4 @@
-package com.mobven.fitai.login.sign_up.screens
+package com.mobven.fitai.home.screens
 
 import androidx.viewpager2.widget.ViewPager2
 import com.mobven.fitai.R

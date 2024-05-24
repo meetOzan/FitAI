@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".login.sign_up.screens.SportOftenFragment">
+    tools:context=".home.screens.SportOftenFragment">
 
     <TextView
         android:id="@+id/sports_often_title"
