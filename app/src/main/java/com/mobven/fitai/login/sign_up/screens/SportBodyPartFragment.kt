@@ -52,9 +52,9 @@ class SportBodyPartFragment : BaseFragment<FragmentSportBodyPartBinding>(Fragmen
         binding.rvBodyPartSport.adapter = adapter
 
         binding.btnBodyPartContinue.setOnClickListener {
-            val currentItem = requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager).currentItem
+            val currentItem = requireActivity().findViewById<ViewPager2>(R.id.vp_training).currentItem
             val nextItem = currentItem + 1
-            requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager).setCurrentItem(nextItem, true)
+            requireActivity().findViewById<ViewPager2>(R.id.vp_training).setCurrentItem(nextItem, true)
         }
     }
 
