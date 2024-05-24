@@ -46,9 +46,9 @@ class OtherHealthProblemFragment : BaseFragment<FragmentOtherHealthProblemBindin
         binding.rvOtherHealthProblem.adapter = adapter
 
         binding.btnOtherHealthProblemContinue.setOnClickListener {
-            val currentItem = requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager).currentItem
+            val currentItem = requireActivity().findViewById<ViewPager2>(R.id.vp_nutrition).currentItem
             val nextItem = currentItem + 1
-            requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager).setCurrentItem(nextItem, true)
+            requireActivity().findViewById<ViewPager2>(R.id.vp_nutrition).setCurrentItem(nextItem, true)
         }
 
     }

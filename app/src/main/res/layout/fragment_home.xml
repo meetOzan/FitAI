@@ -33,7 +33,6 @@
         app:layout_constraintStart_toEndOf="@id/tv_home_welcome_message"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <TextView
         android:id="@+id/tv_home_date"
         android:layout_width="wrap_content"
@@ -98,11 +97,11 @@
                 android:id="@+id/ll_create_plan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_32dp"
                 android:orientation="vertical"
-                android:visibility="visible"
-                android:layout_marginTop="32dp"
                 app:layout_constraintBottom_toTopOf="@+id/tv_create_plan"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rv_home_calendar">
 
@@ -130,8 +129,9 @@
                     layout="@layout/card_plan_item"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_12dp"
                     android:layout_marginHorizontal="@dimen/_24dp"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:layout_marginBottom="@dimen/_6dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_create_plan_description" />
@@ -187,15 +187,15 @@
 
                 <ImageView
                     android:id="@+id/iv_food_plan_add"
-                    android:layout_width="@dimen/_24dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/_24dp"
+                    android:layout_gravity="bottom|end"
                     android:layout_marginEnd="@dimen/_16dp"
                     android:layout_marginBottom="@dimen/_12dp"
                     android:fontFamily="@font/urbanist_bold"
                     android:src="@drawable/plan_plus"
                     android:text="@string/create_plan"
                     android:textSize="@dimen/_18sp"
-                    android:layout_gravity="bottom|end"
                     app:tint="@color/dark_grey_2" />
             </androidx.cardview.widget.CardView>
 
