@@ -11,8 +11,12 @@ class NutritionFragment :
 
         with(binding) {
 
-            toolbar.toolbarBack.setOnClickListener {
-                requireActivity().onBackPressedDispatcher.onBackPressed()
+            toolbarNutrition.toolbarBack.setOnClickListener {
+                if (vpNutrition.currentItem == 0) {
+                    requireActivity().onBackPressedDispatcher.onBackPressed()
+                } else {
+                    vpNutrition.currentItem -= 1
+                }
             }
 
             vpNutrition.adapter = NutritionPagerAdapter(requireActivity())
