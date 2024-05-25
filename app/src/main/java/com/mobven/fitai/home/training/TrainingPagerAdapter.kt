@@ -3,7 +3,7 @@ package com.mobven.fitai.home.training
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.mobven.fitai.home.screens.GoalsFragment
+import com.mobven.fitai.home.screens.GoalsFragmentTraining
 import com.mobven.fitai.home.screens.HealthProblemFragment
 import com.mobven.fitai.home.screens.PlanCreatingFragment
 import com.mobven.fitai.home.screens.PreferredSportFragment
@@ -19,7 +19,7 @@ class TrainingPagerAdapter(
     override fun createFragment(position: Int): Fragment {
         return when(position) {
             0 -> HealthProblemFragment()
-            1 -> GoalsFragment()
+            1 -> GoalsFragmentTraining()
             2 -> PreferredSportFragment()
             3 -> SportOftenFragment()
             4 -> SportBodyPartFragment()

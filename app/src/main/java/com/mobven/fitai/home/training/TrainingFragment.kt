@@ -1,10 +1,7 @@
 package com.mobven.fitai.home.training
 
-
 import com.mobven.fitai.base.BaseFragment
 import com.mobven.fitai.databinding.FragmentTrainingBinding
-
-
 
 class TrainingFragment : BaseFragment<FragmentTrainingBinding>(FragmentTrainingBinding::inflate) {
 
@@ -19,6 +16,5 @@ class TrainingFragment : BaseFragment<FragmentTrainingBinding>(FragmentTrainingB
             indicatorTraining.attachTo(vpTraining)
         }
     }
-
 
 }

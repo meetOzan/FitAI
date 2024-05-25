@@ -9,7 +9,7 @@ import com.mobven.fitai.login.sign_up.adapter.SignUpListAdapter
 import com.mobven.fitai.login.sign_up.model.SignUpSelectorItem
 import com.mobven.fitai.util.enums.SignUpSelectorType
 
-class GoalsFragment : BaseFragment<FragmentGoalsBinding>(FragmentGoalsBinding::inflate) {
+class GoalsFragmentTraining : BaseFragment<FragmentGoalsBinding>(FragmentGoalsBinding::inflate) {
 
     private val adapter = SignUpListAdapter()
 
@@ -43,11 +43,11 @@ class GoalsFragment : BaseFragment<FragmentGoalsBinding>(FragmentGoalsBinding::i
 
         binding.btnGoalsContinue.setOnClickListener {
             val currentItem =
-                requireActivity().findViewById<ViewPager2>(R.id.vp_nutrition).currentItem
+                requireActivity().findViewById<ViewPager2>(R.id.vp_training).currentItem
             val nextItem = currentItem + 1
-            requireActivity().findViewById<ViewPager2>(R.id.vp_nutrition)
+            requireActivity().findViewById<ViewPager2>(R.id.vp_training)
                 .setCurrentItem(nextItem, true)
-        }
 
+        }
     }
 }
