@@ -12,9 +12,9 @@ constraintlayout = "2.1.4"
 viewpagerdotsindicator = "5.0"
 navVersion = "2.7.7"
 hilt = "2.50"
-hiltViewModel = "1.0.0-alpha03"
 hiltNavigation = "1.2.0"
 ksp = "1.8.0-1.0.9"
+androidxNavigation = "2.7.4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -39,7 +39,8 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 hilt-plugin = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-kapt = { id = "kotlin-kapt", version.ref = "kotlin" }
+kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+safe-args = { id = "androidx.navigation.safeargs.kotlin", version.ref = "androidxNavigation"}
 
 [bundles]
 navigation = ["navigation-fragment", "navigation-ui"]

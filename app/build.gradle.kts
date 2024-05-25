@@ -2,7 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.hilt.plugin)
-    kotlin("kapt")
+    alias(libs.plugins.kapt)
+    alias(libs.plugins.safe.args)
 }
 
 android {
