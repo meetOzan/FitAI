@@ -24,7 +24,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     override fun observeUi() {
         with(binding) {
 
-            com.mobven.fitai.presentation.home.setupCards(
+            setupCards(
                 includeFoodPlanItem,
                 "Kahvaltı",
                 "10 dakikada hazır",
@@ -34,7 +34,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             includeFoodPlanItem.thirdTv.visibility = View.GONE
             includeFoodPlanItem.thirdIcon.visibility = View.GONE
 
-            com.mobven.fitai.presentation.home.setupCards(
+            setupCards(
                 includeTrainingItem,
                 "Evde Fitness",
                 "50 dakika",

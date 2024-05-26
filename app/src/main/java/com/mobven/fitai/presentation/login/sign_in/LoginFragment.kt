@@ -1,4 +1,4 @@
-package com.mobven.fitai.login.sign_in
+package com.mobven.fitai.presentation.login.sign_in
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.mobven.fitai.R
 
-class ResetPasswordFragment : Fragment() {
+class LoginFragment : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +20,7 @@ class ResetPasswordFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_reset_password, container, false)
+        return inflater.inflate(R.layout.fragment_login, container, false)
     }
 
 }

@@ -38,7 +38,7 @@
     </fragment>
     <fragment
         android:id="@+id/nutritionFragment"
-        android:name="com.mobven.fitai.home.nutrition.NutritionFragment"
+        android:name="com.mobven.fitai.presentation.home.nutrition.NutritionFragment"
         android:label="fragment_nutrition"
         tools:layout="@layout/fragment_nutrition" >
         <action
