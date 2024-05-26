@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.mobven.fitai.login.sign_up.SignUpFragment"
+        android:name="com.mobven.fitai.presentation.login.sign_up.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/authFragment"
-        android:name="com.mobven.fitai.login.AuthFragment"
+        android:name="com.mobven.fitai.presentation.login.AuthFragment"
         android:label="AuthFragment" >
         <action
             android:id="@+id/action_authFragment_to_signUpFragment"
@@ -47,7 +47,7 @@
     </fragment>
     <fragment
         android:id="@+id/trainingFragment"
-        android:name="com.mobven.fitai.home.training.TrainingFragment"
+        android:name="com.mobven.fitai.presentation.home.training.TrainingFragment"
         android:label="fragment_training"
         tools:layout="@layout/fragment_training" >
         <action
