@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.mobven.fitai.R
 import com.mobven.fitai.databinding.CardSignUpBinding
-import com.mobven.fitai.login.sign_up.model.SignUpSelectorItem
+import com.mobven.fitai.presentation.login.sign_up.model.SignUpSelectorItem
 import com.mobven.fitai.util.enums.SignUpSelectorType
 
 class SignUpListAdapter :

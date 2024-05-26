@@ -1,7 +1,7 @@
 package com.mobven.fitai.presentation.login.sign_up.adapter
 
 import androidx.recyclerview.widget.DiffUtil
-import com.mobven.fitai.login.sign_up.model.SignUpSelectorItem
+import com.mobven.fitai.presentation.login.sign_up.model.SignUpSelectorItem
 
 class SignUpItemDiffUtil : DiffUtil.ItemCallback<SignUpSelectorItem>() {
     override fun areItemsTheSame(oldItem: SignUpSelectorItem, newItem: SignUpSelectorItem): Boolean {

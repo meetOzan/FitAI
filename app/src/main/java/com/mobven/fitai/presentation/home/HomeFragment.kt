@@ -9,8 +9,8 @@ import com.mobven.fitai.R
 import com.mobven.fitai.base.BaseFragment
 import com.mobven.fitai.databinding.CardPlanItemBinding
 import com.mobven.fitai.databinding.FragmentHomeBinding
-import com.mobven.fitai.home.calendar.CalendarItem
-import com.mobven.fitai.home.calendar.HomeCalendarAdapter
+import com.mobven.fitai.presentation.home.calendar.CalendarItem
+import com.mobven.fitai.presentation.home.calendar.HomeCalendarAdapter
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 

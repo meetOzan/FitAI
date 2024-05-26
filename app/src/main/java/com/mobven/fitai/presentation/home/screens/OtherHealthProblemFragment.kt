@@ -4,8 +4,8 @@ import androidx.viewpager2.widget.ViewPager2
 import com.mobven.fitai.R
 import com.mobven.fitai.base.BaseFragment
 import com.mobven.fitai.databinding.FragmentOtherHealthProblemBinding
-import com.mobven.fitai.login.sign_up.adapter.SignUpListAdapter
-import com.mobven.fitai.login.sign_up.model.SignUpSelectorItem
+import com.mobven.fitai.presentation.login.sign_up.adapter.SignUpListAdapter
+import com.mobven.fitai.presentation.login.sign_up.model.SignUpSelectorItem
 import com.mobven.fitai.util.enums.SignUpSelectorType
 
 class OtherHealthProblemFragment : BaseFragment<FragmentOtherHealthProblemBinding>(FragmentOtherHealthProblemBinding::inflate) {

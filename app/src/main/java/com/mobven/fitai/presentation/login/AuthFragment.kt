@@ -4,6 +4,7 @@ import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import com.mobven.fitai.base.BaseFragment
 import com.mobven.fitai.databinding.FragmentAuthBinding
+import com.mobven.fitai.login.AuthFragmentDirections
 
 class AuthFragment : BaseFragment<FragmentAuthBinding>(FragmentAuthBinding::inflate) {
 
