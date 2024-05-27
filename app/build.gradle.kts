@@ -10,10 +10,6 @@ android {
     namespace = "com.mobven.fitai"
     compileSdk = 34
 
-    buildFeatures{
-        viewBinding = true
-    }
-
     defaultConfig {
         applicationId = "com.mobven.fitai"
         minSdk = 24
@@ -33,13 +29,16 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    
     buildFeatures{
         viewBinding = true
     }
@@ -64,5 +63,11 @@ dependencies {
     // Hilt
     implementation(libs.bundles.hiltImplementation)
     kapt(libs.hilt.compiler)
+
+    // Retrofit
+    implementation(libs.bundles.retrofit)
+
+    // OkHttp
+    implementation(libs.bundles.http)
 
 }
