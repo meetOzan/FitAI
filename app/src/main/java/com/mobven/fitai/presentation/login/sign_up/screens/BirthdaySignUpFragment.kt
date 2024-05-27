@@ -2,7 +2,7 @@ package com.mobven.fitai.presentation.login.sign_up.screens
 
 import androidx.navigation.fragment.findNavController
 import com.mobven.fitai.R
-import com.mobven.fitai.base.BaseFragment
+import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.databinding.FragmentBirthdaySignUpBinding
 
 class BirthdaySignUpFragment :

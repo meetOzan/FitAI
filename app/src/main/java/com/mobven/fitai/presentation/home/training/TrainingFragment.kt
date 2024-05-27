@@ -1,6 +1,6 @@
 package com.mobven.fitai.presentation.home.training
 
-import com.mobven.fitai.base.BaseFragment
+import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.databinding.FragmentTrainingBinding
 
 class TrainingFragment : BaseFragment<FragmentTrainingBinding>(FragmentTrainingBinding::inflate) {

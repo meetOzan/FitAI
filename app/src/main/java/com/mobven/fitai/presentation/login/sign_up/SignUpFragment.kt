@@ -1,6 +1,6 @@
 package com.mobven.fitai.presentation.login.sign_up
 
-import com.mobven.fitai.base.BaseFragment
+import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.databinding.FragmentSignUpBinding
 import com.mobven.fitai.presentation.login.sign_up.adapter.SignUpPagerAdapter
 
