@@ -141,7 +141,7 @@
     <string name="password_changed_bottom">Parolanız başarıyla değiştirildi. Yeni\nparalonızla hesabınıza giriş yapabilirsiniz.</string>
     <string name="otp_email">E-posta adresinize gönderdiğimiz doğrulama\nkodunu girin.</string>
     <string name="send_code">Kod Gönder</string>
-    <string name="welcome">Hoş geldin!\nSeni tekrar aramızda\ngördüğümüze sevindik</string>
+    <string name="welcome">Hoş geldin!</string>
     <string name="are_you_forgot_password">Şifrenizi mi unuttunuz?</string>
     <string name="are_you_forgot_password_bottom">Endişelenmeyin! Hesabınızla bağlantılı\nnumaranız doğruysa onaylayın</string>
     <string name="are_you_forgot_password_email_bottom">Endişelenmeyin!  Lütfen hesabınızla bağlantılı\ne-posta adresini girin.</string>

@@ -56,4 +56,11 @@
     <!--#8391A1-->
     <color name="cyan_blue">#8391A1</color>
 
+    <!--#66665F-->
+    <color name="gray_300">#FF66665F</color>
+
+    <!--#0B0B07-->
+    <color name="gray_900">#FF0B0B07</color>
+
+
 </resources>
