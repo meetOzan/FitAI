@@ -1,4 +1,4 @@
-package com.mobven.fitai.presentation.profile
+package com.mobven.fitai.presentation.profile.adatper
 
 import com.mobven.fitai.util.enums.ProfileItemType
 

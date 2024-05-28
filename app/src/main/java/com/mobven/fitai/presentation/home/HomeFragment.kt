@@ -53,6 +53,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
                 navigate(trainingAction)
             }
 
+            ivHomeProfile.setOnClickListener{
+                val profileAction = com.mobven.fitai.presentation.home.HDirections.actionHomeFragmentToProfileFragment()
+                navigate(profileAction)
+            }
+
             val dateList = mutableListOf<CalendarItem>()
             val dayFormatter = DateTimeFormatter.ofPattern(getString(R.string.eeee))
             val dateFormatter = DateTimeFormatter.ofPattern(getString(R.string.dd))

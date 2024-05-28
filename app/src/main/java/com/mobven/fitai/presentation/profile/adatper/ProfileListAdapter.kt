@@ -1,4 +1,4 @@
-package com.mobven.fitai.presentation.profile
+package com.mobven.fitai.presentation.profile.adatper
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mobven.fitai.databinding.CardProfileItemBinding
 import com.mobven.fitai.util.enums.ProfileItemType
 
-class ProfileListAdapter : ListAdapter<ProfileItem, ProfileListAdapter.ProfileViewHolder>(ProfileDiffUtil()){
+class ProfileListAdapter : ListAdapter<ProfileItem, ProfileListAdapter.ProfileViewHolder>(
+    ProfileDiffUtil()
+){
 
     inner class ProfileViewHolder(private val binding: CardProfileItemBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(item: ProfileItem){

@@ -1,4 +1,4 @@
-package com.mobven.fitai.presentation.profile
+package com.mobven.fitai.presentation.profile.adatper
 
 import androidx.recyclerview.widget.DiffUtil
 

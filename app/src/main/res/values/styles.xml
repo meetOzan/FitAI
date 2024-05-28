@@ -107,4 +107,8 @@
         <item name="android:textSize">@dimen/_22sp</item>
     </style>
 
+    <style name="CircularImageView">
+        <item name="cornerSize">50%</item>
+    </style>
+
 </resources>
