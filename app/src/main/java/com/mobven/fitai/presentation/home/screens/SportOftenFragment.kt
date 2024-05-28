@@ -1,42 +1,45 @@
 package com.mobven.fitai.presentation.home.screens
 
+import androidx.fragment.app.viewModels
 import androidx.viewpager2.widget.ViewPager2
 import com.mobven.fitai.R
 import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.databinding.FragmentGoalsBinding
+import com.mobven.fitai.presentation.home.viewmodel.HomeAction
+import com.mobven.fitai.presentation.home.viewmodel.HomeViewModel
 import com.mobven.fitai.presentation.login.sign_up.adapter.SignUpListAdapter
 import com.mobven.fitai.presentation.login.sign_up.model.SignUpSelectorItem
+import com.mobven.fitai.util.enums.HomeFragmentType
 import com.mobven.fitai.util.enums.SignUpSelectorType
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class SportOftenFragment : BaseFragment<FragmentGoalsBinding>(FragmentGoalsBinding::inflate) {
 
     private val adapter = SignUpListAdapter()
+    private val homeViewModel: HomeViewModel by viewModels()
 
     override fun observeUi() {
-        val sportOftenList = listOf(
-            SignUpSelectorItem(
-                title = getString(R.string.as_much_as_offered),
-                isSelected = false,
-                type = SignUpSelectorType.RADIO
-            ),
-            SignUpSelectorItem(
-                title = getString(R.string.on_two_times_week),
-                isSelected = false,
-                type = SignUpSelectorType.RADIO
-            ),
-            SignUpSelectorItem(
-                title = getString(R.string.three_four_times_week),
-                isSelected = false,
-                type = SignUpSelectorType.RADIO
-            ),
-            SignUpSelectorItem(
-                title = getString(R.string.five_six_times_week),
-                isSelected = false,
-                type = SignUpSelectorType.RADIO
-            )
-        ).reversed()
+        homeViewModel.homeUiState.observe(viewLifecycleOwner) { homeState ->
+            when {
+                homeState.isError -> {
+                    handleError(homeState.errorMessage)
+                }
 
+                homeState.isLoading -> {
+                    handleLoading()
+                }
+
+                else -> {
+                    handleSuccess(homeState.signUpSelectorList)
+                }
+
+            }
+        }
+    }
+
+    private fun handleSuccess(sportOftenList: List<SignUpSelectorItem>) {
         adapter.submitList(sportOftenList)
         binding.rvGoals.adapter = adapter
 
@@ -47,6 +50,18 @@ class SportOftenFragment : BaseFragment<FragmentGoalsBinding>(FragmentGoalsBindi
             requireActivity().findViewById<ViewPager2>(R.id.vp_training)
                 .setCurrentItem(nextItem, true)
         }
+    }
+
+    private fun handleError(error: String) {
+        println(error)
+    }
+
+    private fun handleLoading() {
+        println(getString(R.string.loading))
+    }
+
+    override fun callInitialViewModelFunction() {
+        homeViewModel.onAction(HomeAction.GetSelectorItem(HomeFragmentType.SPORT_OFTEN))
     }
 
 }

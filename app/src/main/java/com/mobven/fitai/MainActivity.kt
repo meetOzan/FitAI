@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.mobven.fitai.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -21,4 +24,5 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+
 }
