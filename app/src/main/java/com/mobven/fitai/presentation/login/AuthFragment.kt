@@ -2,7 +2,7 @@ package com.mobven.fitai.presentation.login
 
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
-import com.mobven.fitai.base.BaseFragment
+import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.databinding.FragmentAuthBinding
 
 class AuthFragment : BaseFragment<FragmentAuthBinding>(FragmentAuthBinding::inflate) {

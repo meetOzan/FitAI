@@ -2,7 +2,7 @@ package com.mobven.fitai.presentation.login.sign_up.screens
 
 import androidx.viewpager2.widget.ViewPager2
 import com.mobven.fitai.R
-import com.mobven.fitai.base.BaseFragment
+import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.databinding.FragmentHeightSignUpBinding
 
 class HeightSignUpFragment : BaseFragment<FragmentHeightSignUpBinding>(FragmentHeightSignUpBinding::inflate) {

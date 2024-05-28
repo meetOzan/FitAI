@@ -1,4 +1,4 @@
-package com.mobven.fitai.base
+package com.mobven.fitai.presentation.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

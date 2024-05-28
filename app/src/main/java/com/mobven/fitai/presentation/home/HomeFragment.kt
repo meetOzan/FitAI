@@ -3,25 +3,54 @@ package com.mobven.fitai.presentation.home
 import android.view.View
 import android.os.Build
 import androidx.annotation.RequiresApi
+import androidx.fragment.app.viewModels
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import com.mobven.fitai.R
-import com.mobven.fitai.base.BaseFragment
+import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.databinding.CardPlanItemBinding
 import com.mobven.fitai.databinding.FragmentHomeBinding
 import com.mobven.fitai.presentation.home.calendar.CalendarItem
 import com.mobven.fitai.presentation.home.calendar.HomeCalendarAdapter
+import com.mobven.fitai.presentation.home.viewmodel.HomeViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 typealias HDirections = HomeFragmentDirections
 
+@AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
 
     private val adapter = HomeCalendarAdapter()
+    private val homeViewModel : HomeViewModel by viewModels()
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun observeUi() {
+
+        homeViewModel.homeUiState.observe(viewLifecycleOwner) { homeState ->
+            when {
+                homeState.isError -> {
+                    handleError(homeState.errorMessage)
+                }
+
+                homeState.isLoading -> {
+                    handleLoading()
+                }
+
+                else -> {
+                    handleSuccess()
+                }
+
+            }
+        }
+    }
+
+    override fun navigate(action: NavDirections) {
+        findNavController().navigate(action)
+    }
+
+    private fun handleSuccess() {
         with(binding) {
 
             setupCards(
@@ -44,12 +73,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             )
 
             ivFoodPlanAdd.setOnClickListener {
-                val foodAction = com.mobven.fitai.presentation.home.HDirections.actionHomeFragmentToNutritionFragment()
+                val foodAction = HDirections.actionHomeFragmentToNutritionFragment()
                 navigate(foodAction)
             }
 
             ivTrainingPlanAdd.setOnClickListener {
-                val trainingAction = com.mobven.fitai.presentation.home.HDirections.actionHomeFragmentToTrainingFragment()
+                val trainingAction = HDirections.actionHomeFragmentToTrainingFragment()
                 navigate(trainingAction)
             }
 
@@ -78,8 +107,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
     }
 
-    override fun navigate(action: NavDirections) {
-        findNavController().navigate(action)
+    private fun handleError(error: String) {
+        println(error)
+    }
+
+    private fun handleLoading() {
+        println(getString(R.string.loading))
     }
 
 }

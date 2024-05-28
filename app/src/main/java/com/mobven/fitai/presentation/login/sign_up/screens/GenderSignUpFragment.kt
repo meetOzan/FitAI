@@ -1,59 +1,64 @@
 package com.mobven.fitai.presentation.login.sign_up.screens
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.viewpager2.widget.ViewPager2
 import com.mobven.fitai.R
 import com.mobven.fitai.databinding.FragmentGenderSignUpBinding
+import com.mobven.fitai.presentation.base.BaseFragment
+import com.mobven.fitai.presentation.login.sign_up.viewmodel.SignUpViewModel
 import com.mobven.fitai.presentation.login.sign_up.adapter.SignUpListAdapter
 import com.mobven.fitai.presentation.login.sign_up.model.SignUpSelectorItem
-import com.mobven.fitai.util.enums.SignUpSelectorType
+import com.mobven.fitai.presentation.login.sign_up.viewmodel.SignUpAction
+import dagger.hilt.android.AndroidEntryPoint
 
-class GenderSignUpFragment : Fragment() {
+@AndroidEntryPoint
+class GenderSignUpFragment :
+    BaseFragment<FragmentGenderSignUpBinding>(FragmentGenderSignUpBinding::inflate) {
 
-    private lateinit var binding: FragmentGenderSignUpBinding
     private val adapter = SignUpListAdapter()
+    private val viewModel: SignUpViewModel by viewModels()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentGenderSignUpBinding.inflate(inflater, container, false)
-        return binding.root
+    override fun observeUi() {
+        viewModel.signUpState.observe(viewLifecycleOwner) { signUpState ->
+            when {
+                signUpState.isError -> {
+                    handleError(signUpState.errorMessage)
+                }
+
+                signUpState.isLoading -> {
+                    handleLoading()
+                }
+
+                else -> {
+                    handleSuccess(signUpState.signUpSelectorList)
+                }
+            }
+        }
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val genderList = listOf(
-            SignUpSelectorItem(
-                title = getString(R.string.other_gender),
-                isSelected = false,
-                type = SignUpSelectorType.RADIO
-            ),
-            SignUpSelectorItem(
-                title = getString(R.string.male_gender),
-                isSelected = false,
-                type = SignUpSelectorType.RADIO
-            ),
-            SignUpSelectorItem(
-                title = getString(R.string.female_gender),
-                isSelected = false,
-                type = SignUpSelectorType.RADIO
-            )
-        )
-
+    private fun handleSuccess(genderList: List<SignUpSelectorItem>) {
         adapter.submitList(genderList)
         binding.rvGender.adapter = adapter
 
         binding.btnGenderContinue.setOnClickListener {
-            val currentItem = requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager).currentItem
+            val currentItem =
+                requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager).currentItem
             val nextItem = currentItem + 1
-            requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager).setCurrentItem(nextItem, true)
+            requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager)
+                .setCurrentItem(nextItem, true)
         }
-
     }
+
+    private fun handleError(error: String) {
+        println(error)
+    }
+
+    private fun handleLoading() {
+        println(getString(R.string.loading))
+    }
+
+    override fun callInitialViewModelFunction() {
+        viewModel.onAction(SignUpAction.GetSelectorItem)
+    }
+
 }
