@@ -5,6 +5,9 @@
     <color name="transparent">#00000000</color>
     <color name="onboarding_background">#FFD8D8D8</color>
 
+    <!--#B1EB04-->
+    <color name="green_500">#FFB1EB04</color>
+
     <!-- #1E232C -->
     <color name="main_grey">#FF1E232C</color>
 

@@ -14,6 +14,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="0dp"
         android:contentDescription="@string/onboarding_description_image"
         android:scaleType="centerCrop"
         android:src="@drawable/onboarding_2" />
@@ -26,7 +30,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginHorizontal="@dimen/horizontal_margin"
-        android:layout_marginBottom="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_12dp"
         android:fontFamily="@font/urbanist_bold"
         android:text="@string/onboarding_title_2"
         android:textSize="@dimen/_32sp" />
@@ -35,27 +39,14 @@
         android:id="@+id/tv_onboarding_2_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/btn_onboarding_2_continue"
+        android:layout_above="@+id/btn_onboarding_2_skip"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginHorizontal="@dimen/horizontal_margin"
-        android:layout_marginBottom="@dimen/_30sp"
+        android:layout_marginBottom="@dimen/_24dp"
         android:fontFamily="@font/urbanist_regular"
         android:text="@string/onboarding_description_2"
         android:textSize="@dimen/_16sp" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_onboarding_2_continue"
-        style="@style/nextButtonOnBoardingStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/btn_onboarding_2_skip"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginHorizontal="@dimen/horizontal_margin"
-        android:layout_marginBottom="@dimen/_8dp"
-        android:paddingVertical="@dimen/_18dp"
-        app:cornerRadius="@dimen/button_corner_radius" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_onboarding_2_skip"
