@@ -5,18 +5,17 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.mobven.fitai.presentation.home.screens.DietTypeFragment
 import com.mobven.fitai.presentation.home.screens.FoodAllergiesFragment
-import com.mobven.fitai.presentation.home.screens.GoalsFragment
 import com.mobven.fitai.presentation.home.screens.OtherHealthProblemFragment
 import com.mobven.fitai.presentation.home.screens.PlanCreatingFragment
+import com.mobven.fitai.presentation.login.sign_up.screens.GoalsFragment
 
 class NutritionPagerAdapter(
-    fragmentActivity: FragmentActivity
+    fragmentActivity: FragmentActivity,
 ) : FragmentStateAdapter(fragmentActivity) {
-
     override fun getItemCount(): Int = 5
 
     override fun createFragment(position: Int): Fragment {
-        return when(position) {
+        return when (position) {
             0 -> OtherHealthProblemFragment()
             1 -> GoalsFragment()
             2 -> FoodAllergiesFragment()
@@ -25,5 +24,4 @@ class NutritionPagerAdapter(
             else -> PlanCreatingFragment()
         }
     }
-
 }

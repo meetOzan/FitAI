@@ -8,7 +8,7 @@ import com.mobven.fitai.databinding.FragmentGoalsBinding
 import com.mobven.fitai.presentation.home.viewmodel.HomeAction
 import com.mobven.fitai.presentation.home.viewmodel.HomeViewModel
 import com.mobven.fitai.presentation.login.sign_up.adapter.SignUpListAdapter
-import com.mobven.fitai.presentation.login.sign_up.model.SignUpSelectorItem
+import com.mobven.fitai.presentation.login.sign_up.model.ListSelectorItem
 import com.mobven.fitai.util.enums.HomeFragmentType
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -37,7 +37,7 @@ class PreferredSportFragment : BaseFragment<FragmentGoalsBinding>(FragmentGoalsB
         }
     }
 
-    private fun handleSuccess(preferredSportList: List<SignUpSelectorItem>) {
+    private fun handleSuccess(preferredSportList: List<ListSelectorItem>) {
         adapter.submitList(preferredSportList)
         binding.rvGoals.adapter = adapter
 
