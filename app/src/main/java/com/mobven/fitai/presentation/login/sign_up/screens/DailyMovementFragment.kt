@@ -5,7 +5,7 @@ import com.mobven.fitai.R
 import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.databinding.FragmentDailyMovementBinding
 import com.mobven.fitai.presentation.login.sign_up.adapter.SignUpListAdapter
-import com.mobven.fitai.presentation.login.sign_up.model.SignUpSelectorItem
+import com.mobven.fitai.presentation.login.sign_up.model.ListSelectorItem
 import com.mobven.fitai.util.enums.SignUpSelectorType
 
 
@@ -16,27 +16,27 @@ class DailyMovementFragment : BaseFragment<FragmentDailyMovementBinding>(Fragmen
     override fun observeUi() {
 
         val dailyMovementList = listOf(
-            SignUpSelectorItem(
+            ListSelectorItem(
                 title = getString(R.string.almost_never),
                 isSelected = false,
                 type = SignUpSelectorType.RADIO,
             ),
-            SignUpSelectorItem(
+            ListSelectorItem(
                 title = getString(R.string.rarely),
                 isSelected = false,
                 type = SignUpSelectorType.RADIO,
             ),
-            SignUpSelectorItem(
+            ListSelectorItem(
                 title = getString(R.string.sometimes),
                 isSelected = false,
                 type = SignUpSelectorType.RADIO,
             ),
-            SignUpSelectorItem(
+            ListSelectorItem(
                 title = getString(R.string.often),
                 isSelected = false,
                 type = SignUpSelectorType.RADIO,
             ),
-            SignUpSelectorItem(
+            ListSelectorItem(
                 title = getString(R.string.always),
                 isSelected = false,
                 type = SignUpSelectorType.RADIO,

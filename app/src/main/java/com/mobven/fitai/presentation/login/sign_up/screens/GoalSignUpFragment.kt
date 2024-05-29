@@ -2,12 +2,11 @@ package com.mobven.fitai.presentation.login.sign_up.screens
 
 import androidx.viewpager2.widget.ViewPager2
 import com.mobven.fitai.R
-import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.databinding.FragmentGoalSignUpBinding
+import com.mobven.fitai.presentation.base.BaseFragment
 
 class GoalSignUpFragment :
     BaseFragment<FragmentGoalSignUpBinding>(FragmentGoalSignUpBinding::inflate) {
-
     override fun observeUi() {
         with(binding) {
             btnWeightGoalContinue.setOnClickListener {
@@ -19,5 +18,4 @@ class GoalSignUpFragment :
             }
         }
     }
-
 }

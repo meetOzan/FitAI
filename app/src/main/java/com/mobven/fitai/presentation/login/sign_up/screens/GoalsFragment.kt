@@ -1,9 +1,11 @@
 package com.mobven.fitai.presentation.login.sign_up.screens
 
 import androidx.fragment.app.viewModels
-import androidx.viewpager2.widget.ViewPager2
+import androidx.navigation.NavDirections
+import androidx.navigation.NavOptions
+import androidx.navigation.fragment.findNavController
 import com.mobven.fitai.R
-import com.mobven.fitai.databinding.FragmentGenderSignUpBinding
+import com.mobven.fitai.databinding.FragmentGoalsBinding
 import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.presentation.login.sign_up.adapter.SignUpListAdapter
 import com.mobven.fitai.presentation.login.sign_up.model.ListSelectorItem
@@ -13,13 +15,12 @@ import com.mobven.fitai.util.enums.SignUpFragmentType
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class GenderSignUpFragment :
-    BaseFragment<FragmentGenderSignUpBinding>(FragmentGenderSignUpBinding::inflate) {
+class GoalsFragment : BaseFragment<FragmentGoalsBinding>(FragmentGoalsBinding::inflate) {
     private val adapter = SignUpListAdapter()
-    private val viewModel: SignUpViewModel by viewModels()
+    private val signUpViewModel: SignUpViewModel by viewModels()
 
     override fun observeUi() {
-        viewModel.signUpState.observe(viewLifecycleOwner) { signUpState ->
+        signUpViewModel.signUpState.observe(viewLifecycleOwner) { signUpState ->
             when {
                 signUpState.isError -> {
                     handleError(signUpState.errorMessage)
@@ -36,16 +37,13 @@ class GenderSignUpFragment :
         }
     }
 
-    private fun handleSuccess(genderList: List<ListSelectorItem>) {
-        adapter.submitList(genderList)
-        binding.rvGender.adapter = adapter
+    private fun handleSuccess(goalList: List<ListSelectorItem>) {
+        adapter.submitList(goalList)
+        binding.rvGoals.adapter = adapter
 
-        binding.btnGenderContinue.setOnClickListener {
-            val currentItem =
-                requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager).currentItem
-            val nextItem = currentItem + 1
-            requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager)
-                .setCurrentItem(nextItem, true)
+        binding.btnGoalsContinue.setOnClickListener {
+            val action = BDayDirections.actionSignUpFragmentToHomeFragment()
+            navigate(action)
         }
     }
 
@@ -58,6 +56,15 @@ class GenderSignUpFragment :
     }
 
     override fun callInitialViewModelFunction() {
-        viewModel.onAction(SignUpAction.GetSelectorItem(SignUpFragmentType.GENDER))
+        signUpViewModel.onAction(SignUpAction.GetSelectorItem(SignUpFragmentType.GOALS))
+    }
+
+    override fun navigate(action: NavDirections) {
+        val navOptions =
+            NavOptions.Builder()
+                .setPopUpTo(R.id.signUpFragment, true)
+                .setPopUpTo(R.id.authFragment, true)
+                .build()
+        findNavController().navigate(action, navOptions)
     }
 }

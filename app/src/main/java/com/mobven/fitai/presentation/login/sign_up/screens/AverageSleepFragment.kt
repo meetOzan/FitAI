@@ -5,7 +5,7 @@ import com.mobven.fitai.R
 import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.databinding.FragmentAverageSleepBinding
 import com.mobven.fitai.presentation.login.sign_up.adapter.SignUpListAdapter
-import com.mobven.fitai.presentation.login.sign_up.model.SignUpSelectorItem
+import com.mobven.fitai.presentation.login.sign_up.model.ListSelectorItem
 import com.mobven.fitai.util.enums.SignUpSelectorType
 
 class AverageSleepFragment :
@@ -15,15 +15,15 @@ class AverageSleepFragment :
 
     override fun observeUi() {
         val sleepList = listOf(
-            SignUpSelectorItem(
+            ListSelectorItem(
                 title = getString(R.string.zero_six_hour),
                 isSelected = false,
                 type = SignUpSelectorType.RADIO,
-            ), SignUpSelectorItem(
+            ), ListSelectorItem(
                 title = getString(R.string.six_ten_hour),
                 isSelected = false,
                 type = SignUpSelectorType.RADIO,
-            ), SignUpSelectorItem(
+            ), ListSelectorItem(
                 title = getString(R.string.more_than_ten),
                 isSelected = false,
                 type = SignUpSelectorType.RADIO,

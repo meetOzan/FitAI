@@ -45,7 +45,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:reverseLayout="true"
-        tools:listitem="@layout/card_sign_up" />
+        tools:listitem="@layout/card_selector" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_average_water_continue"

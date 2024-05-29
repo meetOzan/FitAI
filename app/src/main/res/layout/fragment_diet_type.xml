@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/diet_type_title"
-        tools:listitem="@layout/card_sign_up" />
+        tools:listitem="@layout/card_selector" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_diet_type_continue"

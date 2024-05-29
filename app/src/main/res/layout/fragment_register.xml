@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:background="@color/white"
-    tools:context=".login.sign_up.screens.RegisterFragment">
+    tools:context=".presentation.login.sign_up.screens.RegisterFragment">
 
     <TextView
         android:id="@+id/sign_up_title"
@@ -15,9 +15,22 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_24dp"
         android:layout_marginTop="@dimen/_8dp"
-        android:text="@string/sign_up_title"
+        android:fontFamily="@font/urbanist_bold"
+        android:text="@string/welcome"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sign_up_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:textSize="@dimen/_16sp"
+        android:text="@string/register_for_healty_life"
+        android:fontFamily="@font/urbanist_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_title" />
 
     <!--TODO Indicator color değiştirilecek | Mert-->
     <com.google.android.material.textfield.TextInputLayout
@@ -31,9 +44,10 @@
         app:hintTextColor="@color/black"
         app:boxStrokeColor="@color/light_grey_2"
         app:boxStrokeWidth="@dimen/_1dp"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sign_up_title">
+        app:layout_constraintTop_toBottomOf="@id/sign_up_description">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_nickname_sign_up"
@@ -51,11 +65,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_12dp"
         app:boxBackgroundColor="@color/light_grey_2"
         app:boxStrokeColor="@color/light_grey_2"
         app:boxStrokeWidth="@dimen/_1dp"
         app:hintTextColor="@color/black"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_input_layout_nickname_sign_up">
@@ -76,13 +90,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_12dp"
         app:boxBackgroundColor="@color/light_grey_2"
         app:boxStrokeColor="@color/light_grey_2"
         app:boxStrokeWidth="@dimen/_1dp"
         app:endIconDrawable="@drawable/fluent_eye_filled"
         app:endIconMode="password_toggle"
         app:hintTextColor="@color/black"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_input_layout_email_sign_up">
@@ -103,13 +117,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_12dp"
         app:boxBackgroundColor="@color/light_grey_2"
         app:boxStrokeColor="@color/light_grey_2"
         app:boxStrokeWidth="@dimen/_1dp"
         app:endIconDrawable="@drawable/fluent_eye_filled"
         app:endIconMode="password_toggle"
         app:hintTextColor="@color/black"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_input_layout_password_sign_up">
@@ -130,7 +144,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_16dp"
-        android:layout_marginTop="@dimen/_12dp"
+        android:layout_marginTop="@dimen/_6dp"
         android:button="@drawable/custom_checkbox"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_input_layout_password_again_sign_up" />
