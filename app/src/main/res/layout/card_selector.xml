@@ -46,13 +46,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_16sp"
+            android:layout_marginVertical="@dimen/_16sp"
             android:fontFamily="@font/urbanist_bold"
             android:textAlignment="textStart"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@id/radio_button_image_background"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/checkbox_image_sign_up_item"
             app:layout_constraintStart_toEndOf="@id/radio_button_image_background"
-            app:layout_constraintTop_toTopOf="@id/radio_button_image_background"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/radio_text" />
 
         <ImageView

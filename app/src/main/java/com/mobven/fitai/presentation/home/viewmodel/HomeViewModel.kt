@@ -39,26 +39,31 @@ class HomeViewModel
                                         title = stringRes.getString(R.string.ketogenic),
                                         isSelected = false,
                                         type = SignUpSelectorType.RADIO,
+                                        image = R.drawable.ketogenic,
                                     ),
                                     ListSelectorItem(
                                         title = stringRes.getString(R.string.pescetarian),
                                         isSelected = false,
                                         type = SignUpSelectorType.RADIO,
+                                        image = R.drawable.pesketarian,
                                     ),
                                     ListSelectorItem(
                                         title = stringRes.getString(R.string.vegan),
                                         isSelected = false,
                                         type = SignUpSelectorType.RADIO,
+                                        image = R.drawable.vegan,
                                     ),
                                     ListSelectorItem(
                                         title = stringRes.getString(R.string.vegetarian),
                                         isSelected = false,
                                         type = SignUpSelectorType.RADIO,
+                                        image = R.drawable.vegetarian,
                                     ),
                                     ListSelectorItem(
                                         title = stringRes.getString(R.string.traditional),
                                         isSelected = false,
                                         type = SignUpSelectorType.RADIO,
+                                        image = R.drawable.traditional,
                                     ),
                                 )
 
@@ -121,26 +126,31 @@ class HomeViewModel
                                         title = stringRes.getString(R.string.all),
                                         isSelected = false,
                                         type = SignUpSelectorType.CHECKBOX,
+                                        image = R.drawable.all_select,
                                     ),
                                     ListSelectorItem(
                                         title = stringRes.getString(R.string.yoga),
                                         isSelected = false,
                                         type = SignUpSelectorType.CHECKBOX,
+                                        image = R.drawable.yoga,
                                     ),
                                     ListSelectorItem(
                                         title = stringRes.getString(R.string.fitness),
                                         isSelected = false,
                                         type = SignUpSelectorType.CHECKBOX,
+                                        image = R.drawable.fitness,
                                     ),
                                     ListSelectorItem(
                                         title = stringRes.getString(R.string.running),
                                         isSelected = false,
                                         type = SignUpSelectorType.CHECKBOX,
+                                        image = R.drawable.running,
                                     ),
                                     ListSelectorItem(
                                         title = stringRes.getString(R.string.walking),
                                         isSelected = false,
                                         type = SignUpSelectorType.CHECKBOX,
+                                        image = R.drawable.walking,
                                     ),
                                 ).reversed()
 
@@ -150,31 +160,37 @@ class HomeViewModel
                                         title = stringRes.getString(R.string.all),
                                         isSelected = false,
                                         type = SignUpSelectorType.CHECKBOX,
+                                        image = R.drawable.all_select,
                                     ),
                                     ListSelectorItem(
                                         title = stringRes.getString(R.string.shoulder_arms),
                                         isSelected = false,
                                         type = SignUpSelectorType.CHECKBOX,
+                                        image = R.drawable.arms,
                                     ),
                                     ListSelectorItem(
                                         title = stringRes.getString(R.string.chest),
                                         isSelected = false,
                                         type = SignUpSelectorType.CHECKBOX,
+                                        image = R.drawable.chest,
                                     ),
                                     ListSelectorItem(
                                         title = stringRes.getString(R.string.belly_back),
                                         isSelected = false,
                                         type = SignUpSelectorType.CHECKBOX,
+                                        image = R.drawable.belly,
                                     ),
                                     ListSelectorItem(
                                         title = stringRes.getString(R.string.hip),
                                         isSelected = false,
                                         type = SignUpSelectorType.CHECKBOX,
+                                        image = R.drawable.hips,
                                     ),
                                     ListSelectorItem(
                                         title = stringRes.getString(R.string.leg),
                                         isSelected = false,
                                         type = SignUpSelectorType.CHECKBOX,
+                                        image = R.drawable.legs,
                                     ),
                                 ).reversed()
 

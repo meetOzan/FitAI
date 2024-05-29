@@ -21,6 +21,12 @@ class SignUpListAdapter :
                 radioButtonText.text = item.title
                 radioButtonImage.setImageResource(item.image)
 
+                if (item.image == 0) {
+                    radioButtonImageBackground.visibility = View.GONE
+                } else {
+                    radioButtonImageBackground.visibility = View.VISIBLE
+                }
+
                 cardSignUp.setOnClickListener {
                     if (item.type == SignUpSelectorType.RADIO) {
                         selectItem(currentList, adapterPosition)
@@ -59,7 +65,8 @@ class SignUpListAdapter :
                             R.color.white,
                         ),
                     )
-                    cardSignUp.strokeColor = ContextCompat.getColor(root.context, R.color.light_grey)
+                    cardSignUp.strokeColor =
+                        ContextCompat.getColor(root.context, R.color.light_grey)
                     radioButtonImageBackground.setColorFilter(
                         ContextCompat.getColor(
                             root.context,
