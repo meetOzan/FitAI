@@ -153,7 +153,21 @@
     <string name="remember_the_password">Şifreyi Hatırladın mı?</string>
     <string name="daily_training">Günlük Antrenmanlar</string>
     <string name="profile">Profil</string>
+    <string name="profile_text">Profile Item</string>
     <string name="default_name">Jane Doe</string>
     <string name="date_of_joining">5 Mayıs 2024</string>
     <string name="date_of_joining_end">’ten beri üye</string>
+    <string name="goal_tr">Hedef</string>
+    <string name="goal_detail">Kilo Verme,Kas Yapma</string>
+    <string name="badges">Rozetler</string>
+    <string name="personalization">Kişiselleştir</string>
+    <string name="connected_accounts">Bağlantılı Hesaplar</string>
+    <string name="track">Takip</string>
+    <string name="notification">Bildirim</string>
+    <string name="support">Destek</string>
+    <string name="legal">Yasal</string>
+    <string name="theme">Tema</string>
+    <string name="system">Sistem</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
 </resources>

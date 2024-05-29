@@ -68,4 +68,7 @@
     <!--#B1EB04-->
     <color name="green_500">#B1EB04</color>
 
+    <!--#545454-->
+    <color name="black_300">#545454</color>
+
 </resources>
