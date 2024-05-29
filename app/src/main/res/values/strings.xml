@@ -126,7 +126,7 @@
     <string name="created_for_you_powered_ai">Yapay zeka desteğiyle sana özel oluşturuldu.</string>
     <string name="indicator">indicator</string>
     <string name="is_your_number_not_correct">Numaranız doğru değil mi?</string>
-    <string name="login_with_email">Epostayla Giriş Yap</string>
+    <string name="login_with_email">E-postayla Giriş Yap</string>
     <string name="verification">Doğrulama</string>
     <string name="verification_code">nolu numaranıza</string>
     <string name="verification_code_bottom">gönderdiğimiz doğrulama kodunu girin.</string>
@@ -170,4 +170,5 @@
     <string name="system">Sistem</string>
     <string name="light">Light</string>
     <string name="dark">Dark</string>
+    <string name="confirm">Onayla</string>
 </resources>
