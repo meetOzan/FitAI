@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.profile.ProfileFragment">
+
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <TextView
+           android:id="@+id/tvProfile"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentTop="true"
+           android:text="@string/profile"
+           app:layout_constraintStart_toStartOf="@+id/profile_card"
+           app:layout_constraintTop_toTopOf="parent"
+           android:layout_marginTop="@dimen/_20dp"
+           android:textSize="@dimen/_24sp"
+           android:textColor="@color/black"
+           android:fontFamily="@font/urbanist_bold" />
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/profile_card"
+           android:layout_width="match_parent"
+           android:layout_height="210dp"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:backgroundTint="@color/green_500"
+           android:layout_marginStart="@dimen/_24dp"
+           android:layout_marginEnd="@dimen/_24dp"
+           android:layout_marginTop="100dp"
+           app:cardCornerRadius="12dp">
+
+           <TextView
+               android:id="@+id/tvProfileName"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="@string/default_name"
+               android:textSize="@dimen/_24sp"
+               android:fontFamily="@font/urbanist_bold"
+               android:textColor="@color/gray_900"
+               android:gravity="center"
+               android:layout_marginTop="32dp"/>
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="64dp">
+
+               <TextView
+                   android:id="@+id/tvDateOfJoining"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/date_of_joining"
+                   android:textSize="@dimen/_12sp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintEnd_toStartOf="@id/tvDateOfJoiningEnd"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintHorizontal_chainStyle="packed"
+                   android:fontFamily="@font/urbanist_regular"
+                   android:textColor="@color/gray_300"
+                   android:gravity="center" />
+
+               <TextView
+                   android:id="@+id/tvDateOfJoiningEnd"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/date_of_joining_end"
+                   android:textSize="@dimen/_12sp"
+                   app:layout_constraintStart_toEndOf="@id/tvDateOfJoining"
+                   app:layout_constraintHorizontal_chainStyle="packed"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   android:fontFamily="@font/urbanist_regular"
+                   android:textColor="@color/gray_300"
+                   android:gravity="center"/>
+
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginStart="@dimen/_18dp"
+               android:layout_marginEnd="@dimen/_18dp"
+               android:layout_marginTop="119dp">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/goal_tr"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   android:textSize="@dimen/_16sp"
+                   android:fontFamily="@font/urbanist_bold"
+                   android:textColor="@color/gray_900"
+                   android:gravity="center"/>
+
+               <TextView
+                   android:id="@+id/tvGoals"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/goal_detail"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   android:textSize="@dimen/_16sp"
+                   android:fontFamily="@font/urbanist_bold"
+                   android:textColor="@color/gray_900"
+                   android:gravity="center"/>
+
+               <ImageView
+                   android:id="@+id/ic_line"
+                   android:layout_width="match_parent"
+                   android:layout_height="5dp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/tvGoals"
+                   android:src="@drawable/ic_profile_card_line"
+                   android:layout_marginTop="@dimen/_12dp"
+                   android:contentDescription="@string/contentDescription"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/badges"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/ic_line"
+                   android:textSize="@dimen/_16sp"
+                   android:layout_marginTop="@dimen/_12dp"
+                   android:fontFamily="@font/urbanist_bold"
+                   android:textColor="@color/gray_900"
+                   android:gravity="center"/>
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_badge"
+                   android:layout_marginTop="@dimen/_6dp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/ic_line"
+                   android:contentDescription="@string/contentDescription"/>
+
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+       </androidx.cardview.widget.CardView>
+
+       <FrameLayout
+           android:layout_width="90dp"
+           android:layout_height="90dp"
+           app:layout_constraintTop_toBottomOf="@id/tvProfile"
+           app:layout_constraintBottom_toTopOf="@id/profile_card"
+           app:layout_constraintStart_toStartOf="@id/profile_card"
+           app:layout_constraintEnd_toEndOf="@id/profile_card"
+           android:layout_marginStart="@dimen/_12dp"
+           android:layout_marginTop="48dp"
+           android:elevation="2dp">
+
+           <com.google.android.material.imageview.ShapeableImageView
+               android:id="@+id/profileImage"
+               android:layout_width="76dp"
+               android:layout_height="76dp"
+               android:src="@drawable/profile_default_image"
+               app:layout_constraintStart_toStartOf="@id/profile_card"
+               app:layout_constraintEnd_toEndOf="@id/profile_card"
+               app:layout_constraintTop_toTopOf="parent"
+               app:shapeAppearanceOverlay="@style/CircularImageView"
+               app:strokeWidth="2dp"
+               app:strokeColor="@color/white"
+               android:layout_gravity=""/>
+
+           <ImageView
+               android:id="@+id/editProfileButton"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_edit_button"
+               android:backgroundTint="@color/transparent"
+               android:layout_gravity="bottom|end"
+               android:contentDescription="@string/contentDescription"/>
+       </FrameLayout>
+
+       <TextView
+           android:id="@+id/tvPersonalization"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentTop="true"
+           android:text="@string/personalization"
+           app:layout_constraintStart_toStartOf="@+id/profile_card"
+           app:layout_constraintTop_toBottomOf="@id/profile_card"
+           android:layout_marginTop="@dimen/_24dp"
+           android:textSize="@dimen/_18sp"
+           android:textColor="@color/black_300"
+           android:fontFamily="@font/urbanist_bold" />
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/cardPersonalization"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@id/tvPersonalization"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_marginStart="@dimen/_24dp"
+           android:layout_marginEnd="@dimen/_24dp"
+           android:layout_marginTop="@dimen/_12dp"
+           app:cardCornerRadius="@dimen/_12dp">
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/rvPersonalization"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_20dp"
+               android:layout_marginEnd="@dimen/_20dp"
+               android:layout_marginTop="@dimen/_4dp"
+               android:layout_marginBottom="@dimen/_4dp"/>
+
+       </androidx.cardview.widget.CardView>
+
+       <TextView
+           android:id="@+id/tvConnectedAccounts"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentTop="true"
+           android:text="@string/connected_accounts"
+           app:layout_constraintStart_toStartOf="@+id/profile_card"
+           app:layout_constraintTop_toBottomOf="@id/cardPersonalization"
+           android:layout_marginTop="@dimen/_24dp"
+           android:textSize="@dimen/_18sp"
+           android:textColor="@color/black_300"
+           android:fontFamily="@font/urbanist_bold" />
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/cardConnectedAccounts"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@id/tvConnectedAccounts"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_marginStart="@dimen/_24dp"
+           android:layout_marginEnd="@dimen/_24dp"
+           android:layout_marginTop="@dimen/_12dp"
+           app:cardCornerRadius="@dimen/_12dp">
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/rvConnectedAccounts"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_20dp"
+               android:layout_marginEnd="@dimen/_20dp"
+               android:layout_marginTop="@dimen/_4dp"
+               android:layout_marginBottom="@dimen/_4dp"/>
+
+       </androidx.cardview.widget.CardView>
+
+       <TextView
+           android:id="@+id/tvTrack"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentTop="true"
+           android:text="@string/track"
+           app:layout_constraintStart_toStartOf="@+id/profile_card"
+           app:layout_constraintTop_toBottomOf="@id/cardConnectedAccounts"
+           android:layout_marginTop="@dimen/_24dp"
+           android:textSize="@dimen/_18sp"
+           android:textColor="@color/black_300"
+           android:fontFamily="@font/urbanist_bold" />
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/cardTrack"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@id/tvTrack"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_marginStart="@dimen/_24dp"
+           android:layout_marginEnd="@dimen/_24dp"
+           android:layout_marginTop="@dimen/_12dp"
+           app:cardCornerRadius="@dimen/_12dp">
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/rvTrack"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_20dp"
+               android:layout_marginEnd="@dimen/_20dp"
+               android:layout_marginTop="@dimen/_4dp"
+               android:layout_marginBottom="@dimen/_4dp"/>
+
+       </androidx.cardview.widget.CardView>
+
+       <TextView
+           android:id="@+id/tvNotification"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentTop="true"
+           android:text="@string/notification"
+           app:layout_constraintStart_toStartOf="@+id/profile_card"
+           app:layout_constraintTop_toBottomOf="@id/cardTrack"
+           android:layout_marginTop="@dimen/_24dp"
+           android:textSize="@dimen/_18sp"
+           android:textColor="@color/black_300"
+           android:fontFamily="@font/urbanist_bold" />
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/cardNotification"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@id/tvNotification"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_marginStart="@dimen/_24dp"
+           android:layout_marginEnd="@dimen/_24dp"
+           android:layout_marginTop="@dimen/_12dp"
+           app:cardCornerRadius="@dimen/_12dp">
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/rvNotification"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_20dp"
+               android:layout_marginEnd="@dimen/_20dp"
+               android:layout_marginTop="@dimen/_4dp"
+               android:layout_marginBottom="@dimen/_4dp"/>
+
+       </androidx.cardview.widget.CardView>
+
+       <TextView
+           android:id="@+id/tvSupport"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentTop="true"
+           android:text="@string/support"
+           app:layout_constraintStart_toStartOf="@+id/profile_card"
+           app:layout_constraintTop_toBottomOf="@id/cardNotification"
+           android:layout_marginTop="@dimen/_24dp"
+           android:textSize="@dimen/_18sp"
+           android:textColor="@color/black_300"
+           android:fontFamily="@font/urbanist_bold" />
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/cardSupport"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@id/tvSupport"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_marginStart="@dimen/_24dp"
+           android:layout_marginEnd="@dimen/_24dp"
+           android:layout_marginTop="@dimen/_12dp"
+           app:cardCornerRadius="@dimen/_12dp">
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/rvSupport"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_20dp"
+               android:layout_marginEnd="@dimen/_20dp"
+               android:layout_marginTop="@dimen/_4dp"
+               android:layout_marginBottom="@dimen/_4dp"/>
+
+       </androidx.cardview.widget.CardView>
+
+       <TextView
+           android:id="@+id/tvLegal"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentTop="true"
+           android:text="@string/legal"
+           app:layout_constraintStart_toStartOf="@+id/profile_card"
+           app:layout_constraintTop_toBottomOf="@id/cardSupport"
+           android:layout_marginTop="@dimen/_24dp"
+           android:textSize="@dimen/_18sp"
+           android:textColor="@color/black_300"
+           android:fontFamily="@font/urbanist_bold" />
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/cardLegal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@id/tvLegal"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_marginStart="@dimen/_24dp"
+           android:layout_marginEnd="@dimen/_24dp"
+           android:layout_marginTop="@dimen/_12dp"
+           app:cardCornerRadius="@dimen/_12dp">
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/rvLegal"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_20dp"
+               android:layout_marginEnd="@dimen/_20dp"
+               android:layout_marginTop="@dimen/_4dp"
+               android:layout_marginBottom="@dimen/_4dp"/>
+
+       </androidx.cardview.widget.CardView>
+
+
+       <TextView
+           android:id="@+id/tvTheme"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentTop="true"
+           android:text="@string/theme"
+           app:layout_constraintStart_toStartOf="@+id/profile_card"
+           app:layout_constraintTop_toBottomOf="@id/cardLegal"
+           android:layout_marginTop="@dimen/_24dp"
+           android:textSize="@dimen/_18sp"
+           android:textColor="@color/black_300"
+           android:fontFamily="@font/urbanist_bold" />
+
+       <LinearLayout
+           android:id="@+id/llTheme"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@id/tvTheme"
+           app:layout_constraintEnd_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:orientation="horizontal"
+           android:layout_marginTop="@dimen/_12dp"
+           android:layout_marginStart="@dimen/_24dp"
+           android:layout_marginEnd="@dimen/_24dp"
+           android:gravity="center">
+           
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:gravity="center">
+               
+               <ImageView
+                   android:id="@+id/themeSystem"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:contentDescription="@string/contentDescription"
+                   android:src="@drawable/system_theme"/>
+               
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/system"
+                   android:textSize="@dimen/_14sp"
+                   android:layout_marginTop="@dimen/_8dp"
+                   android:fontFamily="@font/urbanist_regular"
+                   android:textColor="@color/gray_900"
+                   android:layout_marginBottom="@dimen/_24dp"/>
+               
+           </LinearLayout>
+
+
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:gravity="center"
+               android:layout_marginStart="@dimen/_12dp">
+
+               <ImageView
+                   android:id="@+id/themeLight"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:contentDescription="@string/contentDescription"
+                   android:src="@drawable/light_theme"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/light"
+                   android:textSize="@dimen/_14sp"
+                   android:layout_marginTop="@dimen/_8dp"
+                   android:fontFamily="@font/urbanist_regular"
+                   android:textColor="@color/gray_900"
+                   android:layout_marginBottom="@dimen/_24dp"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:gravity="center"
+               android:layout_marginStart="@dimen/_12dp">
+
+               <ImageView
+                   android:id="@+id/themeDark"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:contentDescription="@string/contentDescription"
+                   android:src="@drawable/dark_theme"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/dark"
+                   android:textSize="@dimen/_14sp"
+                   android:layout_marginTop="@dimen/_8dp"
+                   android:fontFamily="@font/urbanist_regular"
+                   android:textColor="@color/gray_900"
+                   android:layout_marginBottom="@dimen/_24dp"/>
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

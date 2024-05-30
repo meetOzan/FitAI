@@ -47,7 +47,7 @@ jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = 
 hilt-plugin = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
-safe-args = { id = "androidx.navigation.safeargs.kotlin", version.ref = "androidxNavigation"}
+safeArgs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "androidxNavigation"}
 
 [bundles]
 navigation = ["navigation-fragment", "navigation-ui"]
