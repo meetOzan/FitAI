@@ -7,7 +7,7 @@
     android:background="@color/white"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".home.screens.PlanCreatingFragment">
+    tools:context=".presentation.home.screens.PlanCreatingFragment">
 
     <ImageView
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
         android:id="@+id/tv_plan_creating_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_45dp"
+        android:layout_marginTop="@dimen/_8dp"
         android:fontFamily="@font/urbanist_bold"
         android:maxEms="10"
         android:text="@string/customized_plans_created"

@@ -7,24 +7,9 @@
     tools:context=".presentation.login.sign_in.OTPFragment"
     android:background="@color/white">
 
-    <ImageView
-        android:id="@+id/back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:contentDescription="@string/contentDescription"
-        android:src="@drawable/back_arrow"
-        app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="41dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="25dp"
-        android:contentDescription="@string/contentDescription"
-        android:src="@drawable/ic_logo"
-        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalRight"
+    <include
+        android:id="@+id/toolbar_otp_email"
+        layout="@layout/toolbar_sign_up"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -184,10 +169,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="2dp"
         android:layout_marginTop="@dimen/_4dp"/>
-
-
-
-
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineVerticalLeft"

@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/contentDescription"
-            android:src="@drawable/ic_logo"
+            android:src="@drawable/fit_black"
             app:layout_constraintEnd_toEndOf="@id/guidelineVerticalRight"
             app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
             app:layout_constraintTop_toTopOf="@id/guidelineHorizontalTop" />
@@ -33,6 +33,7 @@
             android:layout_height="wrap_content"
             android:contentDescription="@string/contentDescription"
             android:src="@drawable/fitai"
+            android:layout_marginTop="@dimen/_6dp"
             app:layout_constraintEnd_toEndOf="@id/guidelineVerticalRight"
             app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
             app:layout_constraintTop_toBottomOf="@id/logo"
@@ -43,10 +44,13 @@
             style="@style/darkButtonStyle"
             android:layout_width="0dp"
             android:layout_height="55dp"
+            android:backgroundTint="@color/green_500"
             app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft2"
             app:layout_constraintEnd_toEndOf="@id/guidelineVerticalRight2"
             app:layout_constraintTop_toBottomOf="@id/guidelineHorizontalBottom"
             android:text="@string/register"
+            android:textColor="@color/black"
+            android:fontFamily="@font/urbanist_semibold"
             />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -58,6 +62,7 @@
             app:layout_constraintEnd_toEndOf="@id/guidelineVerticalRight2"
             app:layout_constraintTop_toBottomOf="@id/registerButton"
             android:layout_marginTop="12dp"
+            android:fontFamily="@font/urbanist_semibold"
             android:text="@string/login"
             />
 
@@ -80,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.55" />
+            app:layout_constraintGuide_percent="0.42" />
 
 
         <androidx.constraintlayout.widget.Guideline
@@ -104,9 +109,5 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.95" />
 
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </FrameLayout>

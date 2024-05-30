@@ -3,20 +3,17 @@ package com.mobven.fitai.presentation.home.screens
 import androidx.fragment.app.viewModels
 import androidx.viewpager2.widget.ViewPager2
 import com.mobven.fitai.R
-import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.databinding.FragmentDietTypeBinding
+import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.presentation.home.viewmodel.HomeAction
 import com.mobven.fitai.presentation.home.viewmodel.HomeViewModel
 import com.mobven.fitai.presentation.login.sign_up.adapter.SignUpListAdapter
-import com.mobven.fitai.presentation.login.sign_up.model.SignUpSelectorItem
-import com.mobven.fitai.presentation.login.sign_up.viewmodel.SignUpAction
+import com.mobven.fitai.presentation.login.sign_up.model.ListSelectorItem
 import com.mobven.fitai.util.enums.HomeFragmentType
-import com.mobven.fitai.util.enums.SignUpSelectorType
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class DietTypeFragment : BaseFragment<FragmentDietTypeBinding>(FragmentDietTypeBinding::inflate) {
-
     private val adapter = SignUpListAdapter()
     private val homeViewModel: HomeViewModel by viewModels()
 
@@ -34,12 +31,11 @@ class DietTypeFragment : BaseFragment<FragmentDietTypeBinding>(FragmentDietTypeB
                 else -> {
                     handleSuccess(homeState.signUpSelectorList)
                 }
-
             }
         }
     }
 
-    private fun handleSuccess(dietTypeList: List<SignUpSelectorItem>) {
+    private fun handleSuccess(dietTypeList: List<ListSelectorItem>) {
         adapter.submitList(dietTypeList)
         binding.rvDietType.adapter = adapter
 
@@ -63,5 +59,4 @@ class DietTypeFragment : BaseFragment<FragmentDietTypeBinding>(FragmentDietTypeB
     override fun callInitialViewModelFunction() {
         homeViewModel.onAction(HomeAction.GetSelectorItem(HomeFragmentType.DIET))
     }
-
 }

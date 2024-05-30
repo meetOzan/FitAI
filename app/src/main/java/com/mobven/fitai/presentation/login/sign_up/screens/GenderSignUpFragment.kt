@@ -5,16 +5,16 @@ import androidx.viewpager2.widget.ViewPager2
 import com.mobven.fitai.R
 import com.mobven.fitai.databinding.FragmentGenderSignUpBinding
 import com.mobven.fitai.presentation.base.BaseFragment
-import com.mobven.fitai.presentation.login.sign_up.viewmodel.SignUpViewModel
 import com.mobven.fitai.presentation.login.sign_up.adapter.SignUpListAdapter
-import com.mobven.fitai.presentation.login.sign_up.model.SignUpSelectorItem
+import com.mobven.fitai.presentation.login.sign_up.model.ListSelectorItem
 import com.mobven.fitai.presentation.login.sign_up.viewmodel.SignUpAction
+import com.mobven.fitai.presentation.login.sign_up.viewmodel.SignUpViewModel
+import com.mobven.fitai.util.enums.SignUpFragmentType
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class GenderSignUpFragment :
     BaseFragment<FragmentGenderSignUpBinding>(FragmentGenderSignUpBinding::inflate) {
-
     private val adapter = SignUpListAdapter()
     private val viewModel: SignUpViewModel by viewModels()
 
@@ -36,7 +36,7 @@ class GenderSignUpFragment :
         }
     }
 
-    private fun handleSuccess(genderList: List<SignUpSelectorItem>) {
+    private fun handleSuccess(genderList: List<ListSelectorItem>) {
         adapter.submitList(genderList)
         binding.rvGender.adapter = adapter
 
@@ -58,7 +58,6 @@ class GenderSignUpFragment :
     }
 
     override fun callInitialViewModelFunction() {
-        viewModel.onAction(SignUpAction.GetSelectorItem)
+        viewModel.onAction(SignUpAction.GetSelectorItem(SignUpFragmentType.GENDER))
     }
-
 }

@@ -28,7 +28,7 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@id/daily_movement_title"
         app:layout_constraintBottom_toTopOf="@id/btn_daily_movement_continue"
-        tools:listitem="@layout/card_sign_up" />
+        tools:listitem="@layout/card_selector" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_daily_movement_continue"

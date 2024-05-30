@@ -7,7 +7,7 @@
     <string name="onboarding_description_2">Sağlık durumunuza ve hareketlerinize göre yapay zeka destekli beslenme planlarıyla tanışın.</string>
     <string name="onboarding_title_3">Kişiselleştirilmiş Antrenmanlar </string>
     <string name="onboarding_description_3">Aktivite seviyenize uygun, motive edici ve etkili antrenman programlarıyla formda kalın.</string>
-    <string name="onboarding_title_4">Kalori Takibi </string>
+    <string name="onboarding_title_4">Günlük\nKalori Takibi </string>
     <string name="onboarding_description_4">Günlük yediklerinizi kaydedin, kalori takibi ile sağlıklı alışkanlıklar edinin.</string>
     <string name="atla">Atla</string>
     <string name="sonraki">Sonraki</string>
@@ -46,7 +46,7 @@
     <string name="all">Hepsi</string>
     <string name="eating_plan">Beslenme Planı Oluşturma</string>
     <string name="training_plan">Antreman Planı Oluşturma</string>
-    <string name="calorie_control">Kalori Kontrolü</string>
+    <string name="healthy_life">Sağlıklı Yaşam</string>
     <string name="intermittent_fasting">Aralıklı Oruç</string>
     <string name="water_tracking">Su Takibi</string>
     <string name="which_plan_do_you_apply">Bu uygulamada hangi planları uygulamak istersiniz?</string>
@@ -143,7 +143,7 @@
     <string name="password_changed_bottom">Parolanız başarıyla değiştirildi. Yeni\nparalonızla hesabınıza giriş yapabilirsiniz.</string>
     <string name="otp_email">E-posta adresinize gönderdiğimiz doğrulama\nkodunu girin.</string>
     <string name="send_code">Kod Gönder</string>
-    <string name="welcome">Hoş geldin!\nSeni tekrar aramızda\ngördüğümüze sevindik</string>
+    <string name="welcome">Hoşgeldin!</string>
     <string name="are_you_forgot_password">Şifrenizi mi unuttunuz?</string>
     <string name="are_you_forgot_password_bottom">Endişelenmeyin! Hesabınızla bağlantılı\nnumaranız doğruysa onaylayın</string>
     <string name="are_you_forgot_password_email_bottom">Endişelenmeyin!  Lütfen hesabınızla bağlantılı\ne-posta adresini girin.</string>
@@ -174,4 +174,22 @@
     <string name="dark">Dark</string>
     <string name="confirm">Onayla</string>
     <string name="loading">Loading</string>
+    <string name="register_for_healty_life">Sağlıklı yaşama adım atmak için kayıt olun</string>
+    <string name="make_done">Tamamla</string>
+    <string name="do_you_have_health_problem">Bilinen sağlık sorununuz var mı?</string>
+    <string name="nutrition_plan_please_answer">Size özel beslenme planınızı oluşturmamız için kişisel bilgilerinize ihtiyacımız var.\nLütfen soruları cevaplayın.</string>
+    <string name="training_plan_please_answer">Size özel antrenma planınızı oluşturmamız için kişisel bilgilerinize ihtiyacımız var.\nLütfen soruları cevaplayın.</string>
+    <string name="nutrition_plan_ai_powered">AI Destekli\nBeslenme Planı</string>
+    <string name="training_plan_ai_powered">AI Destekli\nAntreman Planı</string>
+    <string name="daily_goals">Günlük Hedefler</string>
+    <string name="add_excercise">Egzersiz Ekle</string>
+    <string name="add_food">Besin Ekle</string>
+    <string name="goal_complete">Hedef\nTamamlama</string>
+    <string name="percent">%</string>
+    <string name="_45">45</string>
+    <string name="goal_remaining">Hedefe Kalan:  </string>
+    <string name="create_personalized_training">Kişiselleştirilmiş Antrenman\nPlanını Oluştur</string>
+    <string name="categorie_image">categorie_image</string>
+    <string name="food_categories">Öğün Kategorileri</string>
+    <string name="breakfast">Kahvaltı</string>
 </resources>

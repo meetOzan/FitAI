@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:background="@color/white"
-    tools:context=".home.screens.GoalsFragment">
+    tools:context=".presentation.login.sign_up.screens.GoalsFragment">
 
     <TextView
         android:id="@+id/goals_title"
@@ -30,7 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/goals_title"
         app:reverseLayout="true"
-        tools:listitem="@layout/card_sign_up" />
+        tools:listitem="@layout/card_selector" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_goals_continue"
@@ -41,7 +41,7 @@
         android:layout_marginHorizontal="@dimen/horizontal_margin"
         android:layout_marginBottom="@dimen/_48dp"
         android:paddingVertical="@dimen/_16dp"
-        android:text="@string/sonraki"
+        android:text="@string/make_done"
         app:cornerRadius="@dimen/button_corner_radius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

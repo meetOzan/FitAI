@@ -7,6 +7,7 @@
     android:layout_height="wrap_content"
     android:layout_marginVertical="@dimen/_6dp"
     app:cardCornerRadius="@dimen/_8dp"
+    app:strokeWidth="1dp"
     app:strokeColor="@color/light_grey">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,7 +17,7 @@
         android:background="@color/white">
 
         <ImageView
-            android:id="@+id/radio_button_image"
+            android:id="@+id/radio_button_image_background"
             android:layout_width="@dimen/_45dp"
             android:layout_height="@dimen/_45dp"
             android:layout_marginVertical="@dimen/_16sp"
@@ -27,18 +28,32 @@
             app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/light_grey_3" />
 
+        <ImageView
+            android:id="@+id/radio_button_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="14dp"
+            android:src="@drawable/male_icon"
+            app:layout_constraintBottom_toBottomOf="@id/radio_button_image_background"
+            app:layout_constraintEnd_toEndOf="@id/radio_button_image_background"
+            app:layout_constraintStart_toStartOf="@+id/radio_button_image_background"
+            app:layout_constraintTop_toTopOf="@+id/radio_button_image_background"
+            app:tint="@color/black" />
+
+
         <TextView
             android:id="@+id/radio_button_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_16sp"
+            android:layout_marginVertical="@dimen/_16sp"
             android:fontFamily="@font/urbanist_bold"
             android:textAlignment="textStart"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@id/radio_button_image"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/checkbox_image_sign_up_item"
-            app:layout_constraintStart_toEndOf="@id/radio_button_image"
-            app:layout_constraintTop_toTopOf="@id/radio_button_image"
+            app:layout_constraintStart_toEndOf="@id/radio_button_image_background"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/radio_text" />
 
         <ImageView
@@ -48,9 +63,9 @@
             android:layout_marginEnd="@dimen/_16dp"
             android:src="@drawable/checkbox_on"
             android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@id/radio_button_image"
+            app:layout_constraintBottom_toBottomOf="@id/radio_button_image_background"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/radio_button_image" />
+            app:layout_constraintTop_toTopOf="@id/radio_button_image_background" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

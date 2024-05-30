@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/card_home_categories"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="@dimen/_12dp"
+    android:layout_marginEnd="@dimen/_12dp"
+    app:cardElevation="@dimen/_8dp">
+
+    <ImageView
+        android:id="@+id/iv_category"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:contentDescription="@string/categorie_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/breakfast_category" />
+
+    <TextView
+        android:id="@+id/tv_category_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginBottom="@dimen/_24dp"
+        android:background="@drawable/bg_categorie_green_name"
+        android:fontFamily="@font/urbanist_bold"
+        android:paddingHorizontal="@dimen/_16dp"
+        android:paddingVertical="@dimen/_4dp"
+        tools:text="@string/breakfast"
+        android:textColor="@color/black" />
+
+</androidx.cardview.widget.CardView>

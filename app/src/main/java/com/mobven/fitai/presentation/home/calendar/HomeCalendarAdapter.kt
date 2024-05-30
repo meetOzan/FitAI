@@ -12,12 +12,10 @@ import com.mobven.fitai.databinding.CardHomeCalendarItemBinding
 
 class HomeCalendarAdapter :
     ListAdapter<CalendarItem, HomeCalendarAdapter.ViewHolder>(CalendarItemDiffUtil()) {
-
     inner class ViewHolder(private val binding: CardHomeCalendarItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: CalendarItem) {
             with(binding) {
-
                 binding.tvItemCalendarDayName.text = item.dayName
                 binding.tvItemCalendarDayNumber.text = item.date
 
@@ -26,18 +24,18 @@ class HomeCalendarAdapter :
                 }
 
                 if (item.isSelected) {
-                    calendarItem.setBackgroundResource(R.drawable.bg_calendar_item_grey)
+                    calendarItem.setBackgroundResource(R.drawable.bg_calendar_item_green)
                     tvItemCalendarDayName.setTextColor(
                         ContextCompat.getColor(
                             root.context,
-                            R.color.white
-                        )
+                            R.color.black,
+                        ),
                     )
                     tvItemCalendarDayNumber.setTextColor(
                         ContextCompat.getColor(
                             root.context,
-                            R.color.dark_grey_3
-                        )
+                            R.color.black,
+                        ),
                     )
                     tvItemCalendarDayNumber.typeface =
                         ResourcesCompat.getFont(root.context, R.font.urbanist_bold)
@@ -48,14 +46,14 @@ class HomeCalendarAdapter :
                     tvItemCalendarDayNumber.setTextColor(
                         ContextCompat.getColor(
                             root.context,
-                            R.color.black
-                        )
+                            R.color.black,
+                        ),
                     )
                     tvItemCalendarDayName.setTextColor(
                         ContextCompat.getColor(
                             root.context,
-                            R.color.dark_grey_3
-                        )
+                            R.color.dark_grey_3,
+                        ),
                     )
                     tvItemCalendarDayNumber.typeface =
                         ResourcesCompat.getFont(root.context, R.font.urbanist_regular)
@@ -67,22 +65,29 @@ class HomeCalendarAdapter :
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    private fun selectItem(items: List<CalendarItem>, position: Int) {
+    private fun selectItem(
+        items: List<CalendarItem>,
+        position: Int,
+    ) {
         items.forEachIndexed { index, item ->
             item.isSelected = index == position
         }
         notifyDataSetChanged()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int,
+    ): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val binding = CardHomeCalendarItemBinding.inflate(layoutInflater, parent, false)
         return ViewHolder(binding)
     }
 
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: ViewHolder,
+        position: Int,
+    ) {
         holder.bind(getItem(position))
     }
-
 }

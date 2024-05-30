@@ -8,20 +8,24 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.mobven.fitai.R
-import com.mobven.fitai.databinding.CardSignUpBinding
-import com.mobven.fitai.presentation.login.sign_up.model.SignUpSelectorItem
+import com.mobven.fitai.databinding.CardSelectorBinding
+import com.mobven.fitai.presentation.login.sign_up.model.ListSelectorItem
 import com.mobven.fitai.util.enums.SignUpSelectorType
 
 class SignUpListAdapter :
-    ListAdapter<SignUpSelectorItem, SignUpListAdapter.ViewHolder>(SignUpItemDiffUtil()) {
-
-    inner class ViewHolder(private val binding: CardSignUpBinding) :
+    ListAdapter<ListSelectorItem, SignUpListAdapter.ViewHolder>(SignUpItemDiffUtil()) {
+    inner class ViewHolder(private val binding: CardSelectorBinding) :
         RecyclerView.ViewHolder(binding.root) {
-
-        fun bind(item: SignUpSelectorItem) {
+        fun bind(item: ListSelectorItem) {
             with(binding) {
-
                 radioButtonText.text = item.title
+                radioButtonImage.setImageResource(item.image)
+
+                if (item.image == 0) {
+                    radioButtonImageBackground.visibility = View.GONE
+                } else {
+                    radioButtonImageBackground.visibility = View.VISIBLE
+                }
 
                 cardSignUp.setOnClickListener {
                     if (item.type == SignUpSelectorType.RADIO) {
@@ -43,28 +47,31 @@ class SignUpListAdapter :
                     cardSignUpItem.setBackgroundColor(
                         ContextCompat.getColor(
                             root.context,
-                            R.color.light_grey_3
-                        )
+                            R.color.light_grey_3,
+                        ),
                     )
-                    radioButtonImage.setColorFilter(
+                    radioButtonImageBackground.setColorFilter(
                         ContextCompat.getColor(
                             root.context,
-                            R.color.white
-                        )
+                            R.color.green_500,
+                        ),
                     )
+                    cardSignUp.strokeColor = ContextCompat.getColor(root.context, R.color.green_500)
                     checkboxImageSignUpItem.visibility = View.VISIBLE
                 } else {
                     cardSignUpItem.setBackgroundColor(
                         ContextCompat.getColor(
                             root.context,
-                            R.color.white
-                        )
+                            R.color.white,
+                        ),
                     )
-                    radioButtonImage.setColorFilter(
+                    cardSignUp.strokeColor =
+                        ContextCompat.getColor(root.context, R.color.light_grey)
+                    radioButtonImageBackground.setColorFilter(
                         ContextCompat.getColor(
                             root.context,
-                            R.color.light_grey_3
-                        )
+                            R.color.light_grey,
+                        ),
                     )
                     checkboxImageSignUpItem.visibility = View.INVISIBLE
                 }
@@ -73,21 +80,29 @@ class SignUpListAdapter :
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    private fun selectItem(items: List<SignUpSelectorItem>, position: Int) {
+    private fun selectItem(
+        items: List<ListSelectorItem>,
+        position: Int,
+    ) {
         items.forEachIndexed { index, item ->
             item.isSelected = index == position
         }
         notifyDataSetChanged()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int,
+    ): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val binding = CardSignUpBinding.inflate(layoutInflater, parent, false)
+        val binding = CardSelectorBinding.inflate(layoutInflater, parent, false)
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: ViewHolder,
+        position: Int,
+    ) {
         holder.bind(getItem(position))
     }
-
 }

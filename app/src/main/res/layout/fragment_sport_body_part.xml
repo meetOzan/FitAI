@@ -31,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/body_part_title"
         app:reverseLayout="true"
-        tools:listitem="@layout/card_sign_up" />
+        tools:listitem="@layout/card_selector" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_body_part_continue"

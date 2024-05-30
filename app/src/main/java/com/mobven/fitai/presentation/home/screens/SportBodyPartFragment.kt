@@ -8,9 +8,8 @@ import com.mobven.fitai.databinding.FragmentSportBodyPartBinding
 import com.mobven.fitai.presentation.home.viewmodel.HomeAction
 import com.mobven.fitai.presentation.home.viewmodel.HomeViewModel
 import com.mobven.fitai.presentation.login.sign_up.adapter.SignUpListAdapter
-import com.mobven.fitai.presentation.login.sign_up.model.SignUpSelectorItem
+import com.mobven.fitai.presentation.login.sign_up.model.ListSelectorItem
 import com.mobven.fitai.util.enums.HomeFragmentType
-import com.mobven.fitai.util.enums.SignUpSelectorType
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -39,7 +38,7 @@ class SportBodyPartFragment :
         }
     }
 
-    private fun handleSuccess(bodyPartList: List<SignUpSelectorItem>) {
+    private fun handleSuccess(bodyPartList: List<ListSelectorItem>) {
         adapter.submitList(bodyPartList)
         binding.rvBodyPartSport.adapter = adapter
 
