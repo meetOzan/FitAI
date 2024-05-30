@@ -5,8 +5,13 @@
     <color name="transparent">#00000000</color>
     <color name="onboarding_background">#FFD8D8D8</color>
 
+    <!--#F5FDE0-->
+    <color name="green_background">#FFF5FDE0</color>
+
     <!--#B1EB04-->
     <color name="green_500">#FFB1EB04</color>
+    <!--#7EA703-->
+    <color name="green_700">#FF7EA703</color>
 
     <!-- #1E232C -->
     <color name="main_grey">#FF1E232C</color>
@@ -61,6 +66,9 @@
 
     <!--#66665F-->
     <color name="gray_300">#FF66665F</color>
+
+    <!--#1A1B10-->
+    <color name="gray_500">#FF1A1B10</color>
 
     <!--#0B0B07-->
     <color name="gray_900">#FF0B0B07</color>

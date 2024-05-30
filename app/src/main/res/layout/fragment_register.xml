@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,317 +8,322 @@
     android:background="@color/white"
     tools:context=".presentation.login.sign_up.screens.RegisterFragment">
 
-    <TextView
-        android:id="@+id/sign_up_title"
-        style="@style/titleTextStyle"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_8dp"
-        android:fontFamily="@font/urbanist_bold"
-        android:text="@string/welcome"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/sign_up_description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_8dp"
-        android:textSize="@dimen/_16sp"
-        android:text="@string/register_for_healty_life"
-        android:fontFamily="@font/urbanist_regular"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sign_up_title" />
-
-    <!--TODO Indicator color değiştirilecek | Mert-->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_layout_nickname_sign_up"
-        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_16dp"
-        app:boxBackgroundColor="@color/light_grey_2"
-        app:hintTextColor="@color/black"
-        app:boxStrokeColor="@color/light_grey_2"
-        app:boxStrokeWidth="@dimen/_1dp"
-        app:errorEnabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sign_up_description">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edit_text_nickname_sign_up"
+        <TextView
+            android:id="@+id/sign_up_title"
+            style="@style/titleTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:fontFamily="@font/urbanist_regular"
-            android:hint="@string/nickname"
-            android:inputType="text" />
+            android:layout_marginHorizontal="@dimen/_24dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:fontFamily="@font/urbanist_bold"
+            android:text="@string/welcome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_layout_email_sign_up"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_24dp"
-        app:boxBackgroundColor="@color/light_grey_2"
-        app:boxStrokeColor="@color/light_grey_2"
-        app:boxStrokeWidth="@dimen/_1dp"
-        app:hintTextColor="@color/black"
-        app:errorEnabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_input_layout_nickname_sign_up">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edit_text_email_sign_up"
+        <TextView
+            android:id="@+id/sign_up_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="1"
+            android:layout_marginHorizontal="@dimen/_24dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:textSize="@dimen/_16sp"
+            android:text="@string/register_for_healty_life"
             android:fontFamily="@font/urbanist_regular"
-            android:hint="@string/email"
-            android:inputType="textEmailAddress" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_title" />
 
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_layout_password_sign_up"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_24dp"
-        app:boxBackgroundColor="@color/light_grey_2"
-        app:boxStrokeColor="@color/light_grey_2"
-        app:boxStrokeWidth="@dimen/_1dp"
-        app:endIconDrawable="@drawable/fluent_eye_filled"
-        app:endIconMode="password_toggle"
-        app:hintTextColor="@color/black"
-        app:errorEnabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_input_layout_email_sign_up">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edit_text_password_sign_up"
+        <!--TODO Indicator color değiştirilecek | Mert-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_nickname_sign_up"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:fontFamily="@font/urbanist_regular"
-            android:inputType="textPassword"
-            android:hint="@string/password" />
+            android:layout_marginHorizontal="@dimen/_24dp"
+            android:layout_marginTop="@dimen/_16dp"
+            app:boxBackgroundColor="@color/light_grey_2"
+            app:hintTextColor="@color/black"
+            app:boxStrokeColor="@color/light_grey_2"
+            app:boxStrokeWidth="@dimen/_1dp"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_description">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_nickname_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:fontFamily="@font/urbanist_regular"
+                android:hint="@string/nickname"
+                android:inputType="text" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_layout_password_again_sign_up"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_24dp"
-        app:boxBackgroundColor="@color/light_grey_2"
-        app:boxStrokeColor="@color/light_grey_2"
-        app:boxStrokeWidth="@dimen/_1dp"
-        app:endIconDrawable="@drawable/fluent_eye_filled"
-        app:endIconMode="password_toggle"
-        app:hintTextColor="@color/black"
-        app:errorEnabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_input_layout_password_sign_up">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edit_text_password_again_sign_up"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_email_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="1"
+            android:layout_marginHorizontal="@dimen/_24dp"
+            app:boxBackgroundColor="@color/light_grey_2"
+            app:boxStrokeColor="@color/light_grey_2"
+            app:boxStrokeWidth="@dimen/_1dp"
+            app:hintTextColor="@color/black"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_input_layout_nickname_sign_up">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_email_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:fontFamily="@font/urbanist_regular"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_password_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_24dp"
+            app:boxBackgroundColor="@color/light_grey_2"
+            app:boxStrokeColor="@color/light_grey_2"
+            app:boxStrokeWidth="@dimen/_1dp"
+            app:endIconDrawable="@drawable/fluent_eye_filled"
+            app:endIconMode="password_toggle"
+            app:hintTextColor="@color/black"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_input_layout_email_sign_up">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_password_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:fontFamily="@font/urbanist_regular"
+                android:inputType="textPassword"
+                android:hint="@string/password" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_password_again_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_24dp"
+            app:boxBackgroundColor="@color/light_grey_2"
+            app:boxStrokeColor="@color/light_grey_2"
+            app:boxStrokeWidth="@dimen/_1dp"
+            app:endIconDrawable="@drawable/fluent_eye_filled"
+            app:endIconMode="password_toggle"
+            app:hintTextColor="@color/black"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_input_layout_password_sign_up">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_password_again_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:fontFamily="@font/urbanist_regular"
+                android:hint="@string/password_again"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--TODO: Custom checkbox eklenecek | Mert-->
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/sign_up_terms_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_6dp"
+            android:button="@drawable/custom_checkbox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_input_layout_password_again_sign_up" />
+
+        <TextView
+            android:id="@+id/tv_terms_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/urbanist_bold"
+            android:text="@string/terms"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintBottom_toBottomOf="@id/sign_up_terms_checkbox"
+            app:layout_constraintStart_toEndOf="@id/sign_up_terms_checkbox"
+            app:layout_constraintTop_toTopOf="@id/sign_up_terms_checkbox" />
+
+        <TextView
+            android:id="@+id/tv_and_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3dp"
             android:fontFamily="@font/urbanist_regular"
-            android:hint="@string/password_again"
-            android:inputType="textPassword" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:text="@string/and"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintBottom_toBottomOf="@id/sign_up_terms_checkbox"
+            app:layout_constraintStart_toEndOf="@id/tv_terms_sign_up"
+            app:layout_constraintTop_toTopOf="@id/sign_up_terms_checkbox" />
 
-    <!--TODO: Custom checkbox eklenecek | Mert-->
-    <com.google.android.material.checkbox.MaterialCheckBox
-        android:id="@+id/sign_up_terms_checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_16dp"
-        android:layout_marginTop="@dimen/_6dp"
-        android:button="@drawable/custom_checkbox"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_input_layout_password_again_sign_up" />
+        <TextView
+            android:id="@+id/tv_conditions_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3dp"
+            android:fontFamily="@font/urbanist_bold"
+            android:text="@string/conditions"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintBottom_toBottomOf="@id/sign_up_terms_checkbox"
+            app:layout_constraintStart_toEndOf="@id/tv_and_sign_up"
+            app:layout_constraintTop_toTopOf="@id/sign_up_terms_checkbox" />
 
-    <TextView
-        android:id="@+id/tv_terms_sign_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/urbanist_bold"
-        android:text="@string/terms"
-        android:textColor="@color/dark_grey"
-        android:textSize="@dimen/_14sp"
-        app:layout_constraintBottom_toBottomOf="@id/sign_up_terms_checkbox"
-        app:layout_constraintStart_toEndOf="@id/sign_up_terms_checkbox"
-        app:layout_constraintTop_toTopOf="@id/sign_up_terms_checkbox" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3dp"
+            android:fontFamily="@font/urbanist_regular"
+            android:text="@string/accept"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintBottom_toBottomOf="@id/sign_up_terms_checkbox"
+            app:layout_constraintStart_toEndOf="@id/tv_conditions_sign_up"
+            app:layout_constraintTop_toTopOf="@id/sign_up_terms_checkbox" />
 
-    <TextView
-        android:id="@+id/tv_and_sign_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_3dp"
-        android:fontFamily="@font/urbanist_regular"
-        android:text="@string/and"
-        android:textColor="@color/dark_grey"
-        android:textSize="@dimen/_14sp"
-        app:layout_constraintBottom_toBottomOf="@id/sign_up_terms_checkbox"
-        app:layout_constraintStart_toEndOf="@id/tv_terms_sign_up"
-        app:layout_constraintTop_toTopOf="@id/sign_up_terms_checkbox" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_sign_up_continue"
+            style="@style/nextButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_marginHorizontal="@dimen/horizontal_margin"
+            android:layout_marginBottom="@dimen/_48dp"
+            android:paddingVertical="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_24dp"
+            android:text="@string/register"
+            app:cornerRadius="@dimen/button_corner_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_conditions_sign_up" />
 
-    <TextView
-        android:id="@+id/tv_conditions_sign_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_3dp"
-        android:fontFamily="@font/urbanist_bold"
-        android:text="@string/conditions"
-        android:textColor="@color/dark_grey"
-        android:textSize="@dimen/_14sp"
-        app:layout_constraintBottom_toBottomOf="@id/sign_up_terms_checkbox"
-        app:layout_constraintStart_toEndOf="@id/tv_and_sign_up"
-        app:layout_constraintTop_toTopOf="@id/sign_up_terms_checkbox" />
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider_sign_up_left"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginStart="@dimen/_24dp"
+            android:layout_marginTop="@dimen/_30dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            app:dividerColor="@color/light_grey"
+            app:layout_constraintEnd_toStartOf="@id/tv_or_register_with"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_sign_up_continue" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_3dp"
-        android:fontFamily="@font/urbanist_regular"
-        android:text="@string/accept"
-        android:textColor="@color/dark_grey"
-        android:textSize="@dimen/_14sp"
-        app:layout_constraintBottom_toBottomOf="@id/sign_up_terms_checkbox"
-        app:layout_constraintStart_toEndOf="@id/tv_conditions_sign_up"
-        app:layout_constraintTop_toTopOf="@id/sign_up_terms_checkbox" />
+        <TextView
+            android:id="@+id/tv_or_register_with"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/urbanist_bold"
+            android:text="@string/or_register_with"
+            android:textSize="@dimen/_14sp"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintBottom_toBottomOf="@id/divider_sign_up_right"
+            app:layout_constraintEnd_toStartOf="@id/divider_sign_up_right"
+            app:layout_constraintStart_toEndOf="@id/divider_sign_up_left"
+            app:layout_constraintTop_toTopOf="@id/divider_sign_up_left" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_sign_up_continue"
-        style="@style/nextButtonStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="bottom"
-        android:layout_marginHorizontal="@dimen/horizontal_margin"
-        android:layout_marginBottom="@dimen/_48dp"
-        android:paddingVertical="@dimen/_16dp"
-        android:layout_marginTop="@dimen/_24dp"
-        android:text="@string/register"
-        app:cornerRadius="@dimen/button_corner_radius"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_conditions_sign_up" />
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider_sign_up_right"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_30dp"
+            android:layout_marginEnd="@dimen/_24dp"
+            app:dividerColor="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_or_register_with"
+            app:layout_constraintTop_toBottomOf="@id/btn_sign_up_continue" />
 
-    <com.google.android.material.divider.MaterialDivider
-        android:id="@+id/divider_sign_up_left"
-        android:layout_width="@dimen/_0dp"
-        android:layout_height="@dimen/_1dp"
-        android:layout_marginStart="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_30dp"
-        android:layout_marginEnd="@dimen/_12dp"
-        app:dividerColor="@color/light_grey"
-        app:layout_constraintEnd_toStartOf="@id/tv_or_register_with"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_sign_up_continue" />
+        <ImageButton
+            android:id="@+id/btn_sign_up_facebook"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="@dimen/_0dp"
+            android:layout_marginStart="@dimen/_24dp"
+            android:background="@drawable/bg_grey_stroke"
+            android:contentDescription="@string/facebook_register_button"
+            android:src="@drawable/facebook_icon"
+            app:layout_constraintBottom_toBottomOf="@id/btn_sign_up_google"
+            app:layout_constraintEnd_toStartOf="@id/btn_sign_up_google"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_sign_up_google" />
 
-    <TextView
-        android:id="@+id/tv_or_register_with"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/urbanist_bold"
-        android:text="@string/or_register_with"
-        android:textSize="@dimen/_14sp"
-        android:textColor="@color/dark_grey"
-        app:layout_constraintBottom_toBottomOf="@id/divider_sign_up_right"
-        app:layout_constraintEnd_toStartOf="@id/divider_sign_up_right"
-        app:layout_constraintStart_toEndOf="@id/divider_sign_up_left"
-        app:layout_constraintTop_toTopOf="@id/divider_sign_up_left" />
+        <ImageButton
+            android:id="@+id/btn_sign_up_google"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="@dimen/_64dp"
+            android:focusable="true"
+            android:layout_marginHorizontal="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginBottom="@dimen/_8dp"
+            android:background="@drawable/bg_grey_stroke"
+            android:contentDescription="@string/google_register_button"
+            android:paddingHorizontal="@dimen/_8dp"
+            android:paddingVertical="@dimen/_10dp"
+            android:src="@drawable/google_icon"
+            app:layout_constraintBottom_toTopOf="@id/tv_do_you_have_already_account"
+            app:layout_constraintEnd_toStartOf="@id/btn_sign_up_apple"
+            app:layout_constraintStart_toEndOf="@id/btn_sign_up_facebook"
+            app:layout_constraintTop_toBottomOf="@id/divider_sign_up_left" />
 
-    <com.google.android.material.divider.MaterialDivider
-        android:id="@+id/divider_sign_up_right"
-        android:layout_width="@dimen/_0dp"
-        android:layout_height="@dimen/_1dp"
-        android:layout_marginStart="@dimen/_12dp"
-        android:layout_marginTop="@dimen/_30dp"
-        android:layout_marginEnd="@dimen/_24dp"
-        app:dividerColor="@color/light_grey"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tv_or_register_with"
-        app:layout_constraintTop_toBottomOf="@id/btn_sign_up_continue" />
+        <ImageButton
+            android:id="@+id/btn_sign_up_apple"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="@dimen/_0dp"
+            android:layout_marginEnd="@dimen/_24dp"
+            android:background="@drawable/bg_grey_stroke"
+            android:contentDescription="@string/apple_register_button"
+            android:paddingHorizontal="@dimen/_8dp"
+            android:paddingVertical="@dimen/_10dp"
+            android:src="@drawable/apple_logo"
+            app:layout_constraintBottom_toBottomOf="@id/btn_sign_up_google"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_sign_up_google"
+            app:layout_constraintTop_toTopOf="@id/btn_sign_up_google" />
 
-    <ImageButton
-        android:id="@+id/btn_sign_up_facebook"
-        android:layout_width="@dimen/_0dp"
-        android:layout_height="@dimen/_0dp"
-        android:layout_marginStart="@dimen/_24dp"
-        android:background="@drawable/bg_grey_stroke"
-        android:contentDescription="@string/facebook_register_button"
-        android:src="@drawable/facebook_icon"
-        app:layout_constraintBottom_toBottomOf="@id/btn_sign_up_google"
-        app:layout_constraintEnd_toStartOf="@id/btn_sign_up_google"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/btn_sign_up_google" />
+        <TextView
+            android:id="@+id/tv_do_you_have_already_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/urbanist_regular"
+            android:text="@string/zaten_hesab_n_z_var_m"
+            android:textSize="@dimen/_16sp"
+            android:layout_marginEnd="@dimen/_4dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_login_sign_up"
+            app:layout_constraintEnd_toStartOf="@+id/tv_login_sign_up"
+            app:layout_constraintTop_toTopOf="@id/tv_login_sign_up" />
 
-    <ImageButton
-        android:id="@+id/btn_sign_up_google"
-        android:layout_width="@dimen/_0dp"
-        android:layout_height="@dimen/_64dp"
-        android:focusable="true"
-        android:layout_marginHorizontal="@dimen/_8dp"
-        android:layout_marginTop="@dimen/_16dp"
-        android:layout_marginBottom="@dimen/_8dp"
-        android:background="@drawable/bg_grey_stroke"
-        android:contentDescription="@string/google_register_button"
-        android:paddingHorizontal="@dimen/_8dp"
-        android:paddingVertical="@dimen/_10dp"
-        android:src="@drawable/google_icon"
-        app:layout_constraintBottom_toTopOf="@id/tv_do_you_have_already_account"
-        app:layout_constraintEnd_toStartOf="@id/btn_sign_up_apple"
-        app:layout_constraintStart_toEndOf="@id/btn_sign_up_facebook"
-        app:layout_constraintTop_toBottomOf="@id/divider_sign_up_left" />
+        <TextView
+            android:id="@+id/tv_login_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/urbanist_bold"
+            android:text="@string/login"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_sign_up_google"
+            app:layout_constraintTop_toBottomOf="@id/btn_sign_up_google" />
 
-    <ImageButton
-        android:id="@+id/btn_sign_up_apple"
-        android:layout_width="@dimen/_0dp"
-        android:layout_height="@dimen/_0dp"
-        android:layout_marginEnd="@dimen/_24dp"
-        android:background="@drawable/bg_grey_stroke"
-        android:contentDescription="@string/apple_register_button"
-        android:paddingHorizontal="@dimen/_8dp"
-        android:paddingVertical="@dimen/_10dp"
-        android:src="@drawable/apple_logo"
-        app:layout_constraintBottom_toBottomOf="@id/btn_sign_up_google"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btn_sign_up_google"
-        app:layout_constraintTop_toTopOf="@id/btn_sign_up_google" />
-
-    <TextView
-        android:id="@+id/tv_do_you_have_already_account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/urbanist_regular"
-        android:text="@string/zaten_hesab_n_z_var_m"
-        android:textSize="@dimen/_16sp"
-        android:layout_marginEnd="@dimen/_4dp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_login_sign_up"
-        app:layout_constraintEnd_toStartOf="@+id/tv_login_sign_up"
-        app:layout_constraintTop_toTopOf="@id/tv_login_sign_up" />
-
-    <TextView
-        android:id="@+id/tv_login_sign_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/urbanist_bold"
-        android:text="@string/login"
-        android:textSize="@dimen/_16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_sign_up_google"
-        app:layout_constraintTop_toBottomOf="@id/btn_sign_up_google" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

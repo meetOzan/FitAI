@@ -160,4 +160,15 @@
     <string name="training_plan_please_answer">Size özel antrenma planınızı oluşturmamız için kişisel bilgilerinize ihtiyacımız var.\nLütfen soruları cevaplayın.</string>
     <string name="nutrition_plan_ai_powered">AI Destekli\nBeslenme Planı</string>
     <string name="training_plan_ai_powered">AI Destekli\nAntreman Planı</string>
+    <string name="daily_goals">Günlük Hedefler</string>
+    <string name="add_excercise">Egzersiz Ekle</string>
+    <string name="add_food">Besin Ekle</string>
+    <string name="goal_complete">Hedef\nTamamlama</string>
+    <string name="percent">%</string>
+    <string name="_45">45</string>
+    <string name="goal_remaining">Hedefe Kalan:  </string>
+    <string name="create_personalized_training">Kişiselleştirilmiş Antrenman\nPlanını Oluştur</string>
+    <string name="categorie_image">categorie_image</string>
+    <string name="food_categories">Öğün Kategorileri</string>
+    <string name="breakfast">Kahvaltı</string>
 </resources>
