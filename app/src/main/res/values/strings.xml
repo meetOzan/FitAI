@@ -126,6 +126,7 @@
     <string name="created_for_you_powered_ai">Yapay zeka desteğiyle sana özel oluşturuldu.</string>
     <string name="indicator">indicator</string>
     <string name="is_your_number_not_correct">Numaranız doğru değil mi?</string>
+    <string name="is_your_email_not_correct">E-postanız doğru değil mi?</string>
     <string name="login_with_email">E-postayla Giriş Yap</string>
     <string name="login_with_phone">Numarayla Giriş Yap</string>
     <string name="verification">Doğrulama</string>
