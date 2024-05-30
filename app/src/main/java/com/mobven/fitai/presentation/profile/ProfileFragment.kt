@@ -1,5 +1,6 @@
 package com.mobven.fitai.presentation.profile
 
+import android.content.Context
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mobven.fitai.R
 import com.mobven.fitai.databinding.FragmentProfileBinding
@@ -18,21 +19,19 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
 
     override fun observeUi() {
         binding.rvPersonalization.adapter = personalizationAdapter
-        binding.rvPersonalization.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvPersonalization.layoutManager = NonScrollableLinearLayoutManager(requireContext())
 
-        val personalization =
-            listOf(
-                ProfileItem(R.drawable.ic_personalization, "Kişisel Bilgiler", ProfileItemType.SIMPLE),
-                ProfileItem(R.drawable.ic_meal, "Beslenme Planı", ProfileItemType.SIMPLE),
-                ProfileItem(R.drawable.ic_dumbell, "Antreman Planı", ProfileItemType.SIMPLE),
-                ProfileItem(R.drawable.ic_kcal, "Kalori Takibi", ProfileItemType.SIMPLE),
-                ProfileItem(R.drawable.ic_glass, "Su Takibi", ProfileItemType.SIMPLE),
-            )
+        val personalization = listOf(
+            ProfileItem(R.drawable.ic_personalization, "Kişisel Bilgiler", ProfileItemType.SIMPLE),
+            ProfileItem(R.drawable.ic_meal, "Beslenme Planı", ProfileItemType.SIMPLE),
+            ProfileItem(R.drawable.ic_dumbell, "Antreman Planı", ProfileItemType.SIMPLE),
+            ProfileItem(R.drawable.ic_kcal, "Kalori Takibi", ProfileItemType.SIMPLE),
+            ProfileItem(R.drawable.ic_glass, "Su Takibi", ProfileItemType.SIMPLE))
 
         personalizationAdapter.submitList(personalization)
 
         binding.rvConnectedAccounts.adapter = connectedAccountsAdapter
-        binding.rvConnectedAccounts.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvConnectedAccounts.layoutManager = NonScrollableLinearLayoutManager(requireContext())
 
         val connectedAccounts =
             listOf(
@@ -44,7 +43,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
         connectedAccountsAdapter.submitList(connectedAccounts)
 
         binding.rvTrack.adapter = trackAdapter
-        binding.rvTrack.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvTrack.layoutManager = NonScrollableLinearLayoutManager(requireContext())
 
         val track =
             listOf(
@@ -56,7 +55,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
         trackAdapter.submitList(track)
 
         binding.rvNotification.adapter = notificationAdapter
-        binding.rvNotification.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvNotification.layoutManager = NonScrollableLinearLayoutManager(requireContext())
 
         val notification =
             listOf(
@@ -68,7 +67,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
         notificationAdapter.submitList(notification)
 
         binding.rvSupport.adapter = supportAdapter
-        binding.rvSupport.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvSupport.layoutManager = NonScrollableLinearLayoutManager(requireContext())
 
         val support =
             listOf(
@@ -81,7 +80,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
         supportAdapter.submitList(support)
 
         binding.rvLegal.adapter = legalAdapter
-        binding.rvLegal.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvLegal.layoutManager = NonScrollableLinearLayoutManager(requireContext())
 
         val legal =
             listOf(
@@ -90,5 +89,19 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
             )
 
         legalAdapter.submitList(legal)
+    }
+}
+
+}
+
+
+class NonScrollableLinearLayoutManager(context: Context) : LinearLayoutManager(context) {
+
+    override fun canScrollVertically(): Boolean {
+        return false
+    }
+
+    override fun canScrollHorizontally(): Boolean {
+        return false
     }
 }
