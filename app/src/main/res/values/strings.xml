@@ -14,6 +14,7 @@
     <string name="contentDescription">Image</string>
     <string name="register">Kayıt Ol</string>
     <string name="login">Giriş Yap</string>
+    <string name="logout">Çıkış Yap</string>
     <string name="back_button">Back Button</string>
     <string name="toolbar_logo">toolbar_logo</string>
     <string name="sign_up_title">Merhaba!\nBaşlamak için kaydolun</string>

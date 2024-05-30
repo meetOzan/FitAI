@@ -1,5 +1,6 @@
 package com.mobven.fitai.presentation.profile
 
+import android.content.Context
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mobven.fitai.R
 import com.mobven.fitai.base.BaseFragment
@@ -19,7 +20,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
 
     override fun observeUi() {
         binding.rvPersonalization.adapter = personalizationAdapter
-        binding.rvPersonalization.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvPersonalization.layoutManager = NonScrollableLinearLayoutManager(requireContext())
 
         val personalization = listOf(
             ProfileItem(R.drawable.ic_personalization, "Kişisel Bilgiler", ProfileItemType.SIMPLE),
@@ -31,7 +32,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
         personalizationAdapter.submitList(personalization)
 
         binding.rvConnectedAccounts.adapter = connectedAccountsAdapter
-        binding.rvConnectedAccounts.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvConnectedAccounts.layoutManager = NonScrollableLinearLayoutManager(requireContext())
 
         val connectedAccounts = listOf(
             ProfileItem(R.drawable.apple_health, "Apple Health", ProfileItemType.SIMPLE),
@@ -42,7 +43,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
 
 
         binding.rvTrack.adapter = trackAdapter
-        binding.rvTrack.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvTrack.layoutManager = NonScrollableLinearLayoutManager(requireContext())
 
         val track = listOf(
             ProfileItem(R.drawable.ic_kg, "Kilo Güncellemesi", ProfileItemType.ON_OFF),
@@ -53,7 +54,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
 
 
         binding.rvNotification.adapter = notificationAdapter
-        binding.rvNotification.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvNotification.layoutManager = NonScrollableLinearLayoutManager(requireContext())
 
         val notification = listOf(
             ProfileItem(R.drawable.ic_clock, "Görev Anımsatıcısı", ProfileItemType.TOGGLE),
@@ -64,7 +65,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
 
 
         binding.rvSupport.adapter = supportAdapter
-        binding.rvSupport.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvSupport.layoutManager = NonScrollableLinearLayoutManager(requireContext())
 
         val support = listOf(
             ProfileItem(R.drawable.ic_question_mark, "Yardım Merkezi", ProfileItemType.SIMPLE),
@@ -76,7 +77,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
 
 
         binding.rvLegal.adapter = legalAdapter
-        binding.rvLegal.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvLegal.layoutManager = NonScrollableLinearLayoutManager(requireContext())
 
         val legal = listOf(
             ProfileItem(R.drawable.ic_term_of_use, "Kullanım Şartları", ProfileItemType.SIMPLE),
@@ -89,4 +90,16 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
     }
 
 
+}
+
+
+class NonScrollableLinearLayoutManager(context: Context) : LinearLayoutManager(context) {
+
+    override fun canScrollVertically(): Boolean {
+        return false
+    }
+
+    override fun canScrollHorizontally(): Boolean {
+        return false
+    }
 }
