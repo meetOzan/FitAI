@@ -8,18 +8,22 @@ import androidx.navigation.fragment.findNavController
 import com.mobven.fitai.R
 import com.mobven.fitai.databinding.FragmentHomeBinding
 import com.mobven.fitai.presentation.base.BaseFragment
+import com.mobven.fitai.presentation.home.adapter.CategoryItem
+import com.mobven.fitai.presentation.home.adapter.HomeCategoryAdapter
 import com.mobven.fitai.presentation.home.calendar.CalendarItem
 import com.mobven.fitai.presentation.home.calendar.HomeCalendarAdapter
+import com.mobven.fitai.presentation.home.viewmodel.HomeAction
 import com.mobven.fitai.presentation.home.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 
 typealias HDirections = HomeFragmentDirections
 
 @AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
-    private val adapter = HomeCalendarAdapter()
+    private val calendarAdapter = HomeCalendarAdapter()
+    private val trainingAdapter = HomeCategoryAdapter()
+    private val foodAdapter = HomeCategoryAdapter()
+
     private val homeViewModel: HomeViewModel by viewModels()
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -35,7 +39,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
                 }
 
                 else -> {
-                    handleSuccess()
+                    handleSuccess(
+                        trainingList = homeState.trainingCategoryList,
+                        foodList = homeState.foodCategoryList,
+                        dateList = homeState.dateList
+                    )
                 }
             }
         }
@@ -46,28 +54,57 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    private fun handleSuccess() {
+    private fun handleSuccess(
+        trainingList: List<CategoryItem>,
+        foodList: List<CategoryItem>,
+        dateList: List<CalendarItem>
+    ) {
         with(binding) {
-            val dateList = mutableListOf<CalendarItem>()
-            val dayFormatter = DateTimeFormatter.ofPattern(getString(R.string.eeee))
-            val dateFormatter = DateTimeFormatter.ofPattern(getString(R.string.dd))
-
-            for (i in 0 until 10) {
-                val date = LocalDate.now().minusDays(i.toLong())
-                val dayName = date.format(dayFormatter).take(3)
-                val dateStr = date.format(dateFormatter)
-                val isSelected = i == 0
-                dateList.add(
-                    CalendarItem(
-                        date = dateStr,
-                        dayName = dayName,
-                        isSelected = isSelected,
-                    ),
+            with(includeHomeIntakeCalorie) {
+                ivCalorieCardIcon.setImageResource(
+                    R.drawable.intake_calorie,
                 )
+                tvCalorieCardTitle.text = getString(R.string.intake_calorie)
+                this.tvCalorieCardValue.text = getString(R.string._900_kcal)
             }
 
-            adapter.submitList(dateList)
-            rvHomeCalendar.adapter = adapter
+            with(includeHomeBurnedCalorie) {
+                ivCalorieCardIcon.setImageResource(
+                    R.drawable.expend_calorie,
+                )
+                tvCalorieCardTitle.text = getString(R.string.burned_calorie)
+                this.tvCalorieCardValue.text = getString(R.string._1300_kcal)
+            }
+
+            with(includeHomeRemainingCalorie) {
+                ivCalorieCardIcon.setImageResource(
+                    R.drawable.calorie_goal,
+                )
+                tvCalorieCardTitle.text = getString(R.string.daily_goal)
+                this.tvCalorieCardValue.text = getString(R.string._2500_kcal)
+            }
+
+            with(includeHomePersonalizedTraining){
+                ivPersonalizedCardIcon.setImageResource(
+                    R.drawable.dumbell,
+                )
+                tvCreatePersonalized.text = getString(R.string.create_personalized_training)
+            }
+
+            with(includeHomePersonalizedTraining){
+                ivPersonalizedCardIcon.setImageResource(
+                    R.drawable.pan,
+                )
+                tvCreatePersonalized.text = getString(R.string.create_personalized_food)
+            }
+
+            calendarAdapter.submitList(dateList)
+            trainingAdapter.submitList(trainingList)
+            foodAdapter.submitList(foodList)
+
+            rvHomeCalendar.adapter = calendarAdapter
+            rvHomeTrainingCategory.adapter = trainingAdapter
+            rvHomeFoodCategory.adapter = foodAdapter
         }
     }
 
@@ -77,5 +114,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
     private fun handleLoading() {
         println(getString(R.string.loading))
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    override fun callInitialViewModelFunction() {
+        homeViewModel.onAction(HomeAction.GetCategoryItem)
+        homeViewModel.onAction(HomeAction.GetCalendarItem)
     }
 }
