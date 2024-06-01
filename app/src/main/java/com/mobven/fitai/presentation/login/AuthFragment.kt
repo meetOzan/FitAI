@@ -11,7 +11,7 @@ class AuthFragment : BaseFragment<FragmentAuthBinding>(FragmentAuthBinding::infl
         super.observeUi()
 
         binding.registerButton.setOnClickListener {
-            val action = AuthFragmentDirections.actionAuthFragmentToSignUpFragment()
+            val action = AuthFragmentDirections.actionAuthFragmentToRegisterFragment()
             navigate(action)
         }
     }

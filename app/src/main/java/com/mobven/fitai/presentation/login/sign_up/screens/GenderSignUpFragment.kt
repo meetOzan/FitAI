@@ -1,5 +1,7 @@
 package com.mobven.fitai.presentation.login.sign_up.screens
 
+import android.widget.ImageView
+import android.widget.ProgressBar
 import androidx.fragment.app.viewModels
 import androidx.viewpager2.widget.ViewPager2
 import com.mobven.fitai.R
@@ -37,6 +39,7 @@ class GenderSignUpFragment :
     }
 
     private fun handleSuccess(genderList: List<ListSelectorItem>) {
+
         adapter.submitList(genderList)
         binding.rvGender.adapter = adapter
 
@@ -46,6 +49,8 @@ class GenderSignUpFragment :
             val nextItem = currentItem + 1
             requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager)
                 .setCurrentItem(nextItem, true)
+
+            requireActivity().findViewById<ImageView>(R.id.toolbar_back).visibility = ProgressBar.VISIBLE
         }
     }
 
@@ -59,5 +64,6 @@ class GenderSignUpFragment :
 
     override fun callInitialViewModelFunction() {
         viewModel.onAction(SignUpAction.GetSelectorItem(SignUpFragmentType.GENDER))
+        requireActivity().findViewById<ImageView>(R.id.toolbar_back).visibility = ProgressBar.INVISIBLE
     }
 }
