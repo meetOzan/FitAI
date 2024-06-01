@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/white"
-    android:layout_marginBottom="@dimen/_8dp"
     android:layout_marginHorizontal="@dimen/_5dp"
+    android:layout_marginBottom="@dimen/_8dp"
+    android:background="@color/white"
     app:cardCornerRadius="@dimen/_12dp">
 
     <LinearLayout
@@ -21,6 +22,7 @@
             android:layout_height="@dimen/_32dp"
             android:background="@drawable/ic_circle_selected"
             android:backgroundTint="@color/green_background"
+            android:contentDescription="@string/kcal_image"
             android:padding="@dimen/_8dp"
             android:src="@drawable/intake_calorie" />
 
@@ -31,19 +33,16 @@
             android:layout_marginTop="@dimen/_8dp"
             android:layout_marginEnd="@dimen/_16dp"
             android:fontFamily="@font/urbanist_regular"
-            android:text="Alınan Kalori"
-            android:textColor="@color/gray_300" />
+            android:textColor="@color/gray_300"
+            tools:text="Alınan Kalori" />
 
         <TextView
             android:id="@+id/tv_calorie_card_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/urbanist_bold"
-            android:text="900 kcal"
-            android:textColor="@color/gray_500" />
-
+            android:textColor="@color/gray_500"
+            tools:text="900 kcal" />
 
     </LinearLayout>
-
-
 </androidx.cardview.widget.CardView>

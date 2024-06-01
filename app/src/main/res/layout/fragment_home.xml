@@ -229,33 +229,42 @@
 
             <LinearLayout
                 android:id="@+id/ll_calorie"
-                android:layout_width="@dimen/_0dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_24dp"
                 android:layout_marginVertical="@dimen/_18dp"
                 android:orientation="horizontal"
-                android:gravity="center_horizontal"
+                android:gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_home_goal_remaining">
+
                 <include
                     android:id="@+id/include_home_intake_calorie"
-                    layout="@layout/card_calorie_track" />
+                    layout="@layout/card_calorie_track"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
                 <include
                     android:id="@+id/include_home_burned_calorie"
-                    layout="@layout/card_calorie_track" />
+                    layout="@layout/card_calorie_track"
+                    android:layout_width="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5dp"
+                    android:layout_height="wrap_content" />
 
                 <include
                     android:id="@+id/include_home_remaining_calorie"
-                    layout="@layout/card_calorie_track" />
+                    layout="@layout/card_calorie_track"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/ll_home_personalized"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_24dp"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
