@@ -193,4 +193,16 @@
     <string name="categorie_image">categorie_image</string>
     <string name="food_categories">Öğün Kategorileri</string>
     <string name="breakfast">Kahvaltı</string>
+    <string name="hiit">HIIT</string>
+    <string name="snack">Atıştırmalık</string>
+    <string name="burned_calorie">Harcanan Kalori</string>
+    <string name="_1300_kcal">1300 kcal</string>
+    <string name="daily_goal">Günlük Hedef</string>
+    <string name="_2500_kcal">-2500 kcal</string>
+    <string name="_900_kcal">900 kcal</string>
+    <string name="kcal_image">kcal_image</string>
+    <string name="intake_calorie">Alınan Kalori</string>
+    <string name="create_personalized_food">Kişiselleştirilmiş Beslenme\nPlanını Oluştur</string>
+    <string name="name">Ad</string>
+    <string name="surname">Soyad</string>
 </resources>

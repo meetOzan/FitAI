@@ -8,23 +8,22 @@ import com.mobven.fitai.presentation.login.sign_up.screens.GenderSignUpFragment
 import com.mobven.fitai.presentation.login.sign_up.screens.GoalSignUpFragment
 import com.mobven.fitai.presentation.login.sign_up.screens.GoalsFragment
 import com.mobven.fitai.presentation.login.sign_up.screens.HeightSignUpFragment
-import com.mobven.fitai.presentation.login.sign_up.screens.RegisterFragment
 import com.mobven.fitai.presentation.login.sign_up.screens.WeightSignUpFragment
 
-class SignUpPagerAdapter(
-    private val fragmentActivity: FragmentActivity,
+class SignUpPagerAdapter (
+    fragmentActivity: FragmentActivity
 ) : FragmentStateAdapter(fragmentActivity) {
-    override fun getItemCount(): Int = 7
+
+    override fun getItemCount(): Int = 6
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> RegisterFragment()
-            1 -> GenderSignUpFragment()
-            2 -> HeightSignUpFragment()
-            3 -> WeightSignUpFragment()
-            4 -> GoalSignUpFragment()
-            5 -> BirthdaySignUpFragment()
-            6 -> GoalsFragment()
+            0 -> GenderSignUpFragment()
+            1 -> HeightSignUpFragment()
+            2 -> WeightSignUpFragment()
+            3 -> GoalSignUpFragment()
+            4 -> BirthdaySignUpFragment()
+            5 -> GoalsFragment()
             else -> GoalsFragment()
         }
     }

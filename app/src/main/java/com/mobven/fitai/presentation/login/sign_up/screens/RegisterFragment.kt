@@ -1,18 +1,20 @@
 package com.mobven.fitai.presentation.login.sign_up.screens
 
-import androidx.viewpager2.widget.ViewPager2
-import com.mobven.fitai.R
+import androidx.navigation.NavDirections
+import androidx.navigation.fragment.findNavController
 import com.mobven.fitai.databinding.FragmentRegisterBinding
 import com.mobven.fitai.presentation.base.BaseFragment
+
+typealias RDirections = RegisterFragmentDirections
 
 class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterBinding::inflate) {
     override fun observeUi() {
         binding.btnSignUpContinue.setOnClickListener {
-            val currentItem =
-                requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager).currentItem
-            val nextItem = currentItem + 1
-            requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager)
-                .setCurrentItem(nextItem, true)
+            navigate(RDirections.actionRegisterFragmentToSignUpFragment())
         }
+    }
+
+    override fun navigate(action: NavDirections) {
+        findNavController().navigate(action)
     }
 }
