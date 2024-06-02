@@ -197,4 +197,5 @@
     <string name="welcome_back">Seni tekrar aramızda gördüğümüze sevindik</string>
     <string name="error_email">E-posta adresiniz hatalı!</string>
     <string name="error_password">Parolanız eksik veya hatalı!</string>
+    <string name="wrong_code">Yanlış kod, lütfen tekrar deneyin</string>
 </resources>

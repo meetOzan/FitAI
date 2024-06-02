@@ -56,7 +56,7 @@ class OTPFragment : Fragment() {
             editText.addTextChangedListener(otpTextWatcher)
         }
 
-        binding.tvTekrarGonder.setOnClickListener {
+        binding.tvResendCode.setOnClickListener {
             if (isTimerRunning) {
                 Toast.makeText(
                     requireContext(),
@@ -111,7 +111,11 @@ class OTPFragment : Fragment() {
                     editTexts[3].text -> editTexts[2].requestFocus()
                     editTexts[2].text -> editTexts[1].requestFocus()
                     editTexts[1].text -> editTexts[0].requestFocus()
-                    editTexts[0].text -> changeColor(R.drawable.bg_grey_stroke)
+                    editTexts[0].text -> {
+                        changeColor(R.drawable.bg_grey_stroke)
+                        binding.tvError.visibility = View.INVISIBLE
+                    }
+
 
                 }
             }
@@ -129,6 +133,7 @@ class OTPFragment : Fragment() {
 
         } else {
             Toast.makeText(requireContext(), "Giriş Başarısız", Toast.LENGTH_SHORT).show()
+            binding.tvError.visibility = View.VISIBLE
             val color = R.drawable.bg_red_stroke
             changeColor(color)
         }
