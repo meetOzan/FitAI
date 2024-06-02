@@ -198,4 +198,6 @@
     <string name="error_email">E-posta adresiniz hatalı!</string>
     <string name="error_password">Parolanız eksik veya hatalı!</string>
     <string name="wrong_code">Yanlış kod, lütfen tekrar deneyin</string>
+    <string name="password_rule">Min 8 karakter, bir büyük, bir küçük harften oluşmalıdır.</string>
+    <string name="passwords_dont_match">Parolalarınız eşleşmiyor.</string>
 </resources>
