@@ -84,7 +84,6 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
     }
 }
 
-}
 
 class NonScrollableLinearLayoutManager(context: Context) : LinearLayoutManager(context) {
 

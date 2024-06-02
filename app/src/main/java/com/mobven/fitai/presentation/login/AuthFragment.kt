@@ -14,6 +14,11 @@ class AuthFragment : BaseFragment<FragmentAuthBinding>(FragmentAuthBinding::infl
             val action = AuthFragmentDirections.actionAuthFragmentToSignUpFragment()
             navigate(action)
         }
+
+        binding.loginButton.setOnClickListener {
+            val action = AuthFragmentDirections.actionAuthFragmentToLoginFragment()
+            navigate(action)
+        }
     }
 
     override fun navigate(action: NavDirections) {

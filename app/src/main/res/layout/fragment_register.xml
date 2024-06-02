@@ -40,6 +40,10 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_input_layout_nickname_sign_up"
             style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            app:boxCornerRadiusBottomStart="@dimen/_8dp"
+            app:boxCornerRadiusBottomEnd="@dimen/_8dp"
+            app:boxCornerRadiusTopStart="@dimen/_8dp"
+            app:boxCornerRadiusTopEnd="@dimen/_8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_24dp"
@@ -68,6 +72,10 @@
             android:id="@+id/text_input_layout_email_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomStart="@dimen/_8dp"
+            app:boxCornerRadiusBottomEnd="@dimen/_8dp"
+            app:boxCornerRadiusTopStart="@dimen/_8dp"
+            app:boxCornerRadiusTopEnd="@dimen/_8dp"
             android:layout_marginHorizontal="@dimen/_24dp"
             app:boxBackgroundColor="@color/light_grey_2"
             app:boxStrokeColor="@color/light_grey_2"
@@ -79,7 +87,7 @@
             app:layout_constraintTop_toBottomOf="@id/text_input_layout_nickname_sign_up">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text_email_sign_up"
+                android:id="@+id/edit_text_email_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
@@ -93,6 +101,10 @@
             android:id="@+id/text_input_layout_password_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomStart="@dimen/_8dp"
+            app:boxCornerRadiusBottomEnd="@dimen/_8dp"
+            app:boxCornerRadiusTopStart="@dimen/_8dp"
+            app:boxCornerRadiusTopEnd="@dimen/_8dp"
             android:layout_marginHorizontal="@dimen/_24dp"
             app:boxBackgroundColor="@color/light_grey_2"
             app:boxStrokeColor="@color/light_grey_2"
@@ -106,7 +118,7 @@
             app:layout_constraintTop_toBottomOf="@id/text_input_layout_email_sign_up">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text_password_sign_up"
+                android:id="@+id/edit_text_password_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
@@ -120,6 +132,10 @@
             android:id="@+id/text_input_layout_password_again_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomStart="@dimen/_8dp"
+            app:boxCornerRadiusBottomEnd="@dimen/_8dp"
+            app:boxCornerRadiusTopStart="@dimen/_8dp"
+            app:boxCornerRadiusTopEnd="@dimen/_8dp"
             android:layout_marginHorizontal="@dimen/_24dp"
             app:boxBackgroundColor="@color/light_grey_2"
             app:boxStrokeColor="@color/light_grey_2"
@@ -227,12 +243,12 @@
             android:layout_marginTop="@dimen/_30dp"
             android:layout_marginEnd="@dimen/_12dp"
             app:dividerColor="@color/light_grey"
-            app:layout_constraintEnd_toStartOf="@id/tv_or_register_with"
+            app:layout_constraintEnd_toStartOf="@id/tv_or_login_with"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_sign_up_continue" />
 
         <TextView
-            android:id="@+id/tv_or_register_with"
+            android:id="@+id/tv_or_login_with"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/urbanist_bold"
@@ -253,24 +269,24 @@
             android:layout_marginEnd="@dimen/_24dp"
             app:dividerColor="@color/light_grey"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/tv_or_register_with"
+            app:layout_constraintStart_toEndOf="@id/tv_or_login_with"
             app:layout_constraintTop_toBottomOf="@id/btn_sign_up_continue" />
 
         <ImageButton
-            android:id="@+id/btn_sign_up_facebook"
+            android:id="@+id/btn_login_facebook"
             android:layout_width="@dimen/_0dp"
             android:layout_height="@dimen/_0dp"
             android:layout_marginStart="@dimen/_24dp"
             android:background="@drawable/bg_grey_stroke"
             android:contentDescription="@string/facebook_register_button"
             android:src="@drawable/facebook_icon"
-            app:layout_constraintBottom_toBottomOf="@id/btn_sign_up_google"
-            app:layout_constraintEnd_toStartOf="@id/btn_sign_up_google"
+            app:layout_constraintBottom_toBottomOf="@id/btn_login_google"
+            app:layout_constraintEnd_toStartOf="@id/btn_login_google"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/btn_sign_up_google" />
+            app:layout_constraintTop_toTopOf="@id/btn_login_google" />
 
         <ImageButton
-            android:id="@+id/btn_sign_up_google"
+            android:id="@+id/btn_login_google"
             android:layout_width="@dimen/_0dp"
             android:layout_height="@dimen/_64dp"
             android:focusable="true"
@@ -283,12 +299,12 @@
             android:paddingVertical="@dimen/_10dp"
             android:src="@drawable/google_icon"
             app:layout_constraintBottom_toTopOf="@id/tv_do_you_have_already_account"
-            app:layout_constraintEnd_toStartOf="@id/btn_sign_up_apple"
-            app:layout_constraintStart_toEndOf="@id/btn_sign_up_facebook"
+            app:layout_constraintEnd_toStartOf="@id/btn_login_apple"
+            app:layout_constraintStart_toEndOf="@id/btn_login_facebook"
             app:layout_constraintTop_toBottomOf="@id/divider_sign_up_left" />
 
         <ImageButton
-            android:id="@+id/btn_sign_up_apple"
+            android:id="@+id/btn_login_apple"
             android:layout_width="@dimen/_0dp"
             android:layout_height="@dimen/_0dp"
             android:layout_marginEnd="@dimen/_24dp"
@@ -297,10 +313,10 @@
             android:paddingHorizontal="@dimen/_8dp"
             android:paddingVertical="@dimen/_10dp"
             android:src="@drawable/apple_logo"
-            app:layout_constraintBottom_toBottomOf="@id/btn_sign_up_google"
+            app:layout_constraintBottom_toBottomOf="@id/btn_login_google"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/btn_sign_up_google"
-            app:layout_constraintTop_toTopOf="@id/btn_sign_up_google" />
+            app:layout_constraintStart_toEndOf="@id/btn_login_google"
+            app:layout_constraintTop_toTopOf="@id/btn_login_google" />
 
         <TextView
             android:id="@+id/tv_do_you_have_already_account"
@@ -322,8 +338,8 @@
             android:text="@string/login"
             android:textSize="@dimen/_16sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btn_sign_up_google"
-            app:layout_constraintTop_toBottomOf="@id/btn_sign_up_google" />
+            app:layout_constraintStart_toEndOf="@+id/btn_login_google"
+            app:layout_constraintTop_toBottomOf="@id/btn_login_google" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

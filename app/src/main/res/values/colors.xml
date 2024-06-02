@@ -80,4 +80,7 @@
     <!--#545454-->
     <color name="black_300">#545454</color>
 
+    <!--#545454-->
+    <color name="red_50">#FF4848</color>
+
 </resources>
