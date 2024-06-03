@@ -222,4 +222,11 @@
     <string name="login_failed">Giriş Başarısız</string>
     <string name="traning_goals">Antrenman Hedefleri</string>
     <string name="see_all">Hepsini Gör</string>
+    <string name="email_incorrect">E-Mail Hatalı</string>
+    <string name="password_incorrect">Şifre Hatalı</string>
+    <string name="password_eight_char">Şifreniz minimum 8 karakter olmalıdır.</string>
+    <string name="password_least_one_upper_case">Şifreniz en az bir adet büyük harf içermelidir</string>
+    <string name="password_least_one_lower_case">Şifreniz en az bir adet küçük harf içermelidir</string>
+    <string name="passwords_not_matched">Parolalarınız eşleşmiyor.</string>
+    <string name="phone_number">Phone Number</string>
 </resources>

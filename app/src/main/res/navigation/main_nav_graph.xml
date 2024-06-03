@@ -18,19 +18,6 @@
             app:destination="@id/loginFragment" />
     </fragment>
     <fragment
-        android:id="@+id/authFragment"
-        android:name="com.mobven.fitai.presentation.login.AuthFragment"
-        android:label="AuthFragment" >
-        <action
-            android:id="@+id/action_authFragment_to_signUpFragment"
-            app:destination="@id/signUpFragment"
-            app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out" />
-        <action
-            android:id="@+id/action_authFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/homeFragment"
         android:name="com.mobven.fitai.presentation.home.HomeFragment"
         android:label="fragment_home"

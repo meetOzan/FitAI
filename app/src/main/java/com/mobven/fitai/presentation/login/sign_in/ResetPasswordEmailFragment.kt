@@ -2,20 +2,20 @@ package com.mobven.fitai.presentation.login.sign_in
 
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
-import com.mobven.fitai.databinding.FragmentResetPasswordEmailBinding
+import com.mobven.fitai.databinding.FragmentResetPasswordBinding
 import com.mobven.fitai.presentation.base.BaseFragment
 
 class ResetPasswordEmailFragment :
-    BaseFragment<FragmentResetPasswordEmailBinding>(FragmentResetPasswordEmailBinding::inflate) {
+    BaseFragment<FragmentResetPasswordBinding>(FragmentResetPasswordBinding::inflate) {
 
     override fun observeUi() {
-        binding.btnForgotPasswordConfirm.setOnClickListener {
+        binding.resetPasswordButton.setOnClickListener {
             val action =
-                ResetPasswordEmailFragmentDirections.actionResetPasswordEmailFragmentToOTPFragment()
+                ResetPasswordFragmentDirections.actionResetPasswordFragmentToResetPasswordSuccessFragment()
             navigate(action)
         }
 
-        binding.toolbarForgotPassword.toolbarBack.setOnClickListener {
+        binding.toolbarResetPassword.toolbarBack.setOnClickListener {
             findNavController().popBackStack()
         }
     }

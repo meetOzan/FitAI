@@ -58,11 +58,11 @@ class OTPFragment : Fragment() {
         }
 
 
-        binding.toolbarOtpEmail.toolbarBack.setOnClickListener {
+        binding.toolbarOtpPhone.toolbarBack.setOnClickListener {
             findNavController().popBackStack()
         }
 
-        binding.tvTekrarGonder.setOnClickListener {
+        binding.tvResendCode.setOnClickListener {
             if (isTimerRunning) {
                 Toast.makeText(
                     requireContext(),
