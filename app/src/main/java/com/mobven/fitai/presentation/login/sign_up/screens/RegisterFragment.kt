@@ -12,6 +12,9 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterB
         binding.btnSignUpContinue.setOnClickListener {
             navigate(RDirections.actionRegisterFragmentToSignUpFragment())
         }
+        binding.tvLoginSignUp.setOnClickListener {
+            navigate(RDirections.actionRegisterFragmentToLoginFragment())
+        }
     }
 
     override fun navigate(action: NavDirections) {

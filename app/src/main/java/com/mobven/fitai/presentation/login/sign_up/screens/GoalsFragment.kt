@@ -1,9 +1,8 @@
 package com.mobven.fitai.presentation.login.sign_up.screens
 
+import android.content.Intent
 import androidx.fragment.app.viewModels
-import androidx.navigation.NavDirections
-import androidx.navigation.NavOptions
-import androidx.navigation.fragment.findNavController
+import com.mobven.fitai.MainActivity
 import com.mobven.fitai.R
 import com.mobven.fitai.databinding.FragmentGoalsBinding
 import com.mobven.fitai.presentation.base.BaseFragment
@@ -42,8 +41,9 @@ class GoalsFragment : BaseFragment<FragmentGoalsBinding>(FragmentGoalsBinding::i
         binding.rvGoals.adapter = adapter
 
         binding.btnGoalsContinue.setOnClickListener {
-            val action = BDayDirections.actionSignUpFragmentToHomeFragment()
-            navigate(action)
+            val intent = Intent(requireActivity(), MainActivity::class.java)
+            startActivity(intent)
+            requireActivity().finish()
         }
     }
 
@@ -57,14 +57,5 @@ class GoalsFragment : BaseFragment<FragmentGoalsBinding>(FragmentGoalsBinding::i
 
     override fun callInitialViewModelFunction() {
         signUpViewModel.onAction(SignUpAction.GetSelectorItem(SignUpFragmentType.GOALS))
-    }
-
-    override fun navigate(action: NavDirections) {
-        val navOptions =
-            NavOptions.Builder()
-                .setPopUpTo(R.id.signUpFragment, true)
-                .setPopUpTo(R.id.authFragment, true)
-                .build()
-        findNavController().navigate(action, navOptions)
     }
 }

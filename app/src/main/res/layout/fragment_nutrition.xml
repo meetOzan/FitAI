@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".home.nutrition.NutritionFragment">
+    tools:context=".presentation.home.nutrition.NutritionFragment">
 
     <include
         android:id="@+id/toolbar_nutrition"
@@ -29,6 +29,7 @@
         android:id="@+id/vp_nutrition"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_80dp"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_16dp" />
 

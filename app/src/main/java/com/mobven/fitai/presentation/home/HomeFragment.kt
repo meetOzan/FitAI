@@ -89,13 +89,23 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
                     R.drawable.dumbell,
                 )
                 tvCreatePersonalized.text = getString(R.string.create_personalized_training)
+                cardHomePersonalized.setOnClickListener{
+                    findNavController().navigate(R.id.action_homeFragment_to_trainingFragment)
+                }
             }
 
-            with(includeHomePersonalizedTraining){
+            with(includeHomePersonalizedFood){
                 ivPersonalizedCardIcon.setImageResource(
                     R.drawable.pan,
                 )
                 tvCreatePersonalized.text = getString(R.string.create_personalized_food)
+                cardHomePersonalized.setOnClickListener {
+                    findNavController().navigate(R.id.action_homeFragment_to_nutritionFragment)
+                }
+            }
+
+            binding.ivHomeProfile.setOnClickListener {
+                findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
             }
 
             calendarAdapter.submitList(dateList)
