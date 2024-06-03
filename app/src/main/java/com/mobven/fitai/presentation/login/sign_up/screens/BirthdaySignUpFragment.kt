@@ -4,9 +4,6 @@ import androidx.viewpager2.widget.ViewPager2
 import com.mobven.fitai.R
 import com.mobven.fitai.databinding.FragmentBirthdaySignUpBinding
 import com.mobven.fitai.presentation.base.BaseFragment
-import com.mobven.fitai.presentation.login.sign_up.SignUpFragmentDirections
-
-typealias BDayDirections = SignUpFragmentDirections
 
 class BirthdaySignUpFragment :
     BaseFragment<FragmentBirthdaySignUpBinding>(FragmentBirthdaySignUpBinding::inflate) {

@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        supportActionBar?.hide()
 
     }
-
 }
