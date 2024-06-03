@@ -66,8 +66,7 @@ class OTPFragment : Fragment() {
             if (isTimerRunning) {
                 Toast.makeText(
                     requireContext(),
-                    getString(R.string.please_wait_time)
-                    ,
+                    getString(R.string.please_wait_time),
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
@@ -118,8 +117,10 @@ class OTPFragment : Fragment() {
                     editTexts[3].text -> editTexts[2].requestFocus()
                     editTexts[2].text -> editTexts[1].requestFocus()
                     editTexts[1].text -> editTexts[0].requestFocus()
-                    editTexts[0].text -> changeColor(R.drawable.bg_grey_stroke)
-
+                    editTexts[0].text -> {
+                        changeColor(R.drawable.bg_grey_stroke)
+                        binding.tvError.visibility = View.INVISIBLE
+                    }
                 }
             }
         }
@@ -130,7 +131,8 @@ class OTPFragment : Fragment() {
         val actualOtp = getString(R.string._1111)
 
         if (enteredOtp == actualOtp) {
-            Toast.makeText(requireContext(), getString(R.string.login_success), Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.login_success), Toast.LENGTH_SHORT)
+                .show()
             val color = R.drawable.bg_green_stroke
             changeColor(color)
             val navOptions =
@@ -144,7 +146,9 @@ class OTPFragment : Fragment() {
                 navOptions
             )
         } else {
-            Toast.makeText(requireContext(), getString(R.string.login_failed), Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.login_failed), Toast.LENGTH_SHORT)
+                .show()
+            binding.tvError.visibility = View.VISIBLE
             val color = R.drawable.bg_red_stroke
             changeColor(color)
         }

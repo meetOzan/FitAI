@@ -8,20 +8,21 @@
     android:background="@color/white">
 
     <include
-        android:id="@+id/toolbar_otp_email"
+        android:id="@+id/toolbar_otp_phone"
         layout="@layout/toolbar_sign_up"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/dogrulama"
+        android:id="@+id/verification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/urbanist_bold"
         android:text="@string/verification"
         android:textColor="@color/black"
         android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
-        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontalTop" />
+        android:layout_marginHorizontal="@dimen/_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_otp_phone" />
 
     <TextView
         android:id="@+id/phone"
@@ -31,13 +32,14 @@
         android:textSize="18sp"
         android:fontFamily="@font/urbanist_regular"
         android:textColor="@color/lightGray"
-        app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
-        app:layout_constraintTop_toBottomOf="@id/dogrulama"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/verification"
         android:layout_marginTop="@dimen/_10dp" />
 
 
     <TextView
-        android:id="@+id/dogrulamaText"
+        android:id="@+id/verificationText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/verification_code"
@@ -45,7 +47,7 @@
         android:fontFamily="@font/urbanist_regular"
         android:textColor="@color/lightGray"
         app:layout_constraintStart_toEndOf="@id/phone"
-        app:layout_constraintTop_toBottomOf="@id/dogrulama"
+        app:layout_constraintTop_toBottomOf="@id/verification"
         android:layout_marginStart="5dp"
         android:layout_marginTop="@dimen/_10dp"
         />
@@ -58,8 +60,9 @@
         android:textSize="18sp"
         android:fontFamily="@font/urbanist_regular"
         android:textColor="@color/lightGray"
-        app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
-        app:layout_constraintTop_toBottomOf="@id/dogrulamaText"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/verificationText"
         />
 
     <EditText
@@ -75,7 +78,8 @@
         android:background="@drawable/bg_grey_light_radius"
         android:textAlignment="center"
         app:layout_constraintEnd_toStartOf="@id/etOtpBox2"
-        app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
+        android:layout_marginStart="@dimen/_24dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dogrulamaText2"
         tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
@@ -123,73 +127,67 @@
         android:textAlignment="center"
         android:background="@drawable/bg_grey_light_radius"
         android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_24dp"
         app:layout_constraintStart_toEndOf="@id/etOtpBox3"
         app:layout_constraintTop_toBottomOf="@id/dogrulamaText2" />
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/etOtpBox2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/wrong_code"
+        android:textColor="@color/red_50"
+        android:visibility="invisible"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_24dp"/>
 
     <TextView
         android:id="@+id/tvTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/etOtpBox2"
-        app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
-        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalRight"
+        app:layout_constraintTop_toBottomOf="@id/tvError"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:text="@string/timer"
-        android:textSize="20sp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"/>
-
-    <TextView
-        android:id="@+id/tvKodAlmadinizMi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_regular"
-        app:layout_constraintTop_toBottomOf="@id/tvTimer"
-        app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
-        app:layout_constraintEnd_toStartOf="@id/tvTekrarGonder"
-        android:text="@string/didnt_you_get_a_code"
-        android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintHorizontal_chainStyle="packed"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_4dp"/>
 
     <TextView
-        android:id="@+id/tvTekrarGonder"
+        android:id="@+id/tvDidntYouGetACode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_semi_bold"
+        android:fontFamily="@font/urbanist_regular"
         app:layout_constraintTop_toBottomOf="@id/tvTimer"
-        app:layout_constraintStart_toEndOf="@id/tvKodAlmadinizMi"
-        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalRight"
-        android:text="@string/resend_code"
-        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/didnt_you_get_a_code"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_4dp"/>
+
+    <TextView
+        android:id="@+id/tvResendCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/urbanist_bold"
+        app:layout_constraintTop_toBottomOf="@id/tvDidntYouGetACode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/resend_code"
+        android:textColor="@color/black"
+        android:textSize="15sp"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="2dp"
         android:layout_marginTop="@dimen/_4dp"/>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineVerticalLeft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="24dp" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineVerticalRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="24dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineHorizontalTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="100dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

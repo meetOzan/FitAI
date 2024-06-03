@@ -3,10 +3,12 @@
     <dimen name="horizontal_margin">24dp</dimen>
     <dimen name="button_corner_radius">8dp</dimen>
     <dimen name="_24dp">24dp</dimen>
+    <dimen name="_34dp">34dp</dimen>
     <dimen name="_16sp">16sp</dimen>
     <dimen name="_18dp">18dp</dimen>
     <dimen name="_32sp">32sp</dimen>
     <dimen name="_16dp">16dp</dimen>
+    <dimen name="_22dp">22dp</dimen>
     <dimen name="_0dp">0dp</dimen>
     <dimen name="_8dp">8dp</dimen>
     <dimen name="_30dp">30dp</dimen>

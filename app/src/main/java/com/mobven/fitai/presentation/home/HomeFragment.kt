@@ -47,6 +47,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
                 }
             }
         }
+
+        binding.ivHomeProfile.setOnClickListener {
+            val action = HomeFragmentDirections.actionHomeFragmentToProfileFragment()
+            navigate(action)
+        }
     }
 
     override fun navigate(action: NavDirections) {

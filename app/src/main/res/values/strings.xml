@@ -23,6 +23,7 @@
     <string name="password">Parola</string>
     <string name="password_again">Tekrar Parola</string>
     <string name="or_register_with">Ve ya Şununla Kayıt Olun</string>
+    <string name="or_login_with">Ve ya Şununla Giriş Yapın</string>
     <string name="zaten_hesab_n_z_var_m">Zaten hesabınız var mı?</string>
     <string name="terms">Şartları</string>
     <string name="and">ve</string>
@@ -144,7 +145,7 @@
     <string name="password_changed_bottom">Parolanız başarıyla değiştirildi. Yeni\nparalonızla hesabınıza giriş yapabilirsiniz.</string>
     <string name="otp_email">E-posta adresinize gönderdiğimiz doğrulama\nkodunu girin.</string>
     <string name="send_code">Kod Gönder</string>
-    <string name="welcome">Hoşgeldin!</string>
+    <string name="welcome">Hoş geldin!</string>
     <string name="are_you_forgot_password">Şifrenizi mi unuttunuz?</string>
     <string name="are_you_forgot_password_bottom">Endişelenmeyin! Hesabınızla bağlantılı\nnumaranız doğruysa onaylayın</string>
     <string name="are_you_forgot_password_email_bottom">Endişelenmeyin!  Lütfen hesabınızla bağlantılı\ne-posta adresini girin.</string>
@@ -193,6 +194,12 @@
     <string name="categorie_image">categorie_image</string>
     <string name="food_categories">Öğün Kategorileri</string>
     <string name="breakfast">Kahvaltı</string>
+    <string name="welcome_back">Seni tekrar aramızda gördüğümüze sevindik</string>
+    <string name="error_email">E-posta adresiniz hatalı!</string>
+    <string name="error_password">Parolanız eksik veya hatalı!</string>
+    <string name="wrong_code">Yanlış kod, lütfen tekrar deneyin</string>
+    <string name="password_rule">Min 8 karakter, bir büyük, bir küçük harften oluşmalıdır.</string>
+    <string name="passwords_dont_match">Parolalarınız eşleşmiyor.</string>
     <string name="hiit">HIIT</string>
     <string name="snack">Atıştırmalık</string>
     <string name="burned_calorie">Harcanan Kalori</string>
