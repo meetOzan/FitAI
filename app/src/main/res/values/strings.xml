@@ -213,4 +213,6 @@
     <string name="login_success">Giriş Başarılı</string>
     <string name="_1111">1111</string>
     <string name="login_failed">Giriş Başarısız</string>
+    <string name="traning_goals">Antrenman Hedefleri</string>
+    <string name="see_all">Hepsini Gör</string>
 </resources>

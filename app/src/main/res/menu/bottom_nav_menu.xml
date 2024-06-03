@@ -14,7 +14,7 @@
 
     <item android:id="@+id/miFeed"
         android:title="@string/discover"
-        android:icon="@drawable/compass" />
+        android:icon="@drawable/discover" />
 
     <item android:id="@+id/miProfile"
         android:title="@string/profile"
