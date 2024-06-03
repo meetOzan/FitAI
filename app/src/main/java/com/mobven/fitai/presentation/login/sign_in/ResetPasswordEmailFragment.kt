@@ -1,22 +1,27 @@
 package com.mobven.fitai.presentation.login.sign_in
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import com.mobven.fitai.R
+import androidx.navigation.NavDirections
+import androidx.navigation.fragment.findNavController
+import com.mobven.fitai.databinding.FragmentResetPasswordEmailBinding
+import com.mobven.fitai.presentation.base.BaseFragment
 
+class ResetPasswordEmailFragment :
+    BaseFragment<FragmentResetPasswordEmailBinding>(FragmentResetPasswordEmailBinding::inflate) {
 
-class ResetPasswordEmailFragment : Fragment() {
+    override fun observeUi() {
+        binding.btnForgotPasswordConfirm.setOnClickListener {
+            val action =
+                ResetPasswordEmailFragmentDirections.actionResetPasswordEmailFragmentToOTPFragment()
+            navigate(action)
+        }
 
+        binding.toolbarForgotPassword.toolbarBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
+    }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_reset_password_email, container, false)
+    override fun navigate(action: NavDirections) {
+        findNavController().navigate(action)
     }
 
 }

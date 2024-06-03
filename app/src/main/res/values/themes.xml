@@ -1,8 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.FitAI" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorOnSecondaryContainer">@color/green_500</item>
+        <item name="colorSecondaryContainer">@color/transparent</item>
+        <!--colorOnSurface-->
+        <item name="colorOnSurface">@color/green_500</item>
     </style>
 
     <style name="Theme.FitAI" parent="Base.Theme.FitAI" />
