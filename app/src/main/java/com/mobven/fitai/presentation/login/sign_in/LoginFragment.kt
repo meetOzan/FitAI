@@ -8,6 +8,23 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
     override fun observeUi() {
         emailFocusListener()
         passwordFocusListener()
+
+        binding.loginButton.setOnClickListener {
+            if (binding.loginEmail.helperText == null && binding.loginPassword.helperText == null){
+                val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
+                navigate(action)
+            }
+        }
+
+        binding.tvRegister.setOnClickListener {
+            val action = LoginFragmentDirections.actionLoginFragmentToSignUpFragment()
+            navigate(action)
+        }
+
+        binding.loginForgotPassword.setOnClickListener {
+            val action = LoginFragmentDirections.actionLoginFragmentToOTPFragment()
+            navigate(action)
+        }
     }
 
     private fun emailFocusListener() {

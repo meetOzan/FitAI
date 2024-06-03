@@ -52,6 +52,7 @@
             app:hintTextColor="@color/black"
             app:boxStrokeColor="@color/light_grey_2"
             app:boxStrokeWidth="@dimen/_1dp"
+            app:helperTextEnabled="true"
             app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -79,6 +80,7 @@
             android:layout_marginHorizontal="@dimen/_24dp"
             app:boxBackgroundColor="@color/light_grey_2"
             app:boxStrokeColor="@color/light_grey_2"
+            app:helperTextTextColor="@color/red_50"
             app:boxStrokeWidth="@dimen/_1dp"
             app:hintTextColor="@color/black"
             app:errorEnabled="true"
@@ -90,10 +92,10 @@
                 android:id="@+id/edit_text_email_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLines="1"
                 android:fontFamily="@font/urbanist_regular"
                 android:hint="@string/email"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:maxLines="1" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
