@@ -156,7 +156,7 @@
                 app:layout_constraintTop_toBottomOf="@id/ebtn_home_add_food"
                 app:trackColor="@color/gray_50"
                 app:trackThickness="10dp"
-                tools:progress="45" />
+                android:progress="45"/>
 
             <TextView
                 android:id="@+id/tv_home_goal_complete"
@@ -286,10 +286,23 @@
                 android:layout_marginStart="@dimen/_24dp"
                 android:layout_marginTop="@dimen/_24dp"
                 android:fontFamily="@font/urbanist_bold"
-                android:text="@string/daily_goals"
+                android:text="@string/traning_goals"
                 android:textColor="@color/dark_grey_2"
                 android:textSize="@dimen/_18sp"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_home_personalized" />
+
+            <TextView
+                android:id="@+id/tv_see_all_training"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_24dp"
+                android:fontFamily="@font/urbanist_regular"
+                android:text="@string/see_all"
+                android:textColor="@color/gray_200"
+                android:textSize="@dimen/_18sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ll_home_personalized" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -316,6 +329,19 @@
                 android:textColor="@color/dark_grey_2"
                 android:textSize="@dimen/_18sp"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_home_training_category" />
+
+            <TextView
+                android:id="@+id/tv_see_all_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_24dp"
+                android:fontFamily="@font/urbanist_regular"
+                android:text="@string/see_all"
+                android:textColor="@color/gray_200"
+                android:textSize="@dimen/_18sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rv_home_training_category" />
 
             <androidx.recyclerview.widget.RecyclerView
