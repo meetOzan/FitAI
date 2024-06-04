@@ -237,4 +237,8 @@
     <string name="add_nutrition">Besin Ekle</string>
     <string name="scan_food">Besin Tara</string>
     <string name="scan_barcod">Barkod Tara</string>
+    <string name="training_time">Egzersiz Süresi</string>
+    <string name="minute">Dakika</string>
+    <string name="enter_minutes">Dakika Girin</string>
+    <string name="_45_minute">45\'</string>
 </resources>

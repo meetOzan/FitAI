@@ -31,7 +31,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginVertical="@dimen/_16dp"
         android:layout_marginEnd="@dimen/_24dp"
-        android:background="@drawable/bg_white_stroke"
+        android:background="@drawable/bg_black_white_stroke"
         android:clickable="true"
         android:contentDescription="@string/back_button"
         android:focusable="true"

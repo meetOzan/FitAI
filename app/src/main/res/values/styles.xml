@@ -48,6 +48,11 @@
         <item name="android:layout_alignParentBottom">true</item>
     </style>
 
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.AppCompat.Light.Dialog.MinWidth">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
     <style name="birthdayDayMonthStyle">
         <item name="android:background">@drawable/bg_grey_stroke</item>
         <item name="fontFamily">@font/urbanist_bold</item>
@@ -78,6 +83,12 @@
         <item name="android:fontFamily">@font/urbanist_bold</item>
         <item name="android:textColor">@color/main_grey</item>
         <item name="android:textSize">@dimen/_20sp</item>
+    </style>
+
+    <style name="textViewAddTrainingItem">
+        <item name="android:fontFamily">@font/urbanist_bold</item>
+        <item name="android:textColor">@color/main_grey</item>
+        <item name="android:textSize">@dimen/_24sp</item>
     </style>
 
     <style name="nextButtonOnBoardingStyle">

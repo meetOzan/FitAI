@@ -7,7 +7,7 @@
     android:id="@+id/card_add_item"
     app:cardCornerRadius="@dimen/_12dp"
     android:layout_marginVertical="@dimen/_4dp"
-    app:cardElevation="0dp"
+    app:cardElevation="2dp"
     app:cardBackgroundColor="@color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -78,7 +78,7 @@
             app:tint="@color/white_100" />
 
         <ImageView
-            android:id="@+id/radio_button_image"
+            android:id="@+id/add_item_add_button"
             android:layout_width="17dp"
             android:layout_height="22dp"
             android:layout_margin="@dimen/_14dp"
@@ -89,8 +89,6 @@
             app:layout_constraintStart_toStartOf="@id/add_item_add_background"
             app:layout_constraintTop_toTopOf="@id/add_item_add_background"
             app:tint="@color/black" />
-
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

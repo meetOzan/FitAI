@@ -6,14 +6,21 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.mobven.fitai.databinding.CardAddItemBinding
 
-class AddItemAdapter : ListAdapter<AddItemModel, AddItemAdapter.ViewHolder>(AddItemDiffUtil()) {
+class AddItemAdapter(
+    private val onTrainingItemClicked: (Int) -> Unit = { _ -> }
+) : ListAdapter<AddItemModel, AddItemAdapter.ViewHolder>(AddItemDiffUtil()) {
 
-    class ViewHolder(val binding: CardAddItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(val binding: CardAddItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: AddItemModel) {
+
             with(binding) {
-                this.addItemImage.setImageResource(item.image)
-                this.addItemTextTitle.text = item.title
-                this.addItemTextDescription.text = item.description
+                addItemImage.setImageResource(item.image)
+                addItemTextTitle.text = item.title
+                addItemTextDescription.text = item.description
+
+                addItemAddBackground.setOnClickListener {
+                    onTrainingItemClicked(adapterPosition)
+                }
             }
         }
     }
