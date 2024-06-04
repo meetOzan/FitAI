@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_add_item"
+    app:cardCornerRadius="@dimen/_12dp"
+    android:layout_marginVertical="@dimen/_4dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/_12sp">
+
+        <ImageView
+            android:id="@+id/add_item_image_bg"
+            android:layout_width="@dimen/_45dp"
+            android:layout_height="@dimen/_56dp"
+            android:layout_marginVertical="@dimen/_16sp"
+            android:src="@drawable/bg_grey_light_radius"
+            android:contentDescription="@string/contentDescription"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white_100" />
+
+        <ImageView
+            android:id="@+id/add_item_image"
+            android:layout_width="@dimen/_24dp"
+            android:layout_height="@dimen/_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/add_item_image_bg"
+            app:layout_constraintEnd_toEndOf="@+id/add_item_image_bg"
+            app:layout_constraintStart_toStartOf="@+id/add_item_image_bg"
+            android:contentDescription="@string/contentDescription"
+            app:layout_constraintTop_toTopOf="@+id/add_item_image_bg"
+            tools:src="@drawable/ic_logo" />
+
+        <TextView
+            android:id="@+id/add_item_text_title"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sp"
+            android:fontFamily="@font/urbanist_bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/gray_900"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/add_item_image_bg"
+            app:layout_constraintTop_toTopOf="@+id/add_item_image_bg"
+            tools:text="Yürüyüş" />
+
+        <TextView
+            android:id="@+id/add_item_text_description"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sp"
+            android:fontFamily="@font/urbanist_regular"
+            android:textAlignment="textStart"
+            android:textColor="@color/gray_900"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/add_item_image_bg"
+            app:layout_constraintStart_toEndOf="@+id/add_item_image_bg"
+            app:layout_constraintTop_toBottomOf="@+id/add_item_text_title"
+            tools:text="Düşük Tempo - 1 saatte 65 kcal" />
+
+        <ImageView
+            android:id="@+id/add_item_add_background"
+            android:layout_width="@dimen/_45dp"
+            android:layout_height="@dimen/_45dp"
+            android:layout_marginVertical="@dimen/_16sp"
+            android:src="@drawable/ic_circle_selected"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/add_item_add_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white_100" />
+
+        <ImageView
+            android:id="@+id/radio_button_image"
+            android:layout_width="17dp"
+            android:layout_height="22dp"
+            android:layout_margin="@dimen/_14dp"
+            android:contentDescription="@string/add_item_add_button"
+            android:src="@drawable/nav_add_plus"
+            app:layout_constraintBottom_toBottomOf="@id/add_item_add_background"
+            app:layout_constraintEnd_toEndOf="@id/add_item_add_background"
+            app:layout_constraintStart_toStartOf="@id/add_item_add_background"
+            app:layout_constraintTop_toTopOf="@id/add_item_add_background"
+            app:tint="@color/black" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

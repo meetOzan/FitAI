@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".presentation.add.food.AddFoodFragment">
+
+    <TextView
+        android:id="@+id/tv_home_welcome_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_close_add_food"
+        android:layout_alignBottom="@+id/iv_close_add_food"
+        android:layout_marginStart="@dimen/_20dp"
+        android:fontFamily="@font/urbanist_bold"
+        android:gravity="center_vertical"
+        android:text="@string/add_nutrition"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_close_add_food"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="@dimen/_40dp"
+        android:layout_height="@dimen/_40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_24dp"
+        android:background="@drawable/bg_white_stroke"
+        android:clickable="true"
+        android:contentDescription="@string/back_button"
+        android:focusable="true"
+        android:src="@drawable/close"
+        app:tint="@color/white" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_home_welcome_message"
+        android:layout_marginTop="@dimen/_24dp"
+        android:background="@drawable/bg_home_scroll">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:background="@color/transparent">
+
+            <com.google.android.material.search.SearchBar
+                android:id="@+id/search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:hint="@string/search"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.search.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/search"
+            app:layout_anchor="@id/search_bar"></com.google.android.material.search.SearchView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_18dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/scan_food_image_bg"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="@dimen/_24dp"
+                    android:layout_marginEnd="@dimen/_6dp"
+                    app:tint="@color/white"
+                    android:contentDescription="@string/contentDescription"
+                    android:src="@drawable/bg_white_big_radius"
+                    app:layout_constraintEnd_toStartOf="@+id/scan_barcod_image_bg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/scan_food_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:src="@drawable/scan_nutrition"
+                    android:contentDescription="@string/contentDescription"
+                    app:layout_constraintEnd_toEndOf="@id/scan_food_image_bg"
+                    app:layout_constraintStart_toStartOf="@id/scan_food_image_bg"
+                    app:layout_constraintTop_toTopOf="@id/scan_food_image_bg" />
+
+                <TextView
+                    android:id="@+id/tv_scan_food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/urbanist_bold"
+                    android:text="@string/scan_food"
+                    android:textSize="@dimen/_18sp"
+                    android:layout_marginBottom="@dimen/_16dp"
+                    app:layout_constraintBottom_toBottomOf="@id/scan_food_image_bg"
+                    app:layout_constraintEnd_toEndOf="@id/scan_food_image_bg"
+                    app:layout_constraintStart_toStartOf="@id/scan_food_image_bg" />
+
+                <ImageView
+                    android:id="@+id/scan_barcod_image_bg"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="@dimen/_24dp"
+                    android:layout_marginStart="@dimen/_6dp"
+                    app:tint="@color/white"
+                    android:contentDescription="@string/contentDescription"
+                    android:src="@drawable/bg_white_big_radius"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/scan_food_image_bg"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/scan_barcod_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:src="@drawable/scan_barcod"
+                    android:contentDescription="@string/contentDescription"
+                    app:layout_constraintEnd_toEndOf="@id/scan_barcod_image_bg"
+                    app:layout_constraintStart_toStartOf="@id/scan_barcod_image_bg"
+                    app:layout_constraintTop_toTopOf="@id/scan_barcod_image_bg" />
+
+                <TextView
+                    android:id="@+id/tv_scan_barcod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/urbanist_bold"
+                    android:text="@string/scan_barcod"
+                    android:textSize="@dimen/_18sp"
+                    android:layout_marginBottom="@dimen/_16dp"
+                    app:layout_constraintBottom_toBottomOf="@id/scan_barcod_image_bg"
+                    app:layout_constraintEnd_toEndOf="@id/scan_barcod_image_bg"
+                    app:layout_constraintStart_toStartOf="@id/scan_barcod_image_bg" />
+
+                <RadioGroup
+                    android:id="@+id/radio_group_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_24dp"
+                    android:layout_marginTop="@dimen/_24dp"
+                    android:background="@drawable/bg_radio_group"
+                    android:checkedButton="@+id/radio_button_favorites"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/scan_food_image_bg">
+
+                    <RadioButton
+                        android:id="@+id/radio_button_history"
+                        style="@style/radioButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/history" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button_favorites"
+                        style="@style/radioButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/favorites" />
+                </RadioGroup>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_add"
+                    android:layout_width="@dimen/_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_24dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/radio_group_add"
+                    tools:listitem="@layout/card_add_item" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

@@ -229,4 +229,12 @@
     <string name="password_least_one_lower_case">Şifreniz en az bir adet küçük harf içermelidir</string>
     <string name="passwords_not_matched">Parolalarınız eşleşmiyor.</string>
     <string name="phone_number">Phone Number</string>
+    <string name="add_exercise">Egzersiz Ekle</string>
+    <string name="search">Ara</string>
+    <string name="history">Geçmiş</string>
+    <string name="favorites">Favoriler</string>
+    <string name="add_item_add_button">add_item_add_button</string>
+    <string name="add_nutrition">Besin Ekle</string>
+    <string name="scan_food">Besin Tara</string>
+    <string name="scan_barcod">Barkod Tara</string>
 </resources>
