@@ -257,7 +257,7 @@
             android:fontFamily="@font/poppins_regular"
             app:layout_constraintTop_toBottomOf="@id/btnForgotPasswordConfirm"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/tvTekrarGonder"
+            app:layout_constraintEnd_toStartOf="@id/tvLoginWithEmail"
             android:text="@string/dont_have_an_account"
             android:textColor="@color/black"
             android:textSize="15sp"

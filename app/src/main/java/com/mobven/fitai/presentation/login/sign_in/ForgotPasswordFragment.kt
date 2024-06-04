@@ -1,22 +1,26 @@
 package com.mobven.fitai.presentation.login.sign_in
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import com.mobven.fitai.R
+
+import com.mobven.fitai.databinding.FragmentForgotPasswordBinding
+import com.mobven.fitai.presentation.base.BaseFragment
 
 
-class ForgotPasswordFragment : Fragment() {
+class ForgotPasswordFragment : BaseFragment<FragmentForgotPasswordBinding>(FragmentForgotPasswordBinding::inflate) {
 
+    override fun observeUi() {
+        binding.tvLoginWithEmail.setOnClickListener {
+            val action = ForgotPasswordFragmentDirections.actionForgotPasswordFragmentToForgotPasswordEmailFragment()
+            navigate(action)
+        }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_forgot_password, container, false)
+        binding.toolbarForgotPassword.toolbarBack.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
+
+        binding.btnForgotPasswordConfirm.setOnClickListener {
+            val action = ForgotPasswordFragmentDirections.actionForgotPasswordFragmentToOTPFragment2()
+            navigate(action)
+        }
     }
 
 

@@ -1,37 +1,27 @@
 package com.mobven.fitai.presentation.login.sign_in
 
-import android.os.Bundle
+
 import android.os.CountDownTimer
 import android.text.Editable
 import android.text.InputFilter
 import android.text.TextWatcher
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 import com.mobven.fitai.R
 import com.mobven.fitai.databinding.FragmentOtpEmailBinding
+import com.mobven.fitai.presentation.base.BaseFragment
 import java.util.concurrent.TimeUnit
 
 
-class OTPEmailFragment : Fragment() {
+class OTPEmailFragment : BaseFragment<FragmentOtpEmailBinding>(FragmentOtpEmailBinding::inflate) {
     private lateinit var timer: CountDownTimer
     private var isTimerRunning = false
     private var timeLeftInMillis: Long = 61000
     private var _binding: FragmentOtpEmailBinding? = null
-    private val binding get() = _binding!!
     private lateinit var editTexts: List<EditText>
 
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentOtpEmailBinding.inflate(inflater, container, false)
-        val view = binding.root
-
+    override fun observeUi() {
         val filter = InputFilter { source, start, end, _, _, _ ->
             for (i in start until end) {
                 if (!Character.isDigit(source[i])) {
@@ -72,8 +62,6 @@ class OTPEmailFragment : Fragment() {
         editTexts[0].requestFocus()
 
         startTimer()
-
-        return view
     }
 
 
@@ -127,6 +115,8 @@ class OTPEmailFragment : Fragment() {
             Toast.makeText(requireContext(), "Giriş Başarılı", Toast.LENGTH_SHORT).show()
             val color = R.drawable.bg_green_stroke
             changeColor(color)
+            val action = OTPEmailFragmentDirections.actionOTPEmailFragment2ToResetPasswordFragment()
+            navigate(action)
 
         } else {
             Toast.makeText(requireContext(), "Giriş Başarısız", Toast.LENGTH_SHORT).show()

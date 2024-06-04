@@ -1,41 +1,32 @@
 package com.mobven.fitai.presentation.login.sign_in
 
+import androidx.fragment.app.viewModels
 import com.mobven.fitai.databinding.FragmentResetPasswordBinding
 import com.mobven.fitai.presentation.base.BaseFragment
+import com.mobven.fitai.presentation.login.sign_in.viewmodel.SignInViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ResetPasswordFragment : BaseFragment<FragmentResetPasswordBinding>(FragmentResetPasswordBinding::inflate){
+    private val viewModel: SignInViewModel by viewModels()
     override fun observeUi() {
-        passwordFocusListener()
-        checkPassword()
-    }
+        binding.resetPasswordButton.setOnClickListener {
+            val editTextPassword = binding.editTextResetPassword.text.toString()
+            val editTextPasswordAgain = binding.editTextResetPasswordConfirm.text.toString()
 
-    private fun checkPassword(){
-        binding.editTextResetPasswordConfirm.setOnFocusChangeListener { _, focused ->
-            if (!focused && binding.editTextResetPassword.text != binding.editTextResetPasswordConfirm){
-                binding.resetPasswordConfirm.helperText = "Parolalarınız eşleşmiyor."
-            }
-        }
-    }
-    private fun passwordFocusListener(){
-        binding.editTextResetPassword.setOnFocusChangeListener { _, focused ->
-            if (!focused){
-                binding.resetPassword.helperText = validPassword()
+            binding.resetPassword.helperText = viewModel.validPassword(editTextPassword)
+            binding.resetPasswordConfirm.helperText = viewModel.isSamePassword(editTextPassword, editTextPasswordAgain)
+
+            if (allFieldsValid()){
+                val action = ResetPasswordFragmentDirections.actionResetPasswordFragmentToResetPasswordSuccessFragment()
+                navigate(action)
             }
         }
     }
 
-    private fun validPassword() : String?{
-        val passwordText = binding.editTextResetPassword.text.toString()
-        if (passwordText.length < 8){
-            return "Şifreniz minimum 8 karakter olmalıdır."
-        }
-        if (!passwordText.matches(".*[A-Z].*".toRegex())){
-            return "Şifreniz en az bir adet büyük harf içermelidir"
-        }
-        if (!passwordText.matches(".*[a-z].*".toRegex())){
-            return "Şifreniz en az bir adet küçük harf içermelidir"
-        }
-
-        return null
+    private fun allFieldsValid() : Boolean{
+        return binding.resetPassword.helperText == null &&
+               binding.resetPasswordConfirm.helperText == null
     }
+
 }

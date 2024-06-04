@@ -51,6 +51,7 @@
             app:boxBackgroundColor="@color/light_grey_2"
             app:hintTextColor="@color/black"
             app:boxStrokeColor="@color/light_grey_2"
+            app:helperTextTextColor="@color/red_50"
             app:boxStrokeWidth="@dimen/_1dp"
             app:helperTextEnabled="true"
             app:errorEnabled="true"
@@ -89,7 +90,7 @@
             app:layout_constraintTop_toBottomOf="@id/text_input_layout_nickname_sign_up">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text_email_login"
+                android:id="@+id/edit_text_email_sign_up"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/urbanist_regular"
@@ -111,6 +112,7 @@
             app:boxBackgroundColor="@color/light_grey_2"
             app:boxStrokeColor="@color/light_grey_2"
             app:boxStrokeWidth="@dimen/_1dp"
+            app:helperTextTextColor="@color/red_50"
             app:endIconDrawable="@drawable/fluent_eye_filled"
             app:endIconMode="password_toggle"
             app:hintTextColor="@color/black"
@@ -120,7 +122,7 @@
             app:layout_constraintTop_toBottomOf="@id/text_input_layout_email_sign_up">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text_password_login"
+                android:id="@+id/edit_text_password_sign_up"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
@@ -141,6 +143,7 @@
             android:layout_marginHorizontal="@dimen/_24dp"
             app:boxBackgroundColor="@color/light_grey_2"
             app:boxStrokeColor="@color/light_grey_2"
+            app:helperTextTextColor="@color/red_50"
             app:boxStrokeWidth="@dimen/_1dp"
             app:endIconDrawable="@drawable/fluent_eye_filled"
             app:endIconMode="password_toggle"
