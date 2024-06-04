@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
+    android:layout_marginBottom="@dimen/_72dp"
     tools:context=".presentation.add.food.AddFoodFragment">
 
     <TextView
@@ -66,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/search"
-            app:layout_anchor="@id/search_bar"></com.google.android.material.search.SearchView>
+            app:layout_anchor="@id/search_bar"/>
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -78,77 +79,116 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_selected_food_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_24dp"
+                    android:visibility="visible"
+                    android:focusable="true"
+                    android:clickable="true"
+                    app:cardElevation="@dimen/_1dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <include
+                        android:id="@+id/card_selected_ai_add_items"
+                        layout="@layout/card_selected_food_items" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:id="@+id/scan_food_image_bg"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/_0dp"
                     android:layout_height="100dp"
                     android:layout_marginStart="@dimen/_24dp"
+                    android:layout_marginTop="24dp"
                     android:layout_marginEnd="@dimen/_6dp"
-                    app:tint="@color/white"
                     android:contentDescription="@string/contentDescription"
-                    android:src="@drawable/bg_white_big_radius"
+                    app:cardCornerRadius="@dimen/_12dp"
+                    app:cardElevation="@dimen/_1dp"
+                    app:layout_constraintBottom_toTopOf="@id/radio_group_add"
                     app:layout_constraintEnd_toStartOf="@+id/scan_barcod_image_bg"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@id/card_selected_food_items">
 
-                <ImageView
-                    android:id="@+id/scan_food_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_16dp"
-                    android:src="@drawable/scan_nutrition"
-                    android:contentDescription="@string/contentDescription"
-                    app:layout_constraintEnd_toEndOf="@id/scan_food_image_bg"
-                    app:layout_constraintStart_toStartOf="@id/scan_food_image_bg"
-                    app:layout_constraintTop_toTopOf="@id/scan_food_image_bg" />
+                    <LinearLayout
+                        android:id="@+id/ll_scan_food_image_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tv_scan_food"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/urbanist_bold"
-                    android:text="@string/scan_food"
-                    android:textSize="@dimen/_18sp"
-                    android:layout_marginBottom="@dimen/_16dp"
-                    app:layout_constraintBottom_toBottomOf="@id/scan_food_image_bg"
-                    app:layout_constraintEnd_toEndOf="@id/scan_food_image_bg"
-                    app:layout_constraintStart_toStartOf="@id/scan_food_image_bg" />
+                        <ImageView
+                            android:id="@+id/scan_food_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16dp"
+                            android:contentDescription="@string/contentDescription"
+                            android:src="@drawable/scan_nutrition"
+                            app:layout_constraintEnd_toEndOf="@id/scan_food_image_bg"
+                            app:layout_constraintStart_toStartOf="@id/scan_food_image_bg"
+                            app:layout_constraintTop_toTopOf="@id/scan_food_image_bg" />
 
-                <ImageView
+                        <TextView
+                            android:id="@+id/tv_scan_food"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_16dp"
+                            android:fontFamily="@font/urbanist_bold"
+                            android:text="@string/scan_food"
+                            android:textSize="@dimen/_18sp"
+                            app:layout_constraintBottom_toBottomOf="@id/scan_food_image_bg"
+                            app:layout_constraintEnd_toEndOf="@id/scan_food_image_bg"
+                            app:layout_constraintStart_toStartOf="@id/scan_food_image_bg" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:id="@+id/scan_barcod_image_bg"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/_0dp"
                     android:layout_height="100dp"
                     android:layout_marginEnd="@dimen/_24dp"
                     android:layout_marginStart="@dimen/_6dp"
-                    app:tint="@color/white"
                     android:contentDescription="@string/contentDescription"
-                    android:src="@drawable/bg_white_big_radius"
+                    app:cardCornerRadius="@dimen/_12dp"
+                    app:cardElevation="@dimen/_1dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/scan_food_image_bg"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/scan_food_image_bg"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="@+id/scan_food_image_bg">
 
-                <ImageView
-                    android:id="@+id/scan_barcod_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_16dp"
-                    android:src="@drawable/scan_barcod"
-                    android:contentDescription="@string/contentDescription"
-                    app:layout_constraintEnd_toEndOf="@id/scan_barcod_image_bg"
-                    app:layout_constraintStart_toStartOf="@id/scan_barcod_image_bg"
-                    app:layout_constraintTop_toTopOf="@id/scan_barcod_image_bg" />
+                    <LinearLayout
+                        android:id="@+id/ll_scan_barcod_image_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tv_scan_barcod"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/urbanist_bold"
-                    android:text="@string/scan_barcod"
-                    android:textSize="@dimen/_18sp"
-                    android:layout_marginBottom="@dimen/_16dp"
-                    app:layout_constraintBottom_toBottomOf="@id/scan_barcod_image_bg"
-                    app:layout_constraintEnd_toEndOf="@id/scan_barcod_image_bg"
-                    app:layout_constraintStart_toStartOf="@id/scan_barcod_image_bg" />
+                        <ImageView
+                            android:id="@+id/scan_barcod_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16dp"
+                            android:contentDescription="@string/contentDescription"
+                            android:src="@drawable/scan_barcod"
+                            app:layout_constraintEnd_toEndOf="@id/scan_barcod_image_bg"
+                            app:layout_constraintStart_toStartOf="@id/scan_barcod_image_bg"
+                            app:layout_constraintTop_toTopOf="@id/scan_barcod_image_bg" />
+
+                        <TextView
+                            android:id="@+id/tv_scan_barcod"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_16dp"
+                            android:fontFamily="@font/urbanist_bold"
+                            android:text="@string/scan_barcod"
+                            android:textSize="@dimen/_18sp"
+                            app:layout_constraintBottom_toBottomOf="@id/scan_barcod_image_bg"
+                            app:layout_constraintEnd_toEndOf="@id/scan_barcod_image_bg"
+                            app:layout_constraintStart_toStartOf="@id/scan_barcod_image_bg" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
                 <RadioGroup
                     android:id="@+id/radio_group_add"
@@ -196,5 +236,4 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
 </RelativeLayout>

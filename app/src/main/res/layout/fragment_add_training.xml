@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
+    android:layout_marginBottom="@dimen/_72dp"
     tools:context=".presentation.add.training.AddTrainingFragment">
 
     <TextView
@@ -90,8 +91,8 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <include
-                        android:id="@+id/cl_selected_ai_add_items"
-                        layout="@layout/card_selected_add_items" />
+                        android:id="@+id/card_selected_ai_add_items"
+                        layout="@layout/card_selected_training_items" />
 
                 </androidx.cardview.widget.CardView>
 

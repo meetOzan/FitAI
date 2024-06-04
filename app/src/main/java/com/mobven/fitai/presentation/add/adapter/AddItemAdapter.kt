@@ -5,12 +5,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.mobven.fitai.databinding.CardAddItemBinding
+import com.mobven.fitai.util.enums.SelectItemType
 
 class AddItemAdapter(
-    private val onTrainingItemClicked: (Int) -> Unit = { _ -> }
+    private val onTrainingItemClicked: (Int) -> Unit = { _ -> },
+    private val onFoodItemClicked: (Int) -> Unit = { _ -> }
 ) : ListAdapter<AddItemModel, AddItemAdapter.ViewHolder>(AddItemDiffUtil()) {
 
-    inner class ViewHolder(val binding: CardAddItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(val binding: CardAddItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(item: AddItemModel) {
 
             with(binding) {
@@ -19,7 +22,11 @@ class AddItemAdapter(
                 addItemTextDescription.text = item.description
 
                 addItemAddBackground.setOnClickListener {
-                    onTrainingItemClicked(adapterPosition)
+                    if (item.type == SelectItemType.TRAINING) {
+                        onTrainingItemClicked(adapterPosition)
+                    } else {
+                        onFoodItemClicked(adapterPosition)
+                    }
                 }
             }
         }
