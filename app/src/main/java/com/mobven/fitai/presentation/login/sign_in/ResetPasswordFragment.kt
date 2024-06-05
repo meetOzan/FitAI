@@ -1,6 +1,10 @@
 package com.mobven.fitai.presentation.login.sign_in
 
 import androidx.fragment.app.viewModels
+import androidx.navigation.NavDirections
+import androidx.navigation.NavOptions
+import androidx.navigation.fragment.findNavController
+import com.mobven.fitai.R
 import com.mobven.fitai.databinding.FragmentResetPasswordBinding
 import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.presentation.login.sign_in.viewmodel.SignInViewModel
@@ -29,4 +33,11 @@ class ResetPasswordFragment : BaseFragment<FragmentResetPasswordBinding>(Fragmen
                binding.resetPasswordConfirm.helperText == null
     }
 
+    override fun navigate(action: NavDirections) {
+        val navOptions =
+            NavOptions.Builder()
+                .setPopUpTo(R.id.resetPasswordFragment, true)
+                .build()
+        findNavController().navigate(action, navOptions)
+    }
 }

@@ -41,12 +41,9 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
             navigate(action)
         }
     }
+
     private fun allFieldsValid() : Boolean{
         return binding.loginEmail.helperText == null &&
                binding.loginPassword.helperText == null
     }
-
 }
-
-
-

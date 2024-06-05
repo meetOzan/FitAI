@@ -9,7 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.mobven.fitai.MainActivity
+import com.mobven.fitai.LoginActivity
 import com.mobven.fitai.R
 import com.mobven.fitai.databinding.ActivitySplashBinding
 
@@ -31,7 +31,7 @@ class SplashActivity : AppCompatActivity() {
         }
 
         android.os.Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this@SplashActivity, MainActivity::class.java)
+            val intent = Intent(this@SplashActivity, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }, 2500)

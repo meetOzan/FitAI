@@ -8,6 +8,8 @@ import android.text.TextWatcher
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import androidx.navigation.NavOptions
+import androidx.navigation.fragment.findNavController
 import com.mobven.fitai.R
 import com.mobven.fitai.databinding.FragmentOtpBinding
 import com.mobven.fitai.presentation.base.BaseFragment
@@ -46,17 +48,22 @@ class OTPFragment : BaseFragment<FragmentOtpBinding>(FragmentOtpBinding::inflate
             editText.addTextChangedListener(otpTextWatcher)
         }
 
+
+        binding.toolbarOtpPhone.toolbarBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
         binding.tvResendCode.setOnClickListener {
             if (isTimerRunning) {
                 Toast.makeText(
                     requireContext(),
-                    "Lütfen sürenin dolmasını bekleyin.",
+                    getString(R.string.please_wait_time),
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
                 Toast.makeText(
                     requireContext(),
-                    "Kod tekrar gonderildi",
+                    getString(R.string.code_resent),
                     Toast.LENGTH_SHORT
                 ).show()
                 startTimer()
@@ -103,8 +110,6 @@ class OTPFragment : BaseFragment<FragmentOtpBinding>(FragmentOtpBinding::inflate
                         changeColor(R.drawable.bg_grey_stroke)
                         binding.tvError.visibility = View.INVISIBLE
                     }
-
-
                 }
             }
         }
@@ -112,17 +117,26 @@ class OTPFragment : BaseFragment<FragmentOtpBinding>(FragmentOtpBinding::inflate
 
     private fun checkPassword() {
         val enteredOtp = editTexts.joinToString("") { it.text.toString() }
-        val actualOtp = "1111"
+        val actualOtp = getString(R.string._1111)
 
         if (enteredOtp == actualOtp) {
-            Toast.makeText(requireContext(), "Giriş Başarılı", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.login_success), Toast.LENGTH_SHORT)
+                .show()
             val color = R.drawable.bg_green_stroke
             changeColor(color)
+            val navOptions =
+                NavOptions.Builder()
+                    .setPopUpTo(R.id.OTPFragment, true)
+                    .setPopUpTo(R.id.resetPasswordEmailFragment, true)
+                    .build()
             val action = OTPFragmentDirections.actionOTPFragmentToResetPasswordFragment()
-            navigate(action)
-
+            findNavController().navigate(
+                action,
+                navOptions
+            )
         } else {
-            Toast.makeText(requireContext(), "Giriş Başarısız", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.login_failed), Toast.LENGTH_SHORT)
+                .show()
             binding.tvError.visibility = View.VISIBLE
             val color = R.drawable.bg_red_stroke
             changeColor(color)
@@ -162,4 +176,5 @@ class OTPFragment : BaseFragment<FragmentOtpBinding>(FragmentOtpBinding::inflate
         _binding = null
         timer.cancel()
     }
+
 }

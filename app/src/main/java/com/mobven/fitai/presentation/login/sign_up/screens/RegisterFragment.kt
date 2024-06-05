@@ -4,11 +4,15 @@ package com.mobven.fitai.presentation.login.sign_up.screens
 import androidx.fragment.app.viewModels
 import androidx.viewpager2.widget.ViewPager2
 import com.mobven.fitai.R
+import androidx.navigation.NavDirections
+import androidx.navigation.fragment.findNavController
 import com.mobven.fitai.databinding.FragmentRegisterBinding
 import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.presentation.login.sign_in.viewmodel.SignInViewModel
 import com.mobven.fitai.presentation.login.sign_up.SignUpFragmentDirections
 import dagger.hilt.android.AndroidEntryPoint
+
+typealias RDirections = RegisterFragmentDirections
 
 @AndroidEntryPoint
 class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterBinding::inflate) {
@@ -36,8 +40,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterB
         }
 
         binding.tvLoginSignUp.setOnClickListener {
-            val action = SignUpFragmentDirections.actionSignUpFragmentToLoginFragment()
-            navigate(action)
+            navigate(RDirections.actionRegisterFragmentToLoginFragment())
         }
     }
 
@@ -46,5 +49,9 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterB
               binding.textInputLayoutPasswordSignUp.helperText == null &&
               binding.textInputLayoutPasswordAgainSignUp.helperText == null &&
               binding.textInputLayoutNicknameSignUp.helperText == null
+    }
+
+    override fun navigate(action: NavDirections) {
+        findNavController().navigate(action)
     }
 }

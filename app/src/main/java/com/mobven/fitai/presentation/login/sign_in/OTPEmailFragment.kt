@@ -63,8 +63,7 @@ class OTPEmailFragment : BaseFragment<FragmentOtpEmailBinding>(FragmentOtpEmailB
 
         startTimer()
     }
-
-
+    
     private val otpTextWatcher = object : TextWatcher {
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
@@ -109,17 +108,17 @@ class OTPEmailFragment : BaseFragment<FragmentOtpEmailBinding>(FragmentOtpEmailB
 
     private fun checkPassword() {
         val enteredOtp = editTexts.joinToString("") { it.text.toString() }
-        val actualOtp = "1111"
+        val actualOtp = getString(R.string._1111)
 
         if (enteredOtp == actualOtp) {
-            Toast.makeText(requireContext(), "Giriş Başarılı", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.login_success), Toast.LENGTH_SHORT).show()
             val color = R.drawable.bg_green_stroke
             changeColor(color)
             val action = OTPEmailFragmentDirections.actionOTPEmailFragment2ToResetPasswordFragment()
             navigate(action)
 
         } else {
-            Toast.makeText(requireContext(), "Giriş Başarısız", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.login_failed), Toast.LENGTH_SHORT).show()
             binding.tvError.visibility = View.VISIBLE
             val color = R.drawable.bg_red_stroke
             changeColor(color)

@@ -5,24 +5,23 @@ import androidx.navigation.fragment.findNavController
 import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.databinding.FragmentAuthBinding
 
+typealias AuthDirections = AuthFragmentDirections
+
 class AuthFragment : BaseFragment<FragmentAuthBinding>(FragmentAuthBinding::inflate) {
 
     override fun observeUi() {
-        super.observeUi()
-
         binding.registerButton.setOnClickListener {
-            val action = AuthFragmentDirections.actionAuthFragmentToSignUpFragment()
-            navigate(action)
+            val registerAction = AuthDirections.actionAuthFragmentToRegisterFragment()
+            navigate(registerAction)
         }
 
         binding.loginButton.setOnClickListener {
-            val action = AuthFragmentDirections.actionAuthFragmentToLoginFragment()
-            navigate(action)
+            val loginAction = AuthDirections.actionAuthFragmentToLoginFragment()
+            navigate(loginAction)
         }
     }
 
     override fun navigate(action: NavDirections) {
         findNavController().navigate(action)
     }
-
 }
