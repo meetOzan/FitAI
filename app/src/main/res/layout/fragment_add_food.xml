@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    android:layout_marginBottom="@dimen/_72dp"
     tools:context=".presentation.add.food.AddFoodFragment">
 
     <TextView
@@ -73,6 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/_18dp"
+            android:layout_marginBottom="@dimen/_80dp"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -227,8 +227,10 @@
                     android:layout_width="@dimen/_0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_24dp"
+                    android:layout_marginTop="360dp"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.52"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/radio_group_add"
                     tools:listitem="@layout/card_add_item" />

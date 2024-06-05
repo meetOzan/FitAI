@@ -66,12 +66,6 @@ class AddTrainingFragment :
 
             val expandableLayout = binding.cardSelectedAiAddItems.llWarningAiPowered
 
-            if (viewModel.uiState.value?.trainingSelectedList?.size == 0) {
-                expandableLayout.visibility = View.GONE
-            } else {
-                expandableLayout.visibility = View.VISIBLE
-            }
-
             cardSelectedAddItems.setOnClickListener {
                 if (expandableLayout.visibility == ImageView.GONE) {
                     expandableLayout.visibility = View.VISIBLE
@@ -85,4 +79,5 @@ class AddTrainingFragment :
     override fun callInitialViewModelFunction() {
         viewModel.onAction(AddOnAction.GetTrainingItems)
     }
+
 }
