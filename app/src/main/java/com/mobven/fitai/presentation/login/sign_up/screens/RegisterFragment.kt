@@ -8,7 +8,6 @@ import androidx.navigation.fragment.findNavController
 import com.mobven.fitai.databinding.FragmentRegisterBinding
 import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.presentation.login.sign_in.viewmodel.SignInViewModel
-import com.mobven.fitai.presentation.login.sign_up.SignUpFragmentDirections
 import dagger.hilt.android.AndroidEntryPoint
 
 typealias RDirections = RegisterFragmentDirections

@@ -109,8 +109,16 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
                 }
             }
 
-            binding.ivHomeProfile.setOnClickListener {
+            ivHomeProfile.setOnClickListener {
                 findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
+            }
+
+            ebtnHomeAddExercises.setOnClickListener {
+                navigate(HDirections.actionHomeFragmentToAddTrainingFragment())
+            }
+
+            ebtnHomeAddFood.setOnClickListener {
+                navigate(HDirections.actionHomeFragmentToAddFoodFragment())
             }
 
             calendarAdapter.submitList(dateList)

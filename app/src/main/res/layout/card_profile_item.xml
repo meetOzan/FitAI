@@ -17,7 +17,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/light_grey_2" />
+        app:tint="@color/white_100" />
 
     <ImageView
         android:id="@+id/profile_item_image"
@@ -52,7 +52,7 @@
         android:layout_marginEnd="@dimen/_8dp"
         android:fontFamily="@font/urbanist_regular"
         android:textAlignment="textStart"
-        android:textColor="@color/dark_grey_5"
+        android:textColor="@color/gray_300"
         android:textSize="@dimen/_14sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/profile_item_image_bg"

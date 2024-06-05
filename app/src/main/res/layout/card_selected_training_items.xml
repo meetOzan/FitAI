@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_selected_ai_add_items"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_warning_ai_powered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_selected_ai_add_items"
+        android:layout_marginTop="-32dp"
+        android:background="@drawable/bg_white_big_radius"
+        android:backgroundTint="@color/green_500"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/_48dp"
+            android:layout_marginEnd="@dimen/_6dp"
+            android:layout_marginBottom="@dimen/_32sp"
+            android:contentDescription="@string/contentDescription"
+            android:src="@drawable/black_warning" />
+
+        <TextView
+            android:id="@+id/tv_warning_ai_powered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_6dp"
+            android:layout_marginTop="@dimen/_48dp"
+            android:layout_marginBottom="@dimen/_32sp"
+            android:fontFamily="@font/urbanist_semibold"
+            android:maxEms="15"
+            android:text="Hedef kalorinizden 200 kcal fazla kalori harcadınız! Önerimiz;"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_selected_ai_add_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:cardCornerRadius="@dimen/_24dp"
+        app:cardElevation="@dimen/_1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_32dp"
+            android:paddingVertical="@dimen/_16dp">
+
+            <TextView
+                android:id="@+id/tv_selected_add_items_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/urbanist_bold"
+                android:text="Egersizlerim"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_selected_add_items_description_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/urbanist_regular"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_selected_add_items_title" />
+
+            <TextView
+                android:id="@+id/tv_selected_add_items_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/urbanist_regular"
+                android:text="Egzersiz"
+                android:textAlignment="center"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_selected_add_items_description_number"
+                app:layout_constraintStart_toEndOf="@id/tv_selected_add_items_description_number"
+                app:layout_constraintTop_toTopOf="@+id/tv_selected_add_items_description_number" />
+
+            <ImageView
+                android:id="@+id/iv_selected_training_items_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/contentDescription"
+                android:src="@drawable/my_exercises"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_selected_add_items_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_selected_add_items_title" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_selected_training_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="@+id/iv_selected_training_items_image"
+                app:layout_constraintStart_toStartOf="@+id/tv_selected_add_items_description_number"
+                app:layout_constraintTop_toBottomOf="@+id/tv_selected_add_items_description"
+                tools:listitem="@layout/card_ai_powered_training" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
