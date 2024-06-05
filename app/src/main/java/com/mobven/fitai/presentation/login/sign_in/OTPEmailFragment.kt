@@ -13,7 +13,6 @@ import com.mobven.fitai.databinding.FragmentOtpEmailBinding
 import com.mobven.fitai.presentation.base.BaseFragment
 import java.util.concurrent.TimeUnit
 
-
 class OTPEmailFragment : BaseFragment<FragmentOtpEmailBinding>(FragmentOtpEmailBinding::inflate) {
     private lateinit var timer: CountDownTimer
     private var isTimerRunning = false
@@ -47,13 +46,13 @@ class OTPEmailFragment : BaseFragment<FragmentOtpEmailBinding>(FragmentOtpEmailB
             if (isTimerRunning) {
                 Toast.makeText(
                     requireContext(),
-                    "Lütfen sürenin dolmasını bekleyin.",
+                    getString(R.string.please_wait_time),
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
                 Toast.makeText(
                     requireContext(),
-                    "Kod tekrar gonderildi",
+                    getString(R.string.code_resent),
                     Toast.LENGTH_SHORT
                 ).show()
                 startTimer()
@@ -114,7 +113,7 @@ class OTPEmailFragment : BaseFragment<FragmentOtpEmailBinding>(FragmentOtpEmailB
             Toast.makeText(requireContext(), getString(R.string.login_success), Toast.LENGTH_SHORT).show()
             val color = R.drawable.bg_green_stroke
             changeColor(color)
-            val action = OTPEmailFragmentDirections.actionOTPEmailFragment2ToResetPasswordFragment()
+            val action = OTPFragmentDirections.actionOTPFragmentToResetPasswordFragment()
             navigate(action)
 
         } else {

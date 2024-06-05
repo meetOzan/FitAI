@@ -11,11 +11,12 @@ import dagger.hilt.android.AndroidEntryPoint
 class ForgotPasswordEmailFragment :
     BaseFragment<FragmentForgotPasswordEmailBinding>(FragmentForgotPasswordEmailBinding::inflate) {
     private val viewModel: SignInViewModel by viewModels()
+
     override fun observeUi() {
 
         binding.tvLoginWithNumber.setOnClickListener {
             val action =
-                ForgotPasswordEmailFragmentDirections.actionForgotPasswordEmailFragmentToForgotPasswordFragment()
+                ForgotPasswordEmailFragmentDirections.actionForgotPasswordEmailFragmentToResetPasswordEmailFragment()
             navigate(action)
         }
 
@@ -28,11 +29,9 @@ class ForgotPasswordEmailFragment :
             binding.emailContainer.helperText = viewModel.validEmail(emailText)
             if (binding.emailContainer.helperText == null) {
                 val action =
-                    ForgotPasswordEmailFragmentDirections.actionForgotPasswordEmailFragmentToOTPEmailFragment2()
+                    ForgotPasswordEmailFragmentDirections.actionForgotPasswordEmailFragmentToOTPFragment()
                 navigate(action)
             }
         }
     }
-
-
 }

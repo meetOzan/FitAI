@@ -1,7 +1,9 @@
 package com.mobven.fitai.presentation.login.sign_in
 
 
+import android.content.Intent
 import androidx.fragment.app.viewModels
+import com.mobven.fitai.MainActivity
 import com.mobven.fitai.databinding.FragmentLoginBinding
 import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.presentation.login.sign_in.viewmodel.SignInViewModel
@@ -26,18 +28,19 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
 
             if (allFieldsValid())
             {
-                val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
-                navigate(action)
+                val intent = Intent(requireActivity(), MainActivity::class.java)
+                startActivity(intent)
+                requireActivity().finish()
             }
         }
 
         binding.tvRegister.setOnClickListener {
-            val action = LoginFragmentDirections.actionLoginFragmentToSignUpFragment()
+            val action = LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
             navigate(action)
         }
 
         binding.loginForgotPassword.setOnClickListener {
-            val action = LoginFragmentDirections.actionLoginFragmentToForgotPasswordFragment()
+            val action = LoginFragmentDirections.actionLoginFragmentToResetPasswordEmailFragment()
             navigate(action)
         }
     }

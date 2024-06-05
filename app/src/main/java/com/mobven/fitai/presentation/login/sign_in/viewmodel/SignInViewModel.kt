@@ -9,9 +9,17 @@ import javax.inject.Inject
 class SignInViewModel
     @Inject
     constructor() : ViewModel() {
+
     fun validEmail(emailText : String): String? {
         if (!Patterns.EMAIL_ADDRESS.matcher(emailText).matches()) {
             return "E-posta adresiniz hatalı!"
+        }
+        return null
+    }
+
+    fun validPhone(phoneText: String): String? {
+        if (!Patterns.EMAIL_ADDRESS.matcher(phoneText).matches()) {
+            return "Lütfen geçerli bir telefon numarası giriniz!"
         }
         return null
     }
@@ -43,7 +51,7 @@ class SignInViewModel
 
     fun isEmpty(text : String) : String?{
         return if (text.isEmpty()){
-            "Kullanıcı adı boş bırakılamaz."
+            "Burası boş bırakılamaz."
         }else{
             null
         }
