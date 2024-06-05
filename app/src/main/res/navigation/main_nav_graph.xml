@@ -25,6 +25,10 @@
         <action
             android:id="@+id/action_homeFragment_to_addTrainingFragment"
             app:destination="@id/addTrainingFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
     </fragment>
     <fragment
         android:id="@+id/nutritionFragment"
@@ -67,4 +71,75 @@
         android:name="com.mobven.fitai.presentation.add.training.AddTrainingFragment"
         android:label="fragment_add_training"
         tools:layout="@layout/fragment_add_training" />
+
+       <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.mobven.fitai.presentation.login.sign_in.ResetPasswordFragment"
+        android:label="fragment_reset_password"
+        tools:layout="@layout/fragment_reset_password" >
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_resetPasswordSuccessFragment"
+            app:destination="@id/resetPasswordSuccessFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resetPasswordSuccessFragment"
+        android:name="com.mobven.fitai.presentation.login.sign_in.ResetPasswordSuccessFragment"
+        android:label="fragment_reset_password_succes"
+        tools:layout="@layout/fragment_reset_password_succes" >
+        <action
+            android:id="@+id/action_resetPasswordSuccessFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.mobven.fitai.presentation.login.sign_in.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_forgotPasswordEmailFragment"
+            app:destination="@id/forgotPasswordEmailFragment" />
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_OTPFragment2"
+            app:destination="@id/OTPFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordEmailFragment"
+        android:name="com.mobven.fitai.presentation.login.sign_in.ForgotPasswordEmailFragment"
+        android:label="fragment_forgot_email"
+        tools:layout="@layout/fragment_forgot_password_email" >
+        <action
+            android:id="@+id/action_forgotPasswordEmailFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_forgotPasswordEmailFragment_to_OTPEmailFragment2"
+            app:destination="@id/OTPEmailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/OTPFragment"
+        android:name="com.mobven.fitai.presentation.login.sign_in.OTPFragment"
+        android:label="fragment_otp"
+        tools:layout="@layout/fragment_otp" >
+        <action
+            android:id="@+id/action_OTPFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/OTPEmailFragment2"
+        android:name="com.mobven.fitai.presentation.login.sign_in.OTPEmailFragment"
+        android:label="fragment_otp_email"
+        tools:layout="@layout/fragment_otp_email" >
+        <action
+            android:id="@+id/action_OTPEmailFragment2_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="com.mobven.fitai.presentation.home.create_plan.BottomSheetFragment"
+        android:label="fragment_bottom_sheet"
+        tools:layout="@layout/fragment_bottom_sheet" >
+        <action
+            android:id="@+id/action_bottomSheetFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </dialog>
 </navigation>

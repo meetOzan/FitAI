@@ -52,6 +52,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             val action = HomeFragmentDirections.actionHomeFragmentToProfileFragment()
             navigate(action)
         }
+
+        binding.tvHomeDailyGoals.setOnClickListener {
+            val action = HomeFragmentDirections.actionHomeFragmentToBottomSheetFragment()
+            navigate(action)
+        }
     }
 
     override fun navigate(action: NavDirections) {
