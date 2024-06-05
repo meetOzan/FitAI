@@ -7,11 +7,10 @@ import com.mobven.fitai.R
 import com.mobven.fitai.databinding.FragmentResetPasswordSuccesBinding
 import com.mobven.fitai.presentation.base.BaseFragment
 
-class ResetPasswordSuccessFragment :
-    BaseFragment<FragmentResetPasswordSuccesBinding>(FragmentResetPasswordSuccesBinding::inflate) {
+class ResetPasswordSuccessFragment : BaseFragment<FragmentResetPasswordSuccesBinding>(FragmentResetPasswordSuccesBinding::inflate){
 
     override fun observeUi() {
-        binding.registerButton.setOnClickListener {
+        binding.loginButton.setOnClickListener {
             navigate(ResetPasswordSuccessFragmentDirections.actionResetPasswordSuccessFragmentToLoginFragment())
         }
     }
@@ -25,5 +24,4 @@ class ResetPasswordSuccessFragment :
                 .build()
         findNavController().navigate(action, navOptions)
     }
-
 }
