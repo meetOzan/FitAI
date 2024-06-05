@@ -62,6 +62,9 @@
         <action
             android:id="@+id/action_resetPasswordEmailFragment_to_OTPFragment"
             app:destination="@id/OTPFragment" />
+        <action
+            android:id="@+id/action_resetPasswordEmailFragment_to_forgotPasswordEmailFragment"
+            app:destination="@id/forgotPasswordEmailFragment" />
     </fragment>
     <fragment
         android:id="@+id/resetPasswordSuccessFragment"
@@ -92,5 +95,17 @@
         <action
             android:id="@+id/action_resetPasswordFragment_to_resetPasswordSuccessFragment"
             app:destination="@id/resetPasswordSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordEmailFragment"
+        android:name="com.mobven.fitai.presentation.login.sign_in.ForgotPasswordEmailFragment"
+        android:label="fragment_forgot_password_email"
+        tools:layout="@layout/fragment_forgot_password_email" >
+        <action
+            android:id="@+id/action_forgotPasswordEmailFragment_to_resetPasswordEmailFragment"
+            app:destination="@id/resetPasswordEmailFragment" />
+        <action
+            android:id="@+id/action_forgotPasswordEmailFragment_to_OTPFragment"
+            app:destination="@id/OTPFragment" />
     </fragment>
 </navigation>

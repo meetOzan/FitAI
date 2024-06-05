@@ -21,7 +21,7 @@
     <string name="nickname">Kullanıcı Adı</string>
     <string name="email">Email</string>
     <string name="password">Parola</string>
-    <string name="password_again">Tekrar Parola</string>
+    <string name="password_again">Parola Tekrar</string>
     <string name="or_register_with">Ve ya Şununla Kayıt Olun</string>
     <string name="or_login_with">Ve ya Şununla Giriş Yapın</string>
     <string name="zaten_hesab_n_z_var_m">Zaten hesabınız var mı?</string>
