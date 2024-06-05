@@ -153,7 +153,6 @@
                 app:boxCornerRadiusTopEnd="@dimen/_8dp"
                 app:boxCornerRadiusTopStart="@dimen/_8dp"
                 app:boxStrokeColor="@color/white_100"
-                app:boxStrokeColor="@color/light_grey_2"
                 app:boxStrokeWidth="@dimen/_1dp"
                 app:cursorColor="@color/black"
                 app:errorEnabled="true"
