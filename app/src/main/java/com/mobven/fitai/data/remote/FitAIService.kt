@@ -1,13 +1,33 @@
 package com.mobven.fitai.data.remote
 
-import retrofit2.http.GET
+import com.mobven.fitai.data.dto.FirstLoginDto
+import com.mobven.fitai.data.dto.SignInDto
+import com.mobven.fitai.data.dto.SignUpDto
+import com.mobven.fitai.data.dto.WorkoutDetailsDto
+import retrofit2.http.Body
+import retrofit2.http.Header
+import retrofit2.http.POST
 
-fun interface FitAIService {
+interface FitAIService {
 
-    // TODO: Define API endpoints here
+    @POST("api/User/Register")
+    suspend fun registerUser(@Body registerModel: SignUpDto): String
 
-    // For now, a temporarily used function
-    @GET("api/v1/exercises")
-    suspend fun getExercises(): List<String>
+    @POST("api/User/Login")
+    suspend fun loginUser(
+        @Body loginModel: SignInDto
+    ): String
+
+    @POST("api/User/SaveFirstLogin")
+    suspend fun saveFirstLogin(
+        @Header("Authorization") token: String,
+        @Body saveFirstLoginModel: FirstLoginDto
+    ): String
+
+    @POST("api/User/SaveFirstLogin")
+    suspend fun saveWorkoutDetails(
+        @Header("Authorization") token: String,
+        @Body workoutDetailsModel: WorkoutDetailsDto
+    ): String
 
 }

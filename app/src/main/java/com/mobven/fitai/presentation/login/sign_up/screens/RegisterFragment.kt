@@ -1,8 +1,6 @@
 package com.mobven.fitai.presentation.login.sign_up.screens
 
 import androidx.fragment.app.viewModels
-import androidx.viewpager2.widget.ViewPager2
-import com.mobven.fitai.R
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import com.mobven.fitai.databinding.FragmentRegisterBinding
@@ -35,11 +33,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterB
                 textInputLayoutSurnameSignUp.helperText = viewModel.isEmpty(editTextUserName)
 
                 if (allFieldsValid()) {
-                    val currentItem =
-                        requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager).currentItem
-                    val nextItem = currentItem + 1
-                    requireActivity().findViewById<ViewPager2>(R.id.sign_up_view_pager)
-                        .setCurrentItem(nextItem, true)
+                    navigate(RDirections.actionRegisterFragmentToSignUpFragment())
                 }
 
             }
