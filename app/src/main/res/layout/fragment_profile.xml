@@ -527,7 +527,7 @@
            android:layout_marginStart="@dimen/_24dp"
            android:layout_marginEnd="@dimen/_24dp"
            app:layout_goneMarginTop="@dimen/_24dp"
-           android:layout_marginBottom="@dimen/_24dp"
+           android:layout_marginBottom="@dimen/_96dp"
            android:text="@string/logout"
            />
 

@@ -231,7 +231,7 @@
                 android:id="@+id/ll_calorie"
                 android:background="@color/white"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="110dp"
                 android:layout_marginTop="@dimen/_24dp"
                 android:layout_marginVertical="@dimen/_18dp"
                 android:orientation="horizontal"
