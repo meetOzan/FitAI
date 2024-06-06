@@ -7,6 +7,5 @@ class GetExercises @Inject constructor(
     private val fitAIRepository: FitAIRepository
 ) {
 
-    suspend operator fun invoke() = fitAIRepository.getExercises()
 
 }

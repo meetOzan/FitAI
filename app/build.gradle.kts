@@ -18,6 +18,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary = true
+        }
     }
 
     buildTypes {
@@ -38,11 +41,13 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    
-    buildFeatures{
+
+    buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
+
 
 dependencies {
 
@@ -54,20 +59,20 @@ dependencies {
     testImplementation(libs.bundles.testImplementation)
     androidTestImplementation(libs.bundles.androidTestImplementation)
 
-    // Navigation
+// Navigation
     implementation(libs.bundles.navigation)
 
-    // Viewpager Indicator - 3rd Party
+// Viewpager Indicator - 3rd Party
     implementation(libs.thirdparty.viewpagerdotsindicator)
 
-    // Hilt
+// Hilt
     implementation(libs.bundles.hiltImplementation)
     kapt(libs.hilt.compiler)
 
-    // Retrofit
+// Retrofit
     implementation(libs.bundles.retrofit)
 
-    // OkHttp
+// OkHttp
     implementation(libs.bundles.http)
 
 }
