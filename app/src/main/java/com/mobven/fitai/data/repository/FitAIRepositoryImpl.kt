@@ -6,8 +6,6 @@ import com.mobven.fitai.data.model.dto.SignInDto
 import com.mobven.fitai.data.model.dto.SignUpDto
 import com.mobven.fitai.data.model.dto.WorkoutDetailsDto
 import com.mobven.fitai.data.model.entity.UserEntity
-import com.mobven.fitai.data.source.LocalDataSourceImpl
-import com.mobven.fitai.data.source.RemoteDataSourceImpl
 import com.mobven.fitai.domain.repository.FitAIRepository
 import com.mobven.fitai.domain.source.LocalDataSource
 import com.mobven.fitai.domain.source.RemoteDataSource
@@ -43,7 +41,10 @@ class FitAIRepositoryImpl @Inject constructor(
         }
     }
 
-    override fun saveFirstLogin(authToken: String, firstLoginDto: FirstLoginDto) : Flow<ResponseState<String>> {
+    override fun saveFirstLogin(
+        authToken: String,
+        firstLoginDto: FirstLoginDto
+    ): Flow<ResponseState<String>> {
         return flow {
             emit(ResponseState.Loading)
             val response = provideRemoteSource.saveFirstLogin(authToken, firstLoginDto)
@@ -54,7 +55,10 @@ class FitAIRepositoryImpl @Inject constructor(
 
     }
 
-    override fun saveWorkoutDetails(authToken: String, workoutDetailsDto: WorkoutDetailsDto) : Flow<ResponseState<String>> {
+    override fun saveWorkoutDetails(
+        authToken: String,
+        workoutDetailsDto: WorkoutDetailsDto
+    ): Flow<ResponseState<String>> {
         return flow {
             emit(ResponseState.Loading)
             val response = provideRemoteSource.saveWorkoutDetails(authToken, workoutDetailsDto)
@@ -94,10 +98,6 @@ class FitAIRepositoryImpl @Inject constructor(
 
     override fun updateUserKey(userKey: String) {
         provideLocalSource.updateUserKey(userKey)
-    }
-
-    override fun updateFirstEntrance() {
-        provideLocalSource.updateFirstEntrance()
     }
 
 }

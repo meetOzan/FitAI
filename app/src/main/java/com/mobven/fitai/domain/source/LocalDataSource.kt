@@ -14,6 +14,4 @@ interface LocalDataSource {
 
     suspend fun getUser(): UserEntity
 
-    fun updateFirstEntrance()
-
 }

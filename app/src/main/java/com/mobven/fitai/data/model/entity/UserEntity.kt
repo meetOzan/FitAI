@@ -48,8 +48,5 @@ data class UserEntity(
     val basalMetabolism: Int,
 
     @ColumnInfo(name = "daily_kcal_goal")
-    val dailyKcalGoal: Int?,
-
-    @ColumnInfo(name = "is_first_entrance")
-    val isFirstEntrance: Boolean
+    val dailyKcalGoal: Int?
 )

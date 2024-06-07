@@ -29,6 +29,4 @@ interface FitAIRepository {
 
     fun updateUserKey(userKey: String)
 
-    fun updateFirstEntrance()
-
 }

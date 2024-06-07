@@ -22,8 +22,4 @@ interface UserDao {
 
     @Query("UPDATE user_entity SET user_id = :userId")
     fun updateUserKey(userId: String)
-
-    @Query("UPDATE user_entity SET is_first_entrance = 1")
-    fun updateFirstEntrance()
-
 }

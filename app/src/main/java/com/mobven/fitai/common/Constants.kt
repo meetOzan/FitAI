@@ -8,4 +8,6 @@ object Constants {
 
     const val DATABASE_NAME = "fit_ai_database.db"
 
+    const val PREF_NAME = "fit_ai_pref"
+
 }
