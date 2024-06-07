@@ -1,6 +1,6 @@
 package com.mobven.fitai.domain.usecase
 
-import com.mobven.fitai.data.dto.FirstLoginDto
+import com.mobven.fitai.data.model.dto.FirstLoginDto
 import com.mobven.fitai.domain.repository.FitAIRepository
 import javax.inject.Inject
 

@@ -6,4 +6,6 @@ object Constants {
 
     const val TIMEOUT = 60L
 
+    const val DATABASE_NAME = "fit_ai_database.db"
+
 }

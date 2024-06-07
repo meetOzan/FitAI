@@ -1,4 +1,4 @@
-package com.mobven.fitai.data.dto
+package com.mobven.fitai.data.model.dto
 
 data class WorkoutDetailsDto(
     val focusAreas: String,

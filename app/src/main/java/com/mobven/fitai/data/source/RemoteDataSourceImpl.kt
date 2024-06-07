@@ -1,9 +1,9 @@
 package com.mobven.fitai.data.source
 
-import com.mobven.fitai.data.dto.FirstLoginDto
-import com.mobven.fitai.data.dto.SignInDto
-import com.mobven.fitai.data.dto.SignUpDto
-import com.mobven.fitai.data.dto.WorkoutDetailsDto
+import com.mobven.fitai.data.model.dto.FirstLoginDto
+import com.mobven.fitai.data.model.dto.SignInDto
+import com.mobven.fitai.data.model.dto.SignUpDto
+import com.mobven.fitai.data.model.dto.WorkoutDetailsDto
 import com.mobven.fitai.data.remote.FitAIService
 import com.mobven.fitai.domain.source.RemoteDataSource
 import javax.inject.Inject
