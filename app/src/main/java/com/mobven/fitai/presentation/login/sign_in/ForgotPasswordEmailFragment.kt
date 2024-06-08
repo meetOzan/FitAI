@@ -15,8 +15,7 @@ class ForgotPasswordEmailFragment :
     override fun observeUi() {
 
         binding.tvLoginWithNumber.setOnClickListener {
-            val action =
-                ForgotPasswordEmailFragmentDirections.actionForgotPasswordEmailFragmentToResetPasswordEmailFragment()
+            val action = ForgotPasswordEmailFragmentDirections.actionForgotPasswordEmailFragmentToResetPasswordEmailFragment()
             navigate(action)
         }
 

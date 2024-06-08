@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_marginVertical="@dimen/_5dp"
+    app:cardCornerRadius="@dimen/_12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginStart="@dimen/_12dp">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/contentDescription" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Muz"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/urbanist_bold"/>
+
+            <TextView
+                android:id="@+id/item_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 tane orta, 180 kcal"
+                android:textSize="14sp"
+                android:textColor="@color/gray_300"
+                android:fontFamily="@font/urbanist_regular"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivAiButton"
+        android:layout_width="@dimen/_40dp"
+        android:layout_height="@dimen/_32dp"
+        android:src="@drawable/ai_button"
+        android:scaleType="centerCrop"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/_25dp"
+        android:layout_marginBottom="@dimen/_25dp"
+        android:layout_marginEnd="@dimen/_12dp"
+        android:contentDescription="@string/contentDescription"/>
+
+
+</androidx.cardview.widget.CardView>
