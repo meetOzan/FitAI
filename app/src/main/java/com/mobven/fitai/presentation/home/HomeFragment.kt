@@ -1,10 +1,17 @@
 package com.mobven.fitai.presentation.home
 
+
 import android.os.Build
+import android.view.View
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.viewModels
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.mobven.fitai.R
 import com.mobven.fitai.databinding.FragmentHomeBinding
 import com.mobven.fitai.presentation.base.BaseFragment
@@ -12,6 +19,8 @@ import com.mobven.fitai.presentation.home.adapter.CategoryItem
 import com.mobven.fitai.presentation.home.adapter.HomeCategoryAdapter
 import com.mobven.fitai.presentation.home.calendar.CalendarItem
 import com.mobven.fitai.presentation.home.calendar.HomeCalendarAdapter
+import com.mobven.fitai.presentation.home.personal_plan.PersonalPlanData
+import com.mobven.fitai.presentation.home.personal_plan.PlanAdapter
 import com.mobven.fitai.presentation.home.viewmodel.HomeAction
 import com.mobven.fitai.presentation.home.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -23,7 +32,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     private val calendarAdapter = HomeCalendarAdapter()
     private val trainingAdapter = HomeCategoryAdapter()
     private val foodAdapter = HomeCategoryAdapter()
-
+    private var isExpanded = false
+    private lateinit var llPlanCard: LinearLayout
     private val homeViewModel: HomeViewModel by viewModels()
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -52,7 +62,75 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             val action = HomeFragmentDirections.actionHomeFragmentToProfileFragment()
             navigate(action)
         }
+
+        binding.tvHomeDailyGoals.setOnClickListener {
+            val action = HomeFragmentDirections.actionHomeFragmentToBottomSheetFragment()
+            navigate(action)
+        }
+
+        getUserData()
+
+        val arrow : ImageView = requireView().findViewById(R.id.ivArrow)
+
+        binding.cardViewPlan.setOnClickListener {
+            if (isExpanded) {
+                arrow.setImageResource(R.drawable.ic_arrow_down)
+                llPlanCard.visibility = View.GONE
+            } else {
+                arrow.setImageResource(R.drawable.ic_arrow_up)
+                llPlanCard.visibility = View.VISIBLE
+            }
+            isExpanded = !isExpanded
+        }
+
     }
+
+    private fun getUserData() {
+
+        binding.cardViewImage.setImageResource(R.drawable.pilates)
+        val planRecyclerView : RecyclerView = requireView().findViewById(R.id.plan_recycler_view)
+        llPlanCard  = requireView().findViewById(R.id.llPlanCardDetail)
+        planRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        planRecyclerView.setHasFixedSize(true)
+        val planArrayList : ArrayList<PersonalPlanData> = arrayListOf()
+
+        val header: TextView = requireView().findViewById(R.id.tvHeader)
+        val cardHeader : TextView = requireView().findViewById(R.id.tv_card_header)
+        val time : TextView = requireView().findViewById(R.id.tvTime)
+        val kcal : TextView = requireView().findViewById(R.id.tvKcal)
+
+        header.text = "Setler"
+        cardHeader.text = "Pilates"
+        time.text = "15 dakika"
+        kcal.text = "150 kcal"
+
+
+       val imageId : Array<Int> = arrayOf(
+            R.drawable.ic_warm_up,
+            R.drawable.ic_main_set,
+            R.drawable.ic_cool_down
+        )
+
+        val name : Array<String> = arrayOf(
+            "Isınma Seti",
+            "Ana Set",
+            "Soğuma Seti"
+        )
+
+        val detail : Array<String> = arrayOf(
+            "Mat",
+            "Mat - Direnç Bandı",
+            "Mat"
+        )
+
+        for (i in imageId.indices) {
+            val planData = PersonalPlanData(imageId[i], name[i], detail[i])
+            planArrayList.add(planData)
+        }
+
+        planRecyclerView.adapter = PlanAdapter(planArrayList)
+    }
+
 
     override fun navigate(action: NavDirections) {
         findNavController().navigate(action)
@@ -89,17 +167,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
                 this.tvCalorieCardValue.text = getString(R.string._2500_kcal)
             }
 
-            with(includeHomePersonalizedTraining){
-                ivPersonalizedCardIcon.setImageResource(
-                    R.drawable.dumbell,
-                )
-                tvCreatePersonalized.text = getString(R.string.create_personalized_training)
-                cardHomePersonalized.setOnClickListener{
-                    findNavController().navigate(R.id.action_homeFragment_to_trainingFragment)
-                }
-            }
-
-            with(includeHomePersonalizedFood){
+            with(includeHomePersonalizedFood) {
                 ivPersonalizedCardIcon.setImageResource(
                     R.drawable.pan,
                 )

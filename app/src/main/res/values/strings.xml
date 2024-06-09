@@ -16,6 +16,7 @@
     <string name="login">Giriş Yap</string>
     <string name="logout">Çıkış Yap</string>
     <string name="back_button">Back Button</string>
+    <string name="close_button">Close Button</string>
     <string name="toolbar_logo">toolbar_logo</string>
     <string name="sign_up_title">Merhaba!\nBaşlamak için kaydolun</string>
     <string name="nickname">Kullanıcı Adı</string>
@@ -123,7 +124,10 @@
     <string name="create_plan_description">İstediğin alanda sana özel planlar oluştur.</string>
     <string name="nutrition_plan">Beslenme Planı</string>
     <string name="add_plan_button">add_plan_button</string>
-    <string name="training_plan_add">Antrenman Planı</string>
+    <string name="add_training_plan">Antrenman Planı</string>
+    <string name="add_nutrition_plan">Beslenme Planı</string>
+    <string name="water_tracker">Su Takibi</string>
+    <string name="create_personal_program_with_ai">AI size özel plan oluştursun.</string>
     <string name="water_tracking_add">Su Takibi</string>
     <string name="created_for_you_powered_ai">Yapay zeka desteğiyle sana özel oluşturuldu.</string>
     <string name="indicator">indicator</string>
@@ -244,4 +248,5 @@
     <string name="x2">x2</string>
     <string name="registerfragment">RegisterFragment</string>
     <string name="registerfragmenterror">RegisterFragmentError</string>
+    <string name="add_plan">AI Destekli Plan Ekle</string>
 </resources>

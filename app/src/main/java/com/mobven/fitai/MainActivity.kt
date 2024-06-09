@@ -8,6 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.mobven.fitai.databinding.ActivityMainBinding
+import com.mobven.fitai.presentation.home.HomeFragmentDirections
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -39,7 +40,8 @@ class MainActivity : AppCompatActivity() {
         val fab = binding.floatingActionButton
 
         fab.setOnClickListener {
-            // TODO: Bottom Sheet will be added here
+            val action = HomeFragmentDirections.actionHomeFragmentToBottomSheetFragment()
+            navHostFragment.navController.navigate(action)
         }
     }
 }

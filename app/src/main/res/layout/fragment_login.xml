@@ -65,10 +65,11 @@
             android:id="@+id/edit_text_email_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/gray_900"
             android:fontFamily="@font/urbanist_regular"
             android:hint="@string/email"
-            android:inputType="textEmailAddress"
-            android:maxLines="1" />
+            android:inputType="textEmailAddress" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -100,6 +101,7 @@
             android:id="@+id/edit_text_password_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/gray_900"
             android:fontFamily="@font/urbanist_regular"
             android:hint="@string/password"
             android:inputType="textPassword"
