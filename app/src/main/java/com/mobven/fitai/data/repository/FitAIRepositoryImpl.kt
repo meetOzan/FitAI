@@ -34,7 +34,6 @@ class FitAIRepositoryImpl @Inject constructor(
         return flow {
             emit(ResponseState.Loading)
             val response = provideRemoteSource.loginUser(loginUser)
-            insertUserKey(response)
             emit(ResponseState.Success(response))
         }.catch {
             emit(ResponseState.Error(it.message.orEmpty()))

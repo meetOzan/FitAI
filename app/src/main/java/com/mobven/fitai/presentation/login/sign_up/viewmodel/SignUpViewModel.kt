@@ -21,6 +21,7 @@ class SignUpViewModel @Inject constructor(
     private val stringRes: StringResourceProvider,
     private val registerUserUseCase: RegisterUserUseCase
 ) : ViewModel() {
+
     private val _signUpState = MutableLiveData(SignUpState.initial())
     val signUpState: LiveData<SignUpState> = _signUpState
 
@@ -28,6 +29,10 @@ class SignUpViewModel @Inject constructor(
         when (action) {
             is SignUpAction.GetSelectorItem -> {
                 getSignUpSelectorList(action.signUpFragmentType)
+            }
+
+            is SignUpAction.RegisterUser -> {
+                registerUser(action.signUpDto)
             }
         }
     }
@@ -88,7 +93,7 @@ class SignUpViewModel @Inject constructor(
                             ),
                         )
                     }
-                },
+                }
             )
     }
 
@@ -113,7 +118,6 @@ class SignUpViewModel @Inject constructor(
 
                     is ResponseState.Success -> {
                         _signUpState.value = SignUpState(
-                            isSuccess = true,
                             isError = false,
                             isLoading = false,
                             userAuthKey = registerResponse.data
@@ -122,22 +126,17 @@ class SignUpViewModel @Inject constructor(
                 }
             }
         }
-
     }
 }
 
 data class SignUpState(
     val isLoading: Boolean = false,
     val isError: Boolean = false,
-    val isSuccess: Boolean = false,
     val errorMessage: String = "",
     val userAuthKey: String = "",
     val signUpSelectorList: List<ListSelectorItem> = emptyList(),
 ) {
     companion object {
-        fun initial() =
-            SignUpState(
-                isLoading = true,
-            )
+        fun initial() = SignUpState(isLoading = true)
     }
 }

@@ -12,8 +12,21 @@ object SharedPreferencesHelper {
         }
     }
 
-    fun getIsFirstLaunch(context: Context): Boolean? {
+    fun getIsFirstLaunch(context: Context): Boolean {
         val sharedPref = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
         return sharedPref.getBoolean("isFirstEntrance", false)
+    }
+
+    fun saveUserAuthKey(context: Context, userAuthKey: String) {
+        val sharedPref = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
+        with(sharedPref.edit()) {
+            putString("userAuthKey", userAuthKey)
+            apply()
+        }
+    }
+
+    fun getUserAuthKey(context: Context): String? {
+        val sharedPref = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
+        return sharedPref.getString("userAuthKey", "")
     }
 }
