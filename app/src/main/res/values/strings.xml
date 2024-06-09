@@ -246,5 +246,7 @@
     <string name="enter_minutes">Dakika Girin</string>
     <string name="_45_minute">45\'</string>
     <string name="x2">x2</string>
+    <string name="registerfragment">RegisterFragment</string>
+    <string name="registerfragmenterror">RegisterFragmentError</string>
     <string name="add_plan">AI Destekli Plan Ekle</string>
 </resources>

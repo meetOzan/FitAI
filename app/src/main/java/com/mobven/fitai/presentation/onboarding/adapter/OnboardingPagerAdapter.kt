@@ -1,4 +1,4 @@
-package com.mobven.fitai.presentation.onboarding
+package com.mobven.fitai.presentation.onboarding.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

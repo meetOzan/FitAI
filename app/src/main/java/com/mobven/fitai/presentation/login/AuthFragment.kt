@@ -4,9 +4,11 @@ import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import com.mobven.fitai.presentation.base.BaseFragment
 import com.mobven.fitai.databinding.FragmentAuthBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 typealias AuthDirections = AuthFragmentDirections
 
+@AndroidEntryPoint
 class AuthFragment : BaseFragment<FragmentAuthBinding>(FragmentAuthBinding::inflate) {
 
     override fun observeUi() {
