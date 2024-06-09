@@ -86,4 +86,7 @@
     <!--#545454-->
     <color name="red_50">#FF4848</color>
 
+    <!--#B8B8B5-->
+    <color name="gray_100">#B8B8B5</color>
+
 </resources>
