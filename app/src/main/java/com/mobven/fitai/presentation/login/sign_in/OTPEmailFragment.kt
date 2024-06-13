@@ -8,6 +8,7 @@ import android.text.TextWatcher
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.mobven.fitai.R
 import com.mobven.fitai.databinding.FragmentOtpEmailBinding
 import com.mobven.fitai.presentation.base.BaseFragment
@@ -113,8 +114,7 @@ class OTPEmailFragment : BaseFragment<FragmentOtpEmailBinding>(FragmentOtpEmailB
             Toast.makeText(requireContext(), getString(R.string.login_success), Toast.LENGTH_SHORT).show()
             val color = R.drawable.bg_green_stroke
             changeColor(color)
-            val action = OTPFragmentDirections.actionOTPFragmentToResetPasswordFragment()
-            navigate(action)
+            findNavController().navigate(R.id.action_OTPFragment_to_resetPasswordFragment)
 
         } else {
             Toast.makeText(requireContext(), getString(R.string.login_failed), Toast.LENGTH_SHORT).show()

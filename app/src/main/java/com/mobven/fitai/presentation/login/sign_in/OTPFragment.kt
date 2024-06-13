@@ -129,9 +129,9 @@ class OTPFragment : BaseFragment<FragmentOtpBinding>(FragmentOtpBinding::inflate
                     .setPopUpTo(R.id.OTPFragment, true)
                     .setPopUpTo(R.id.resetPasswordEmailFragment, true)
                     .build()
-            val action = OTPFragmentDirections.actionOTPFragmentToResetPasswordFragment()
             findNavController().navigate(
-                action,
+                R.id.action_OTPFragment_to_resetPasswordFragment,
+                null,
                 navOptions
             )
         } else {
@@ -160,7 +160,8 @@ class OTPFragment : BaseFragment<FragmentOtpBinding>(FragmentOtpBinding::inflate
 
     private fun updateTimerText() {
         val minutes = TimeUnit.MILLISECONDS.toMinutes(timeLeftInMillis)
-        val seconds = TimeUnit.MILLISECONDS.toSeconds(timeLeftInMillis) - TimeUnit.MINUTES.toSeconds(minutes)
+        val seconds =
+            TimeUnit.MILLISECONDS.toSeconds(timeLeftInMillis) - TimeUnit.MINUTES.toSeconds(minutes)
         val timeFormatted = String.format("%02d:%02d", minutes, seconds)
         binding.tvTimer.text = timeFormatted
     }
