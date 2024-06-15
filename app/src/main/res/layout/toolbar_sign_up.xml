@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        style="@style/Widget.AppCompat.ImageButton"
+        android:id="@+id/toolbar_back"
+        android:layout_width="@dimen/_40dp"
+        android:layout_height="@dimen/_40dp"
+        android:clickable="true"
+        android:contentDescription="@string/back_button"
+        android:focusable="true"
+        app:strokeColor="@color/black"
+        android:background="@drawable/bg_grey_stroke"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginVertical="@dimen/_16dp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/back_arrow"
+        app:tint="@color/main_grey"/>
+
+    <ImageView
+        android:layout_width="@dimen/_32dp"
+        android:layout_height="@dimen/_35dp"
+        android:contentDescription="@string/toolbar_logo"
+        android:src="@drawable/fit_black"
+        android:layout_marginEnd="@dimen/_24dp"
+        android:layout_marginVertical="@dimen/_16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:foregroundGravity="right"/>
+
+</RelativeLayout>

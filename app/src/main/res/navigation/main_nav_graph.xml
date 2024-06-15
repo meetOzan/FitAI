@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mobven.fitai.presentation.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_nutritionFragment"
+            app:destination="@id/nutritionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_trainingFragment"
+            app:destination="@id/trainingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addFoodFragment"
+            app:destination="@id/addFoodFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addTrainingFragment"
+            app:destination="@id/addTrainingFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nutritionFragment"
+        android:name="com.mobven.fitai.presentation.home.nutrition.NutritionFragment"
+        android:label="fragment_nutrition"
+        tools:layout="@layout/fragment_nutrition" >
+        <action
+            android:id="@+id/action_nutritionFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainingFragment"
+        android:name="com.mobven.fitai.presentation.home.training.TrainingFragment"
+        android:label="fragment_training"
+        tools:layout="@layout/fragment_training" >
+        <action
+            android:id="@+id/action_trainingFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.mobven.fitai.presentation.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFoodFragment"
+        android:name="com.mobven.fitai.presentation.add.food.AddFoodFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add_food" >
+        <action
+            android:id="@+id/action_addFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTrainingFragment"
+        android:name="com.mobven.fitai.presentation.add.training.AddTrainingFragment"
+        android:label="fragment_add_training"
+        tools:layout="@layout/fragment_add_training" />
+
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="com.mobven.fitai.presentation.home.create_plan.BottomSheetFragment"
+        android:label="fragment_bottom_sheet"
+        tools:layout="@layout/fragment_bottom_sheet" >
+        <action
+            android:id="@+id/action_bottomSheetFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </dialog>
+</navigation>

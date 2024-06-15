@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_calendar_item_white"
+    android:orientation="vertical"
+    android:layout_marginEnd="@dimen/_6dp"
+    android:paddingHorizontal="@dimen/_6dp"
+    android:id="@+id/calendar_item"
+    android:paddingVertical="8dp">
+
+    <ImageView
+        android:id="@+id/ivCircle"
+        android:layout_width="@dimen/_36sp"
+        android:layout_height="@dimen/_36sp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_circle_selected" />
+
+    <TextView
+        android:id="@+id/tv_item_calendar_day_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/ivCircle"
+        android:layout_alignTop="@id/ivCircle"
+        android:background="@drawable/ic_circle_selected"
+        android:backgroundTint="@color/white"
+        android:layout_alignEnd="@id/ivCircle"
+        android:layout_alignBottom="@id/ivCircle"
+        android:fontFamily="@font/urbanist_bold"
+        android:gravity="center"
+        android:paddingTop="2dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sp"
+        tools:text="16" />
+
+    <TextView
+        android:id="@+id/tv_item_calendar_day_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivCircle"
+        android:layout_alignStart="@id/ivCircle"
+        android:layout_alignEnd="@id/ivCircle"
+        android:layout_marginTop="@dimen/_6dp"
+        android:fontFamily="@font/urbanist_regular"
+        android:gravity="center"
+        android:textColor="@color/dark_grey_2"
+        android:textSize="@dimen/_12sp"
+        tools:text="Paz" />
+
+</RelativeLayout>

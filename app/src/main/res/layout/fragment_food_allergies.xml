@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    tools:context=".home.screens.FoodAllergiesFragment">
+
+    <TextView
+        android:id="@+id/food_allergies_title"
+        style="@style/titleTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:text="@string/which_foods_alergies"
+        app:layout_constraintEnd_toEndOf="@+id/text_input_layout_food_allergies"
+        app:layout_constraintStart_toStartOf="@+id/text_input_layout_food_allergies"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_food_allergies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginVertical="@dimen/_16sp"
+        app:cursorColor="@color/black"
+        android:textColorHint="@color/light_grey_4"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="@dimen/_8dp"
+        app:boxCornerRadiusBottomStart="@dimen/_8dp"
+        app:boxCornerRadiusTopEnd="@dimen/_8dp"
+        app:boxCornerRadiusTopStart="@dimen/_8dp"
+        app:boxStrokeColor="@color/light_grey_3"
+        app:boxStrokeWidth="@dimen/_1dp"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/food_allergies_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_food_allergies"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/textInputEditTextStyleInfo"
+            android:hint="@string/allergies" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_food_allergies_continue"
+        style="@style/nextButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cursorColor="@color/black"
+        android:gravity="bottom"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginBottom="@dimen/_48dp"
+        android:paddingVertical="@dimen/_16dp"
+        android:text="@string/sonraki"
+        app:cornerRadius="@dimen/button_corner_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

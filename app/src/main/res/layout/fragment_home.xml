@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".presentation.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/tv_home_welcome_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/urbanist_bold"
+        android:text="@string/welcome_message"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_home_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
+        android:layout_marginStart="6dp"
+        android:fontFamily="@font/urbanist_bold"
+        android:text="Mert,"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/tv_home_welcome_message"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_home_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_4dp"
+        android:fontFamily="@font/urbanist_regular"
+        android:text="29 Eylül 2024"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/tv_home_welcome_message"
+        app:layout_constraintTop_toBottomOf="@id/tv_home_welcome_message" />
+
+    <ImageButton
+        android:id="@+id/ib_home_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_24dp"
+        android:background="@color/transparent"
+        android:src="@drawable/ic_notification"
+        android:contentDescription="@string/contentDescription"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_home_welcome_message"
+        app:layout_constraintEnd_toStartOf="@id/iv_home_profile"
+        app:layout_constraintTop_toTopOf="@id/tv_home_welcome_message" />
+
+    <ImageView
+        android:id="@+id/iv_home_profile"
+        android:layout_width="@dimen/_32dp"
+        android:layout_height="@dimen/_32dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:src="@drawable/ic_circle_selected"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_home_welcome_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_home_welcome_message" />
+
+    <ScrollView
+        android:id="@+id/sv_home"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        android:layout_marginTop="@dimen/_40dp"
+        android:background="@drawable/bg_home_scroll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_home_date">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_0dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_home_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_24dp"
+                android:layoutDirection="rtl"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:itemCount="7"
+                tools:listitem="@layout/card_home_calendar_item" />
+
+            <TextView
+                android:id="@+id/tv_home_daily_goals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_12dp"
+                android:fontFamily="@font/urbanist_bold"
+                android:text="@string/daily_goals"
+                android:textColor="@color/dark_grey_2"
+                android:textSize="@dimen/_18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_home_calendar" />
+
+            <Button
+                android:id="@+id/ebtn_home_add_exercises"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_12dp"
+                android:layout_marginEnd="@dimen/_4dp"
+                android:background="@drawable/bg_grey_stroke"
+                android:text="@string/add_excercise"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/white"
+                app:icon="@drawable/add_exercise"
+                app:iconTint="@color/black"
+                app:layout_constraintEnd_toStartOf="@id/ebtn_home_add_food"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_daily_goals"
+                app:layout_goneMarginTop="@dimen/_4dp" />
+
+            <Button
+                android:id="@+id/ebtn_home_add_food"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4dp"
+                android:layout_marginTop="@dimen/_12dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:background="@drawable/bg_grey_stroke"
+                android:text="@string/add_food"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/white"
+                app:icon="@drawable/add_food"
+                app:iconTint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ebtn_home_add_exercises"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_daily_goals" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/circular_progress_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30dp"
+                app:indicatorColor="@color/green_500"
+                app:indicatorSize="165dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ebtn_home_add_food"
+                app:trackColor="@color/gray_50"
+                app:trackThickness="10dp"
+                android:progress="45"/>
+
+            <TextView
+                android:id="@+id/tv_home_goal_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_40dp"
+                android:fontFamily="@font/urbanist_bold"
+                android:text="@string/_45"
+                android:textAlignment="center"
+                android:textColor="@color/gray_500"
+                android:textSize="@dimen/_45sp"
+                app:layout_constraintBottom_toBottomOf="@+id/circular_progress_home"
+                app:layout_constraintEnd_toEndOf="@+id/circular_progress_home"
+                app:layout_constraintHorizontal_bias="0.42"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/tv_home_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_40dp"
+                android:fontFamily="@font/urbanist_bold"
+                android:text="@string/percent"
+                android:textAlignment="center"
+                android:textColor="@color/gray_500"
+                android:textSize="@dimen/_45sp"
+                app:layout_constraintBottom_toBottomOf="@id/circular_progress_home"
+                app:layout_constraintEnd_toEndOf="@+id/textView2"
+                app:layout_constraintHorizontal_bias="0.45"
+                app:layout_constraintStart_toStartOf="@id/circular_progress_home" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_40dp"
+                android:fontFamily="@font/urbanist_bold"
+                android:text="@string/goal_complete"
+                android:textAlignment="center"
+                android:textColor="@color/gray_500"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintEnd_toEndOf="@id/circular_progress_home"
+                app:layout_constraintStart_toStartOf="@id/circular_progress_home"
+                app:layout_constraintTop_toTopOf="@id/circular_progress_home" />
+
+            <TextView
+                android:id="@+id/tv_home_goal_remaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6dp"
+                android:fontFamily="@font/urbanist_regular"
+                android:text="@string/goal_remaining"
+                android:textColor="@color/gray_500"
+                app:layout_constraintEnd_toStartOf="@id/tv_home_goal_remaining_number"
+                app:layout_constraintStart_toStartOf="@+id/tv_home_percent"
+                app:layout_constraintTop_toBottomOf="@id/circular_progress_home" />
+
+            <TextView
+                android:id="@+id/tv_home_goal_remaining_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6dp"
+                android:fontFamily="@font/urbanist_regular"
+                android:text=" 5 kg"
+                android:textColor="@color/gray_500"
+                app:layout_constraintEnd_toEndOf="@+id/tv_home_goal_complete"
+                app:layout_constraintStart_toEndOf="@+id/tv_home_goal_remaining"
+                app:layout_constraintTop_toBottomOf="@id/circular_progress_home" />
+
+            <LinearLayout
+                android:id="@+id/ll_calorie"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginTop="@dimen/_24dp"
+                android:layout_marginVertical="@dimen/_18dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_goal_remaining">
+
+                <include
+                    android:id="@+id/include_home_intake_calorie"
+                    layout="@layout/card_calorie_track"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    android:id="@+id/include_home_burned_calorie"
+                    layout="@layout/card_calorie_track"
+                    android:layout_width="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5dp"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    android:id="@+id/include_home_remaining_calorie"
+                    layout="@layout/card_calorie_track"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_home_personalized"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_calorie"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view_plan"
+                    android:layout_width="327dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="@dimen/_12dp"
+                    android:background="#777677">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/card_view_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:src="@color/transparent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:scaleType="center"/>
+
+                            <include layout="@layout/plan_card_view_layout" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <include
+                    android:id="@+id/include_home_personalized_food"
+                    layout="@layout/card_home_personalized" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_home_training_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_24dp"
+                android:fontFamily="@font/urbanist_bold"
+                android:text="@string/traning_goals"
+                android:textColor="@color/dark_grey_2"
+                android:textSize="@dimen/_18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_home_personalized" />
+
+            <TextView
+                android:id="@+id/tv_see_all_training"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_24dp"
+                android:fontFamily="@font/urbanist_regular"
+                android:text="@string/see_all"
+                android:textColor="@color/gray_200"
+                android:textSize="@dimen/_18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_home_personalized" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_home_training_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/_24dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/card_home_categories"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_training_category"/>
+
+            <TextView
+                android:id="@+id/tv_home_food_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_24dp"
+                android:fontFamily="@font/urbanist_bold"
+                android:text="@string/food_categories"
+                android:textColor="@color/dark_grey_2"
+                android:textSize="@dimen/_18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_home_training_category" />
+
+            <TextView
+                android:id="@+id/tv_see_all_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_24dp"
+                android:fontFamily="@font/urbanist_regular"
+                android:text="@string/see_all"
+                android:textColor="@color/gray_200"
+                android:textSize="@dimen/_18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_home_training_category" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_home_food_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12dp"
+                android:layout_marginBottom="@dimen/_80dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="@dimen/_24dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/card_home_categories"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_food_category"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".presentation.home.nutrition.NutritionFragment">
+
+    <include
+        android:id="@+id/toolbar_nutrition"
+        layout="@layout/toolbar_sign_up" />
+
+    <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+        android:id="@+id/indicator_nutrition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:dampingRatio="0.5"
+        android:layout_marginTop="@dimen/_24dp"
+        android:layout_gravity="center_horizontal"
+        app:dotsColor="@color/main_grey"
+        app:dotsSize="8dp"
+        app:dotsSpacing="6dp"
+        app:stiffness="300" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_nutrition"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_16dp" />
+
+</LinearLayout>

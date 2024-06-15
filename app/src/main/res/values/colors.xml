@@ -1,5 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="onboarding_background">#FFD8D8D8</color>
+
+    <!--D9D9D9-->
+    <color name="white_50">#FFF4F4F4</color>
+
+    <!--#F5FDE0-->
+    <color name="green_background">#FFF5FDE0</color>
+
+    <!--#B1EB04-->
+    <color name="green_500">#FFB1EB04</color>
+
+    <!--#7EA703-->
+    <color name="green_700">#FF7EA703</color>
+
+    <!-- #1E232C -->
+    <color name="main_grey">#FF1E232C</color>
+
+    <!-- #1E232C33 -->
+    <color name="main_transparent_grey">#331E232C</color>
+
+    <!--#6A707C-->
+    <color name="lightGray">#6A707C</color>
+
+    <!--#E8ECF4-->
+    <color name="light_grey">#FFE8ECF4</color>
+
+    <!--#F7F8F9-->
+    <color name="white_100">#FFF7F8F9</color>
+
+    <!--#EFF1F4-->
+    <color name="light_grey_3">#FFEFF1F4</color>
+
+    <!--D1D1D1-->
+    <color name="light_grey_4">#FFD1D1D1</color>
+
+    <!--#D9D9D9-->
+    <color name="light_grey_5">#FFD9D9D9</color>
+
+    <!--B9B9B9-->
+    <color name="light_grey_6">#FFB9B9B9</color>
+
+    <!-- Text Input Layout default stroke color -->
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#FFE8ECF4</color>
+
+    <!--#6A707C-->
+    <color name="dark_grey">#FF6A707C</color>
+
+    <!--#404446-->
+    <color name="dark_grey_2">#FF404446</color>
+
+    <!--#5E5E5E-->
+    <color name="dark_grey_3">#FF5E5E5E</color>
+
+    <!--#72777A-->
+    <color name="dark_grey_4">#FF72777A</color>
+
+    <!--8D9195-->
+    <color name="dark_grey_5">#FF8D9195</color>
+
+    <!--#8391A1-->
+    <color name="cyan_blue">#8391A1</color>>
+
+    <!--#E8E8E7-->
+    <color name="gray_50">#FFE8E8E7</color>
+
+    <!--#969691-->
+    <color name="gray_200">#969691</color>
+
+    <!--#66665F-->
+    <color name="gray_300">#66665F</color>
+
+    <!--#1A1B10-->
+    <color name="gray_500">#FF1A1B10</color>
+
+    <!--#0B0B07-->
+    <color name="gray_900">#0B0B07</color>
+
+    <!--#545454-->
+    <color name="black_300">#545454</color>
+
+    <!--#545454-->
+    <color name="red_50">#FF4848</color>
+
+    <!--#B8B8B5-->
+    <color name="gray_100">#B8B8B5</color>
+
 </resources>

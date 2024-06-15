@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".presentation.login.sign_up.screens.HeightSignUpFragment">
+
+    <TextView
+        android:id="@+id/height_title"
+        style="@style/titleTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:text="@string/what_is_your_height" />
+
+    <LinearLayout
+        android:id="@+id/ll_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/height_title"
+        android:layout_marginTop="@dimen/_48dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:textSize="@dimen/_48sp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_height"
+            style="@style/textViewPersonalInfoStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_4dp"
+            android:hint="@string/height" />
+
+        <TextView
+            style="@style/textViewPersonalInfoUnitStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/_4dp"
+            android:text="@string/cm" />
+    </LinearLayout>
+
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:layout_below="@id/ll_height"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_12dp"
+        app:dividerColor="@color/light_grey_3" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_height_continue"
+        style="@style/nextButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginBottom="@dimen/_48dp"
+        android:gravity="bottom"
+        android:paddingVertical="@dimen/_16dp"
+        android:text="@string/sonraki"
+        app:cornerRadius="@dimen/button_corner_radius" />
+
+</RelativeLayout>

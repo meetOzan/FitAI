@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".presentation.login.sign_up.SignUpFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_sign_up" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/sign_up_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/progress_indicator" />
+
+    <include
+        android:id="@+id/progress_indicator"
+        layout="@layout/progressbar_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginVertical="@dimen/_12dp" />
+
+</RelativeLayout>

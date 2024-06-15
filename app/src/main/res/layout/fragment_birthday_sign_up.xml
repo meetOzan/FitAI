@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".login.sign_up.screens.BirthdaySignUpFragment">
+
+    <TextView
+        android:id="@+id/birthday_title"
+        style="@style/titleTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:text="@string/what_is_your_birthday" />
+
+    <EditText
+        android:id="@+id/et_birthday_day"
+        style="@style/birthdayDayMonthStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/birthday_title"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_24dp"
+        android:autofillHints="day"
+        android:hint="@string/_29"
+        android:maxEms="10"
+        android:padding="@dimen/_20dp" />
+
+    <EditText
+        android:id="@+id/et_birthday_month"
+        style="@style/birthdayDayMonthStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12dp"
+        android:layout_marginTop="@dimen/_24dp"
+        android:layout_toEndOf="@id/et_birthday_day"
+        android:autofillHints="month"
+        android:hint="@string/_09"
+        android:maxEms="10"
+        android:padding="@dimen/_20dp"
+        android:paddingVertical="@dimen/_16dp" />
+
+    <EditText
+        android:id="@+id/et_birthday_year"
+        style="@style/birthdayDayMonthStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/birthday_title"
+        android:layout_marginStart="@dimen/_12dp"
+        android:layout_marginTop="@dimen/_24dp"
+        android:layout_toEndOf="@id/et_birthday_month"
+        android:autofillHints="year"
+        android:hint="@string/_2024"
+        android:maxEms="10"
+        android:maxLength="4"
+        android:paddingHorizontal="@dimen/_40dp"
+        android:paddingVertical="@dimen/_20dp"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/et_birthday_year"
+        android:layout_alignBottom="@id/et_birthday_year"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/_12dp"
+        android:layout_marginEnd="@dimen/_30dp"
+        android:layout_toEndOf="@id/et_birthday_year"
+        android:contentDescription="@string/calendar_icon"
+        android:padding="@dimen/_16sp"
+        android:src="@drawable/calendar" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_birthday_continue"
+        style="@style/nextButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginBottom="@dimen/_48dp"
+        android:paddingVertical="@dimen/_16dp"
+        android:text="@string/sonraki"
+        android:textAlignment="center"
+        app:cornerRadius="@dimen/button_corner_radius" />
+
+</RelativeLayout>

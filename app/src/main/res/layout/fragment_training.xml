@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".presentation.home.training.TrainingFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_sign_up" />
+
+    <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+        android:id="@+id/indicator_training"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_24dp"
+        app:dampingRatio="0.5"
+        app:dotsColor="@color/main_grey"
+        app:dotsSize="8dp"
+        app:dotsSpacing="6dp"
+        app:stiffness="300" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_training"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_80dp" />
+
+</LinearLayout>

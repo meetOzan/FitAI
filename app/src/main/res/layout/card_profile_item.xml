@@ -1,0 +1,97 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_profile_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:strokeColor="@color/light_grey">
+
+    <ImageView
+        android:id="@+id/profile_item_image_bg"
+        android:layout_width="@dimen/_45dp"
+        android:layout_height="@dimen/_45dp"
+        android:layout_marginVertical="@dimen/_16sp"
+        android:src="@drawable/bg_grey_light_radius"
+        android:contentDescription="@string/contentDescription"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white_100" />
+
+    <ImageView
+        android:id="@+id/profile_item_image"
+        android:layout_width="@dimen/_36dp"
+        android:layout_height="@dimen/_36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_item_image_bg"
+        app:layout_constraintEnd_toEndOf="@+id/profile_item_image_bg"
+        app:layout_constraintStart_toStartOf="@+id/profile_item_image_bg"
+        android:contentDescription="@string/contentDescription"
+        app:layout_constraintTop_toTopOf="@+id/profile_item_image_bg"
+        tools:src="@drawable/ic_logo" />
+
+    <TextView
+        android:id="@+id/profile_item_text"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sp"
+        android:fontFamily="@font/urbanist_bold"
+        android:textAlignment="textStart"
+        android:textColor="@color/gray_900"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/profile_item_image_bg"
+        app:layout_constraintEnd_toStartOf="@+id/tv_on_off_profile_item"
+        app:layout_constraintStart_toEndOf="@id/profile_item_image_bg"
+        app:layout_constraintTop_toTopOf="@id/profile_item_image_bg"
+        tools:text="@string/profile_text" />
+
+    <TextView
+        android:id="@+id/tv_on_off_profile_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:fontFamily="@font/urbanist_regular"
+        android:textAlignment="textStart"
+        android:textColor="@color/gray_300"
+        android:textSize="@dimen/_14sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_item_image_bg"
+        app:layout_constraintEnd_toStartOf="@+id/iv_right_arrow_profile"
+        app:layout_constraintTop_toTopOf="@+id/profile_item_image_bg"
+        tools:text="Açık" />
+
+    <ImageView
+        android:id="@+id/iv_right_arrow_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:src="@drawable/arrow_right"
+        android:contentDescription="@string/contentDescription"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/profile_item_image_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/profile_item_image_bg" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_profile_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:src="@drawable/arrow_right"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/profile_item_image_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/profile_item_image_bg"
+        app:thumbTint="@color/white"
+        app:trackTint="@drawable/selector_profile_switch_track" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/_8dp"
+        app:dividerColor="@color/light_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
